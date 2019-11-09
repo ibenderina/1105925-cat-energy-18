@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="main-header">
+  <a href="index.html" aria-label="Логотип сайта Energy">
+    <img class="main-header__logo-item" src="img/logo.svg" width="191" height="39" alt="Логотип сайта Energy">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button" aria-label="Развернуть меню"></button>
+    <ul class="main-nav__list">
+      <li class="main-nav__list-item">
+        <a class="main-nav__list-link" href="">Главная
+        </a>
+      </li>
+      <li class="main-nav__list-item">
+        <a class="main-nav__list-link" href="">Каталог продукции
+        </a>
+      </li>
+      <li class="main-nav__list-item">
+        <a class="main-nav__list-link" href="">Подбор программы
+        </a>
+      </li>
+    </ul>
+    <form class="menu-form">
+      <p class="menu-form__article">Заполните анкету и мы подберем
+        программу питания для вашего кота
+      </p>
+      <div class="menu-form__options">
+        <label class="menu-form__options-label" for="name">Имя:*</label>
+        <input class="menu-form__options-input" type="text" name="name" id="name" placeholder="Барсик">
+        <label class="menu-form__options-label" for="weight">Вес (кг):*</label>
+        <input class="menu-form__options-input" type="text" name="weight" id="weight" placeholder="7">
+        <label class="menu-form__options-label" for="age">Возраст (лет):</label>
+        <input class="menu-form__options-input" type="text" name="age" id="age" placeholder="7">
+      </div>
+      <div class="menu-form__options">
+        <input class="menu-form__options-radio" type="radio" name="losing_weight" id="losing_weight">
+        <label class="menu-form__options-label" for="losing_weight">Похудение</label>
+        <input class="menu-form__options-radio" type="radio" name="gain" id="gain">
+        <label class="menu-form__options-label" for="gain">Набор массы</label>
+        <input class="menu-form__options-radio" type="radio" name="advice" id="advice">
+        <label class="menu-form__options-label" for="advice">Не знаю (Нужен ваш совет)</label>
+      </div>
+      <div class="menu-form__options">
+        <h3 class="menu-form__options-header">Контактные данные (владельца кота)</h3>
+        <label class="menu-form__options-label" for="email">E-mail:*</label>
+        <input class="menu-form__options-input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+        <label class="menu-form__options-label" for="phone">Телефон:*</label>
+        <input class="menu-form__options-input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+      </div>
+      <div class="menu-form__options">
+        <h3 class="menu-form__options-header">Комментарий</h3>
+        <label class="visually-hidden" for="behavior">Повадки кота</label>
+        <textarea class="menu-form__options-input" name="behavior" id="behavior" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </div>
+      <div class="menu-form__options">
+        <h3 class="menu-form__options-header">Дополнительно</h3>
+        <input class="menu-form__options-checkbox" type="checkbox" name="supplements" id="supplements">
+        <label class="menu-form__options-label" for="supplements">Сахарозаменитель</label>
+        <input class="menu-form__options-checkbox" type="checkbox" name="supplements" id="supplements">
+        <label class="menu-form__options-label" for="supplements">Питьевая вода</label>
+        <input class="menu-form__options-checkbox" type="checkbox" name="supplements" id="supplements">
+        <label class="menu-form__options-label" for="supplements">Молоко</label>
+        <input class="menu-form__options-checkbox" type="checkbox" name="supplements" id="supplements">
+        <label class="menu-form__options-label" for="supplements">Витамины</label>
+      </div>
+      <button class="menu-form__options-button" type="submit">Отправить заявку</button>
+      <span class="menu-form__options-note">* — Обязательные поля</span>
+    </form>
+  </nav>
+</header>
+</body>
+</html>
