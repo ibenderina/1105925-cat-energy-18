@@ -6,23 +6,23 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="main-header">
-  <a aria-label="Логотип сайта Energy">
-    <img class="main-header__logo-item" src="img/logo.svg" width="191" height="39" alt="Логотип сайта Energy">
+<header class="header">
+  <a class="header__logo-link">
+    <img class="header__logo" src="img/logo.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
   </a>
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button" aria-label="Развернуть меню"></button>
     <ul class="main-nav__list">
       <li class="main-nav__list-item">
-        <a class="main-nav__list-link" href="">Главная
+        <a class="main-nav__list-link main-nav__list-link--active">Главная
         </a>
       </li>
       <li class="main-nav__list-item">
-        <a class="main-nav__list-link" href="">Каталог продукции
+        <a class="main-nav__list-link" href="catalog.html">Каталог продукции
         </a>
       </li>
       <li class="main-nav__list-item">
-        <a class="main-nav__list-link" href="">Подбор программы
+        <a class="main-nav__list-link" href="form.html">Подбор программы
         </a>
       </li>
     </ul>
@@ -31,24 +31,24 @@
 <main class="main">
   <section class="about">
     <h1 class="about__header">Функциональное питание для котов</h1>
-    <p class="about__article">Занялся собой? Займись котом!</p>
-    <img class="about__item" src="pic.png" width="280" height="270" alt="Упаковка функционального корма">
+    <p class="about__description">Занялся собой? Займись котом!</p>
+    <img class="about__img" src="pic.png" width="280" height="270" alt="Упаковка функционального корма">
   </section>
   <section class="programs">
-    <a class="programs__select-button" href="">Подобрать программу</a>
-    <div class="programs__selection">
-      <h3 class="programs__selection-header">Похудение</h3>
-      <p class="programs__selection-article">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+    <a class="programs__select-link" href="">Подобрать программу</a>
+    <div class="programs__items programs-item">
+      <h3 class="programs-item__header">Похудение</h3>
+      <p class="programs-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
         Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
       </p>
-      <a class="programs__selection-link" href="">Каталог Slim</a>
+      <a class="programs-item__link" href="">Каталог Slim</a>
     </div>
-    <div class="programs__selection">
-      <h3 class="programs__selection-header">Набор массы</h3>
-      <p class="programs__selection-article">Заработать авторитет среди дворовых котов и даже собак?
+    <div class="programs__items programs-item">
+      <h3 class="programs-item__header">Набор массы</h3>
+      <p class="programs-item__description">Заработать авторитет среди дворовых котов и даже собак?
         Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
       </p>
-      <a class="programs__selection-link" href="">Каталог pro</a>
+      <a class="programs-item__link" href="">Каталог pro</a>
     </div>
   </section>
   <section class="benefits">
@@ -60,34 +60,33 @@
       <li class="benefits__list-item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
     </ul>
   </section>
-  <section class="example">
-    <h2 class="example__header">Живой пример</h2>
-    <p class="example__article">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+  <section class="results">
+    <h2 class="results__header">Живой пример</h2>
+    <p class="results__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
       Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
       по 16 часов в день.
     </p>
-    <ul class="example__list">
-      <li class="example__list-item">
-        <span class="example__list-value">5 кг</span>
-        <span class="example__list-info">снижение веса</span>
-      </li>
-      <li class="example__list-item">
-        <span class="example-list-value">60 дней</span>
-        <span class="example-list-info">затрачено времени</span>
-      </li>
-    </ul>
-    <span class="example__total">Затраты на питание: 15 000 руб.</span>
-    <div class="example__photo">
-      <img class="example__photo-item example__photo-item--before" src="img/logo.svg" width="311" height="232">
-      <img class="example__photo-item example__photo-item--after" src="img/logo.svg" width="311" height="232">
+    <dl class="results__list">
+        <dt class="results__list-value">5 кг</dt>
+        <dd class="results__list-info">снижение веса</dd>
+        <dt class="results-list-value">60 дней</dt>
+        <dd class="results-list-info">затрачено времени</dd>
+    </dl>
+    <span class="results__total">Затраты на питание: 15 000 руб.</span>
+    <div class="results__photo">
+      <img class="results__photo-item results__photo-item--before" src="img/logo.svg" width="311" height="232"
+           alt="Фото кота до">
+      <img class="results__photo-item results__photo-item--after" src="img/logo.svg" width="311" height="232"
+           alt="Фото кота после">
     </div>
-    <div class="example__range">
-      <button class="example__range-button example__range-button--before" type="button">Было</button>
-      <span class="example__range-scale"></span>
-      <button class="example__range-button example__range-button--after" type="button">Стало</button>
+    <div class="results__range">
+      <button class="results__range-button results__range-button--before" type="button">Было</button>
+      <span class="results__range-scale"></span>
+      <button class="results__range-button results__range-button--after" type="button">Стало</button>
     </div>
   </section>
   <section class="contacts">
+    <h2 class="visually-hidden">Как нас найти</h2>
     <p class="contacts__article">Приглашаем к сотрудничеству дилеров!</p>
     <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
     <iframe class="contacts__map"></iframe>
@@ -97,26 +96,26 @@
   <img class="footer__logo-item" src="logo.svg" width="128" height="24" alt="Логотип сайта Cat Energy">
   <ul class="social-list">
     <li class="social-list__item">
-      <a class="social-list__item-link" href="" aria-label="Перейти во вконтакте">
-        <img class="social-list__item-icon" src="pic.svg" width="22" height="12" alt="Вконтакте">
+      <a class="social-list__link" href="" aria-label="Перейти во вконтакте">
+        <img class="social-list__icon" src="pic.svg" width="22" height="12" alt="Вконтакте">
       </a>
     </li>
     <li class="social-list__item">
-      <a class="social-list__item-link" href="" aria-label="Перейти в инстаграм">
-        <img class="social-list__item-icon" src="pic.svg" width="17" height="17" alt="Инстаграм">
+      <a class="social-list__link" href="" aria-label="Перейти в инстаграм">
+        <img class="social-list__icon" src="pic.svg" width="17" height="17" alt="Инстаграм">
       </a>
     </li>
     <li class="social-list__item">
-      <a class="social-list__item-link" href="" aria-label="Перейти в фейсбук">
-        <img class="social-list__item-icon" src="pic.svg" width="10" height="19" alt="Фейсбук">
+      <a class="social-list__link" href="" aria-label="Перейти в фейсбук">
+        <img class="social-list__icon" src="pic.svg" width="10" height="19" alt="Фейсбук">
       </a>
     </li>
   </ul>
   <div class="developer">
     <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
        aria-label="Перейти на сайт разработчика">
-      <span class="developer__header">HTML Academy</span>
-      <img class="developer__item" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип разработчика">
+      <span class="developer__name">HTML Academy</span>
+      <img class="developer__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип разработчика">
     </a>
   </div>
 </footer>
