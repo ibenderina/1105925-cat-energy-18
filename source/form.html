@@ -30,42 +30,43 @@
 </header>
 <main class="main">
   <form class="menu-form" method="post" action="https://echo.htmlacademy.ru">
-    <h2 class="visually-hidden">Индивидуальный подбор питания для кота</h2>
+    <h1 class="main__header">Подбор программы</h1>
     <p class="menu-form__description">Заполните анкету и мы подберем
       программу питания для вашего кота
     </p>
-    <div class="menu-form__options options">
-      <h3 class="visually-hidden">Личные данные</h3>
+    <h2 class="visually-hidden">Анкета</h2>
+    <fieldset class="menu-form__options options">
+      <legend class="visually-hidden">Личные данные</legend>
       <label class="options__label" for="name">Имя:*</label>
       <input class="options__input" type="text" name="name" id="name" placeholder="Барсик">
       <label class="options__label" for="weight">Вес (кг):*</label>
       <input class="options__input" type="text" name="weight" id="weight" placeholder="7">
       <label class="options__label" for="age">Возраст (лет):</label>
       <input class="options__input" type="text" name="age" id="age" placeholder="7">
-    </div>
-    <div class="menu-form__options options">
-      <h3 class="visually-hidden">Ваша цель</h3>
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="visually-hidden">Ваша цель</legend>
       <input class="options__radio" type="radio" name="losing_weight" id="losing_weight">
       <label class="options__label" for="losing_weight">Похудение</label>
       <input class="options__radio" type="radio" name="gain" id="gain">
       <label class="options__label" for="gain">Набор массы</label>
       <input class="options__radio" type="radio" name="advice" id="advice">
       <label class="options__label" for="advice">Не знаю (Нужен ваш совет)</label>
-    </div>
-    <div class="menu-form__options options">
-      <h3 class="options__header">Контактные данные (владельца кота)</h3>
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="options__header">Контактные данные (владельца кота)</legend>
       <label class="options__label" for="email">E-mail:*</label>
       <input class="options__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
       <label class="options__label" for="phone">Телефон:*</label>
       <input class="options__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
-    </div>
-    <div class="menu-form__options options">
-      <h3 class="options__header">Комментарий</h3>
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="options__header">Комментарий</legend>
       <label class="visually-hidden" for="behavior">Повадки кота</label>
       <textarea class="options__input" name="behavior" id="behavior" placeholder="Расскажите обо всех повадках кота"></textarea>
-    </div>
-    <div class="menu-form__options options">
-      <h3 class="options__header">Дополнительно</h3>
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="options__header">Дополнительно</legend>
       <input class="options__checkbox" type="checkbox" name="supplements1" id="supplements1">
       <label class="options__label" for="supplements1">Сахарозаменитель</label>
       <input class="options__checkbox" type="checkbox" name="supplements2" id="supplements2">
@@ -74,7 +75,7 @@
       <label class="options__label" for="supplements3">Молоко</label>
       <input class="options__checkbox" type="checkbox" name="supplements4" id="supplements4">
       <label class="options__label" for="supplements4">Витамины</label>
-    </div>
+    </fieldset>
     <button class="menu-form__options-button" type="submit">Отправить заявку</button>
     <span class="menu-form__options-note">* — Обязательные поля</span>
   </form>
@@ -86,7 +87,9 @@
   </section>
 </main>
 <footer class="footer">
-  <img class="footer__logo-item" src="logo.svg" width="128" height="24" alt="Логотип сайта Cat Energy">
+  <a class="footer__logo-link" href="index.ru" aria-label="Перейти на главную страницу сайта 'Cat Energy'">
+    <img class="footer__logo" src="logo.svg" width="128" height="24" alt="Логотип сайта 'Cat Energy'">
+  </a>
   <ul class="social-list">
     <li class="social-list__item">
       <a class="social-list__link" href="" aria-label="Перейти во вконтакте">
