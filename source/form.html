@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <a class="header__logo-link" href="index.html" aria-label="Перейти на главную сайта'Cat Energy'">
+    <img class="header__logo" src="img/logo.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button" aria-label="Развернуть меню"></button>
+    <ul class="main-nav__list">
+      <li class="main-nav__list-item">
+        <a class="main-nav__list-link" href="index.html">Главная
+        </a>
+      </li>
+      <li class="main-nav__list-item">
+        <a class="main-nav__list-link" href="catalog.html">Каталог продукции
+        </a>
+      </li>
+      <li class="main-nav__list-item">
+        <a class="main-nav__list-link main-nav__list-link--active">Подбор программы
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="main">
+  <form class="menu-form" method="post" action="https://echo.htmlacademy.ru">
+    <h1 class="main__header">Подбор программы</h1>
+    <p class="menu-form__description">Заполните анкету и мы подберем
+      программу питания для вашего кота
+    </p>
+    <h2 class="visually-hidden">Анкета</h2>
+    <fieldset class="menu-form__options options">
+      <legend class="visually-hidden">Личные данные</legend>
+      <label class="options__label" for="name">Имя:*</label>
+      <input class="options__input" type="text" name="name" id="name" placeholder="Барсик">
+      <label class="options__label" for="weight">Вес (кг):*</label>
+      <input class="options__input" type="text" name="weight" id="weight" placeholder="7">
+      <label class="options__label" for="age">Возраст (лет):</label>
+      <input class="options__input" type="text" name="age" id="age" placeholder="7">
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="visually-hidden">Ваша цель</legend>
+      <input class="options__radio" type="radio" name="losing_weight" id="losing_weight" checked>
+      <label class="options__label" for="losing_weight">Похудение</label>
+      <input class="options__radio" type="radio" name="gain" id="gain">
+      <label class="options__label" for="gain">Набор массы</label>
+      <input class="options__radio" type="radio" name="advice" id="advice">
+      <label class="options__label" for="advice">Не знаю (Нужен ваш совет)</label>
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="options__header">Контактные данные (владельца кота)</legend>
+      <label class="options__label" for="email">E-mail:*</label>
+      <input class="options__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+      <label class="options__label" for="phone">Телефон:*</label>
+      <input class="options__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="options__header">Комментарий</legend>
+      <label class="visually-hidden" for="behavior">Повадки кота</label>
+      <textarea class="options__input" name="behavior" id="behavior" placeholder="Расскажите обо всех повадках кота"></textarea>
+    </fieldset>
+    <fieldset class="menu-form__options options">
+      <legend class="options__header">Дополнительно</legend>
+      <input class="options__checkbox" type="checkbox" name="supplements1" id="supplements1" checked>
+      <label class="options__label" for="supplements1">Сахарозаменитель</label>
+      <input class="options__checkbox" type="checkbox" name="supplements2" id="supplements2">
+      <label class="options__label" for="supplements2">Питьевая вода</label>
+      <input class="options__checkbox" type="checkbox" name="supplements3" id="supplements3">
+      <label class="options__label" for="supplements3">Молоко</label>
+      <input class="options__checkbox" type="checkbox" name="supplements4" id="supplements4">
+      <label class="options__label" for="supplements4">Витамины</label>
+    </fieldset>
+    <button class="menu-form__options-button" type="submit">Отправить заявку</button>
+    <span class="menu-form__options-note">* — Обязательные поля</span>
+  </form>
+  <section class="contacts">
+    <h2 class="visually-hidden">Как нас найти</h2>
+    <p class="contacts__article">Приглашаем к сотрудничеству дилеров!</p>
+    <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <iframe class="contacts__map"></iframe>
+  </section>
+</main>
+<footer class="footer">
+  <a class="footer__logo-link" href="index.ru" aria-label="Перейти на главную страницу сайта 'Cat Energy'">
+    <img class="footer__logo" src="logo.svg" width="128" height="24" alt="Логотип сайта 'Cat Energy'">
+  </a>
+  <ul class="social-list">
+    <li class="social-list__item">
+      <a class="social-list__link" href="" aria-label="Перейти во вконтакте">
+        <img class="social-list__icon" src="pic.svg" width="22" height="12" alt="Вконтакте">
+      </a>
+    </li>
+    <li class="social-list__item">
+      <a class="social-list__link" href="" aria-label="Перейти в инстаграм">
+        <img class="social-list__icon" src="pic.svg" width="17" height="17" alt="Инстаграм">
+      </a>
+    </li>
+    <li class="social-list__item">
+      <a class="social-list__link" href="" aria-label="Перейти в фейсбук">
+        <img class="social-list__icon" src="pic.svg" width="10" height="19" alt="Фейсбук">
+      </a>
+    </li>
+  </ul>
+  <div class="developer">
+    <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
+       aria-label="Перейти на сайт разработчика">
+      <span class="developer__name">HTML Academy</span>
+      <img class="developer__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип разработчика">
+    </a>
+  </div>
+</footer>
+</body>
+</html>
