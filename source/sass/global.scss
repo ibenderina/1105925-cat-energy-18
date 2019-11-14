@@ -1,0 +1,44 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+//стилизация ul
+.main-nav__list,
+.programs__list,
+.benefits__list,
+.social-list,
+.catalog__list,
+.product-list {
+  list-style-type: none;
+}
+
+//стилизация заголовков
+.benefits__header,
+.results__header,
+.main__header {
+  font-family: Oswald;
+  font-size: 36px;
+  text-align: left;
+  font-weight: 500;
+  color: #111111;
+}
+
+//отступы по бокам для некоторых блоков
+.benefits,
+.programs,
+.results,
+.menu-form,
+.footer {
+  padding: 0 20px;
+}

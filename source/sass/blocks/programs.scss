@@ -1,0 +1,127 @@
+.programs__select-link {
+  display: inline-block;
+  padding: 10px 73px;
+  background-color: #68b738;
+
+  color: #ffffff;
+  font-family: Oswald;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.programs__select-link:hover,
+.programs__select-link:focus {
+  background-color: #5eaa2f;
+}
+
+.programs__select-link:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5eaa2f;
+}
+
+.programs__list {
+  padding: 9px 0 0 0;
+}
+
+.programs-item {
+  position: relative;
+  padding: 40px 19px 36px 19px;
+  margin: 0 0 10px 0;
+
+  background-color: #f2f2f2;
+}
+
+.programs-item__header {
+  margin: 0;
+  padding-right: 61px;
+
+  text-align: right;
+}
+
+.programs-item__header,
+.programs-item__link {
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 500;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.programs-item__header::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  left: 22px;
+  top: 24px;
+
+  background-color: #68b738;
+  border-radius: 50%;
+}
+
+.programs-item__header--slim::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 49px;
+  left: 30px;
+  top: 23px;
+
+  background-image: url("/img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+}
+
+.programs-item__header--pro::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 67px;
+  height: 28px;
+  left: 6px;
+  top: 55px;
+
+  background-image: url("/img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+}
+
+.programs-item__description {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 39px 0 22px 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.programs-item__link {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.programs-item__link::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 12px;
+  margin-left: 10px;
+
+  background-image: url("/img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+}
+
+.programs-item__link:hover::after,
+.programs-item__link:focus::after {
+  width: 34px;
+  height: 12px;
+
+  background-image: url("/img/icon-right-arrow-verylong.svg");
+}
+
+.programs-item__link:active::after {
+  color: rgba(17, 17, 17, 0.3);
+}
