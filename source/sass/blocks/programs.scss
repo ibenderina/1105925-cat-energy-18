@@ -29,8 +29,8 @@
 
 .programs-item {
   position: relative;
-  padding: 40px 19px 36px 19px;
-  margin: 0 0 10px 0;
+  padding: 40px 19px 19px 19px;
+  margin: 0 0 20px 0;
 
   background-color: #f2f2f2;
 }
@@ -40,6 +40,10 @@
   padding-right: 61px;
 
   text-align: right;
+}
+
+.programs-item__header--pro {
+  padding-right: 33px;
 }
 
 .programs-item__header,
@@ -83,8 +87,8 @@
   display: inline-block;
   width: 67px;
   height: 28px;
-  left: 6px;
-  top: 55px;
+  left: 13px;
+  top: 35px;
 
   background-image: url("/img/icon-cat-pro.svg");
   background-repeat: no-repeat;
@@ -92,8 +96,8 @@
 
 .programs-item__description {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 39px 0 22px 0;
-  margin: 0;
+  padding: 39px 0 21px 0;
+  margin: 0 0 18px 0;
 
   font-size: 14px;
 }
@@ -108,7 +112,7 @@
   display: inline-block;
   width: 25px;
   height: 12px;
-  margin-left: 10px;
+  margin-left: 11px;
 
   background-image: url("/img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;

@@ -2,11 +2,20 @@
   position: relative;
 }
 
+.benefits__header {
+  margin: 38px 0 49px 0;
+}
+
 .benefits__list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0;
+  margin: 0;
+}
+
+.benefits__list-text {
+  padding-top: 2px;
 }
 
 .benefits__list-item {

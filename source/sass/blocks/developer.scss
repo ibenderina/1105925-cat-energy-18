@@ -1,4 +1,15 @@
 .developer__link {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  align-items: center;
+
+  text-decoration: none;
 }
+
+.developer__name {
+  color: #444444;
+  font-size: 16px;
+}
+
+

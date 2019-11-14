@@ -1,20 +1,29 @@
+.contacts__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 13px 20px 0 20px;
+}
+
 .contacts__text {
   display: inline-block;
   vertical-align: middle;
-  width: 40%;
-  padding-left: 20px;
+  width: 44%;
 
   font-family: Oswald;
   font-size: 16px;
   font-weight: 500;
+  line-height: 20px;
   color: #111111;
   text-transform: uppercase;
 }
 
 .contacts__address {
   display: inline-block;
-  width: 40%;
-  padding-right: 20px;
+  width: 50%;
+  padding-top: 3px;
+
+  line-height: 20px;
 }
 
 .contacts__map {
