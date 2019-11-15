@@ -1,0 +1,47 @@
+.menu-form__description {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #111111;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.options__label {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #222222;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.options__input::placeholder {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.options__header {
+  font-family: "Oswald", sans-serif;
+  color: #111111;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.menu-form__options-button {
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.menu-form__options-note {
+  font-size: 14px;
+  line-height: 16px;
+}

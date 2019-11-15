@@ -3,10 +3,11 @@
   padding: 10px 73px;
   background-color: #68b738;
 
+  font-family: "Oswald", sans-serif;
   color: #ffffff;
-  font-family: Oswald;
   font-size: 14px;
-  font-weight: 400;
+  line-height: 18px;
+  font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -39,7 +40,14 @@
   margin: 0;
   padding-right: 61px;
 
+  font-size: 24px;
+  line-height: 37px;
   text-align: right;
+}
+
+.programs-item__link {
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .programs-item__header--pro {
@@ -48,8 +56,7 @@
 
 .programs-item__header,
 .programs-item__link {
-  font-family: Oswald;
-  font-size: 24px;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   color: #111111;
   text-transform: uppercase;

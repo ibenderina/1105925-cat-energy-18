@@ -4,16 +4,19 @@
   padding-top: 28px;
   margin-bottom: 135px;
 
-  font-family: Oswald;
-  text-align: center;
-  font-weight: 500;
-  color: #ffffff;
-
   background-image: url("/img/index-background-mobile@1x.jpg");
   background-color: #68b738;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.about__header,
+.about__description {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .about__header {

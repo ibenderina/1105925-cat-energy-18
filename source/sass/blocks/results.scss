@@ -25,8 +25,9 @@
 }
 
 .results__list-value {
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-size: 24px;
+  line-height: 24px;
   font-weight: 500;
   color: #111111;
 }
@@ -40,8 +41,9 @@
 }
 
 .results__total {
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
   color: #111111;
   text-transform: uppercase;
@@ -55,10 +57,11 @@
 }
 
 .results__range-button {
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   color: #111111;
   text-transform: uppercase;
   font-size: 16px;
+  line-height: 20px;
   font-weight: 500;
 
   border: none;

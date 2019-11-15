@@ -12,6 +12,7 @@
   position: relative;
 
   font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: #ffffff;
 }
@@ -30,4 +31,30 @@
 
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.add-products__header {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  color: #111111;
+  font-weight: 500;
+}
+
+.product-list__item {
+  border-bottom: solid 1px #ededed;
+}
+
+.product-list__name {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  font-weight: 500;
+}
+
+.contain__text,
+.contain__description {
+  font-size: 14px;
+  line-height: 14px;
 }

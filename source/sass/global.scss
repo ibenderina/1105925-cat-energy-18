@@ -23,7 +23,7 @@
   list-style-type: none;
 }
 
-//стилизация заголовков
+//стилизация заголовков h1
 .benefits__header,
 .results__header,
 .main__header {
@@ -31,6 +31,7 @@
   font-size: 36px;
   text-align: left;
   font-weight: 500;
+  line-height: 60px;
   color: #111111;
 }
 
