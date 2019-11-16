@@ -10,3 +10,12 @@
 
   border-bottom: solid 1px #ededed;
 }
+
+.header__logo:hover,
+.header__logo:focus {
+  opacity: 0.8;
+}
+
+.header__logo:active {
+  opacity: 0.6;
+}

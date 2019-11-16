@@ -13,15 +13,18 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 25px;
-  margin-bottom: 34px;
+  margin-bottom: 61px;
 }
 
 .results__list--style {
-  width: 37%;
-  padding: 13px 9px 0;
+  width: 31%;
+  padding: 14px 17px 0;
+  margin-bottom: -28px;
+
   text-align: center;
+
   border: 1px solid #d9d9d9;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .results__list-value {
@@ -29,15 +32,20 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 500;
+  text-transform: uppercase;
   color: #111111;
 }
 
 .results__list-info {
   margin-left: 0;
-  padding: 0 15px;
+  margin-bottom: -14px;
+  padding-top: 7px;
 
   font-size: 12px;
   line-height: 12px;
+  word-spacing: 30px;
+
+  background-color: #f2f2f2;
 }
 
 .results__total {

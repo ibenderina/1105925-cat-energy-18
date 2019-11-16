@@ -1,6 +1,3 @@
-.catalog {
-
-}
 
 .main__header {
   margin: 0;
@@ -8,34 +5,48 @@
 }
 
 .catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
 .catalog-item {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0;
-  width: 100%;
+  padding: 20px 20px;
 
-  border: solid 1px #ededed;
-  border-spacing: collapse;
+  border-bottom: solid 1px #ededed;
 }
 
-.catalog-item__img {
-  width: 50%;
-  flex-grow: 1;
+.catalog-item:first-of-type {
+  border-top: solid 1px #ededed;
+}
+
+.catalog-item:last-of-type {
+  display: block;
+  text-align: center;
+
+  .catalog-item__header {
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .catalog-item__img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .catalog-item__info {
-  width: 50%;
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 49%;
 }
 
 .catalog-item__header {
   position: relative;
+  padding: 0 50px 0 0;
 
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
@@ -44,31 +55,14 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
-  text-align: center;
-}
-
-.catalog-item:last-child .catalog-item__header::before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 31px;
-  height: 31px;
-  top: -48px;
-  left: 120px;
-
-  background-image: url("/img/icon-plus-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.catalog-item:last-child {
-  padding: 50px 0 10px 0;
+  text-align: left;
 }
 
 .catalog-item__link {
-  width: 100%;
-  flex-grow: 2;
+  display: block;
+  flex-grow: 1;
   padding: 12px 0;
+  width: 100%;
 
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
@@ -82,10 +76,32 @@
   background-color: #68b738;
 }
 
+.catalog-item__link:hover,
+.catalog-item__link:focus {
+  background-color: #5eaa2f;
+}
+
+.catalog-item__link:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5eaa2f;
+}
+
 .catalog-item__link--more {
   color: #444444;
 
   background-color: #f2f2f2;
+}
+
+.catalog-item__link--more:hover,
+.catalog-item__link--more:focus {
+  background-color: #ebebeb;
+}
+
+.catalog-item__link--more:active {
+  color: rgba(68, 68, 68, 0.3);
+
+  background-color: #ebebeb;
 }
 
 .features {
@@ -101,11 +117,13 @@
 
 .features__text {
   display: inline-block;
-  width: 50%;
+  width: 48%;
 }
 
 .features__description {
-  display: inline;
+  display: inline-block;
   margin: 0;
-  width: 50%;
+  width: 49%;
+
+  text-align: right;
 }

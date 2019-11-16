@@ -41,20 +41,45 @@
   font-weight: 500;
 }
 
+.product-list {
+  padding: 0;
+}
+
 .product-list__item {
-  border-bottom: solid 1px #ededed;
+  margin: 0;
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.product-list__item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .product-list__name {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
   color: #222222;
   font-weight: 500;
 }
 
+.product-list__contain {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .contain__text,
 .contain__description {
+  margin: 0;
+  width: 49%;
+
   font-size: 14px;
   line-height: 14px;
+}
+
+.contain__description {
+  text-align: right;
 }

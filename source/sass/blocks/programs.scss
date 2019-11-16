@@ -133,6 +133,7 @@
   background-image: url("/img/icon-right-arrow-verylong.svg");
 }
 
-.programs-item__link:active::after {
-  color: rgba(17, 17, 17, 0.3);
+.programs-item__link:active {
+  opacity: 0.3;
+
 }
