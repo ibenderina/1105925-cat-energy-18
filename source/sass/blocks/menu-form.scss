@@ -14,6 +14,17 @@
   border: none;
 }
 
+.options:nth-of-type(3),
+.options:nth-of-type(4),
+.options:nth-of-type(5) {
+  border-top: solid 3px #68b738;
+  margin-right: -20px;
+
+  .options__label {
+    padding-right: 20px;
+  }
+}
+
 .options:nth-of-type(2) {
   margin: 0 -20px;
   padding: 20px;
@@ -64,12 +75,16 @@
 
 .options__input:active,
 .options__textarea:active {
-  border: solid 1px #444444;
+  padding: 9px 12px 9px 13px;
+
+  border: solid 2px #444444;
 }
 
 .options__input--error,
 .options__textarea--error {
-  border: solid 1px #ff8282;
+  padding: 9px 12px 9px 13px;
+
+  border: solid 2px #ff8282;
 }
 
 .options__input::placeholder {
@@ -81,9 +96,39 @@
   font-weight: 500;
 }
 
+.options__input--email::after,
+.options__input--phone::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 7px;
+  right: 30px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.options__input--email::after {
+  width: 18px;
+  height: 14px;
+
+  background-image: url(/img/icon-mail.svg);
+}
+
+.options__input--phone::after {
+  width: 21px;
+  height: 21px;
+
+  background-image: url(/img/icon-phone.svg);
+}
+
 .options__header {
-  display: inline;
-  margin: 30px 0;
+  display: inline-block;
+  margin: 0 77px 0 0;
+  vertical-align: middle;
+  padding: 4px 22px 10px 0;
 
   font-family: "Oswald", sans-serif;
   color: #111111;
