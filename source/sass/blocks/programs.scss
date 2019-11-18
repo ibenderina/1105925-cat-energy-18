@@ -1,29 +1,3 @@
-.programs__select-link {
-  display: inline-block;
-  padding: 10px 73px;
-  background-color: #68b738;
-
-  font-family: "Oswald", sans-serif;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.programs__select-link:hover,
-.programs__select-link:focus {
-  background-color: #5eaa2f;
-}
-
-.programs__select-link:active {
-  color: rgba(255, 255, 255, 0.3);
-
-  background-color: #5eaa2f;
-}
-
 .programs__list {
   padding: 9px 0 0 0;
 }

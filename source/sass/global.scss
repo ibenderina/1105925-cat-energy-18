@@ -42,3 +42,37 @@
 .add-products {
   padding: 0 20px;
 }
+
+.main__header {
+  margin: 0;
+  padding: 20px;
+}
+
+.button-link {
+  display: block;
+  flex-grow: 1;
+  padding: 12px 0;
+  width: 100%;
+
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  text-align: center;
+
+  background-color: #68b738;
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: #5eaa2f;
+}
+
+.button-link:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5eaa2f;
+}
