@@ -69,12 +69,14 @@
     <fieldset class="menu-form__options options">
       <legend class="options__header">Контактные данные (владельца кота)</legend>
       <label class="options__label" for="email">
-        <span class="options__name options__input--email">E-mail:*</span>
-        <input class="options__input options__input--error" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+        <span class="options__name">E-mail:*</span>
+        <input class="options__input options__input--error" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+        <span class="options__input--email"></span>
       </label>
       <label class="options__label" for="phone">
-        <span class="options__name options__input--phone">Телефон:*</span>
+        <span class="options__name">Телефон:*</span>
         <input class="options__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+        <span class="options__input--phone"></span>
       </label>
     </fieldset>
     <fieldset class="menu-form__options options">

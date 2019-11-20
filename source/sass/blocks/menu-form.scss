@@ -38,13 +38,6 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
-
-  &:focus {
-    .options__input--email::after,
-    .options__input--phone::after {
-      filter: none;
-    }
-  }
 }
 
 .options__name {
@@ -78,6 +71,11 @@
 .options__input:hover,
 .options__textarea:hover {
   border: 1px solid rgba(205, 205, 205, 1);
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: none;
+  }
 }
 
 .options__input:focus,
@@ -85,6 +83,23 @@
   padding: 9px 12px 9px 13px;
 
   border: solid 2px #444444;
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: none;
+  }
+}
+
+.options__input:invalid,
+.options__textarea:invalid {
+  padding: 9px 12px 9px 13px;
+
+  border: solid 2px #ff8282;
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: brightness(0.6) saturate(159%) invert(1) hue-rotate(90deg);
+  }
 }
 
 .options__input--email::after,
