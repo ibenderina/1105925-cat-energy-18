@@ -5,6 +5,20 @@
   align-items: center;
 
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .developer__img {
+      filter: none;
+    }
+  }
+
+  &:active {
+    .developer__img,
+    .developer__name {
+      opacity: 0.3;
+    }
+  }
 }
 
 .developer__name {
@@ -16,18 +30,3 @@
 .developer__img {
   filter: grayscale(1) brightness(2) invert(1);
 }
-
-.developer__link:hover,
-.developer__link:focus {
-  .developer__img {
-    filter: none;
-  }
-}
-
-.developer__link:active {
-  .developer__img,
-  .developer__name {
-    opacity: 0.3;
-  }
-}
-

@@ -2,23 +2,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
   padding: 10px 0;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  list-style-type: none;
 }
 
 .social-list__icon {
   filter: grayscale(1) brightness(2) invert(1);
 }
 
-.social-list__icon:hover,
-.social-list__icon:focus {
-  filter: none;
+.social-list__link {
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
+    filter: none;
+  }
+
+  &:active .social-list__icon {
+    opacity: 0.3;
+  }
 }
-
-.social-list__icon:active {
-  opacity: 0.3;
-}
-
-
-

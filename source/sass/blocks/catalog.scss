@@ -1,6 +1,10 @@
+@import "../mixin.scss";
+
 .catalog__list {
   margin: 0;
   padding: 0;
+
+  list-style-type: none;
 }
 
 .catalog-item {
@@ -10,25 +14,27 @@
   padding: 20px 20px;
 
   border-bottom: solid 1px #ededed;
-}
 
-.catalog-item:first-of-type {
-  border-top: solid 1px #ededed;
-}
-
-.catalog-item:last-of-type {
-  display: block;
-  text-align: center;
-
-  .catalog-item__header {
-    padding: 0;
-
-    text-align: center;
+  &:first-of-type {
+    border-top: solid 1px #ededed;
   }
 
-  .catalog-item__img {
+  &:last-of-type {
     display: block;
-    width: 100%;
+    text-align: center;
+
+    .catalog-item__header {
+      padding: 0;
+
+      text-align: center;
+    }
+
+    .catalog-item__img {
+      display: block;
+      width: 100%;
+
+      opacity: 0.2;
+    }
   }
 }
 
@@ -42,51 +48,38 @@
   position: relative;
   padding: 0 50px 0 0;
 
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
+  @include Oswald-style(16px, 20px, #111111, left, uppercase);
   text-decoration: none;
-  color: #111111;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-  text-align: left;
 }
 
+.catalog-item__link {
+  &--more {
+    display: block;
+    flex-grow: 1;
+    padding: 12px 0;
+    width: 100%;
 
+    @include Oswald-style(16px, 20px, #444444, center, uppercase);
+    text-decoration: none;
 
+    background-color: #f2f2f2;
+  }
 
+  &--more:hover,
+  &--more:focus {
+    background-color: #ebebeb;
+  }
 
-.catalog-item__link--more {
-  display: block;
-  flex-grow: 1;
-  padding: 12px 0;
-  width: 100%;
+  &--more:active {
+    color: rgba(68, 68, 68, 0.3);
 
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #444444;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-  text-align: center;
-
-  background-color: #f2f2f2;
-}
-
-.catalog-item__link--more:hover,
-.catalog-item__link--more:focus {
-  background-color: #ebebeb;
-}
-
-.catalog-item__link--more:active {
-  color: rgba(68, 68, 68, 0.3);
-
-  background-color: #ebebeb;
+    background-color: #ebebeb;
+  }
 }
 
 .features {
   display: inline-block;
+  vertical-align: middle;
   width: 100%;
 }
 
@@ -98,13 +91,38 @@
 
 .features__text {
   display: inline-block;
+  vertical-align: middle;
   width: 48%;
 }
 
 .features__description {
   display: inline-block;
+  vertical-align: middle;
   margin: 0;
   width: 49%;
 
   text-align: right;
+}
+
+.button-link {
+  display: block;
+  flex-grow: 1;
+  padding: 12px 0;
+  width: 100%;
+
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
+  text-decoration: none;
+
+  background-color: #68b738;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5eaa2f;
+  }
 }

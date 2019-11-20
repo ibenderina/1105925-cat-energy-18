@@ -1,10 +1,11 @@
+@import "../mixin.scss";
+
+.menu-form {
+  padding: 0 20px;
+}
+
 .menu-form__description {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: #111111;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
+  @include Oswald-style(14px, 18px, #111111, left, uppercase);
 }
 
 .options {
@@ -12,23 +13,23 @@
   margin: 0;
 
   border: none;
-}
 
-.options:nth-of-type(3),
-.options:nth-of-type(4),
-.options:nth-of-type(5) {
-  border-top: solid 3px #68b738;
-  margin-right: -20px;
-
-  .options__label {
-    padding-right: 20px;
+  &:nth-of-type(2) {
+    margin: 0 -20px;
+    padding: 20px;
+    border: 1px solid #ededed;
   }
-}
 
-.options:nth-of-type(2) {
-  margin: 0 -20px;
-  padding: 20px;
-  border: 1px solid #ededed;
+  &:nth-of-type(3),
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    border-top: solid 3px #68b738;
+    margin-right: -20px;
+
+    .options__label {
+      padding-right: 20px;
+    }
+  }
 }
 
 .options__label {
@@ -37,6 +38,13 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
+
+  &:focus {
+    .options__input--email::after,
+    .options__input--phone::after {
+      filter: none;
+    }
+  }
 }
 
 .options__name {
@@ -44,12 +52,7 @@
   align-items: center;
   padding-right: 15px;
 
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: #222222;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
+  @include Oswald-style(16px, 18px, #222222, left, uppercase);
   white-space: nowrap;
 }
 
@@ -59,6 +62,10 @@
 
   border: 1px solid rgba(205, 205, 205, 0.5);
   outline: none;
+
+  &::placeholder {
+    @include Oswald-style(16px, 18px, #444444, left, uppercase);
+  }
 }
 
 .options__textarea {
@@ -73,27 +80,11 @@
   border: 1px solid rgba(205, 205, 205, 1);
 }
 
-.options__input:active,
-.options__textarea:active {
+.options__input:focus,
+.options__textarea:focus {
   padding: 9px 12px 9px 13px;
 
   border: solid 2px #444444;
-}
-
-.options__input--error,
-.options__textarea--error {
-  padding: 9px 12px 9px 13px;
-
-  border: solid 2px #ff8282;
-}
-
-.options__input::placeholder {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: #444444;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
 }
 
 .options__input--email::after,
@@ -105,6 +96,8 @@
   top: 7px;
   right: 30px;
 
+  filter: grayscale(1) brightness(2) invert(1);
+
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -114,14 +107,14 @@
   width: 18px;
   height: 14px;
 
-  background-image: url(/img/icon-mail.svg);
+  background-image: url("../../img/icon-mail.svg");
 }
 
 .options__input--phone::after {
   width: 21px;
   height: 21px;
 
-  background-image: url(/img/icon-phone.svg);
+  background-image: url("../../img/icon-phone.svg");
 }
 
 .options__header {
@@ -130,19 +123,11 @@
   vertical-align: middle;
   padding: 4px 22px 10px 0;
 
-  font-family: "Oswald", sans-serif;
-  color: #111111;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 500;
+  @include Oswald-style(24px, 24px, #111111, left, none);
 }
 
 .menu-form__options-button {
-  font-family: "Oswald", sans-serif;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  @include Oswald-style(16px, 20px, #ffffff, center, none);
 }
 
 .menu-form__options-note {
@@ -150,18 +135,18 @@
   text-align: center;
 }
 
-//Ниже стилизация radio / checkbox
-.options__checkbox:not(:disabled):hover + label::before {
+.options__checkbox:hover + .options__name::before,
+.options__radio:hover + .options__name::before {
   border: solid 1px #bababa;
 }
 
-.options__checkbox:disabled + .options__name,
-.options__radio:disabled + .options__name {
+.options__checkbox:active + .options__name,
+.options__radio:active + .options__name {
   opacity: 0.3;
   border-color: #bababa;
 }
 
-.options__checkbox:focus + label,
+.options__checkbox:focus + .options__name,
 .options__radio:focus + .options__name {
   outline: -webkit-focus-ring-color auto 5px;
 }
@@ -170,7 +155,7 @@
   content: "";
 
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -182,13 +167,14 @@
   content: "";
 
   display: inline-block;
+  vertical-align: middle;
   position: absolute;
   top: 10px;
   left: 6px;
   width: 22px;
   height: 17px;
 
-  background-image: url(/img/icon-tick.svg);
+  background-image: url("../../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -198,7 +184,7 @@
   content: "";
 
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -215,7 +201,7 @@
   top: 10px;
   left: 6px;
 
-  vertical-align: center;
+  vertical-align: middle;
   width: 12px;
   height: 12px;
   margin-right: 5px;
@@ -223,4 +209,27 @@
 
   border-radius: 25px;
   background-color: #68b738;
+}
+
+.button-link {
+  display: block;
+  flex-grow: 1;
+  padding: 12px 0;
+  width: 100%;
+
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
+  text-decoration: none;
+
+  background-color: #68b738;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5eaa2f;
+  }
 }

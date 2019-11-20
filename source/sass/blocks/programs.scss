@@ -1,5 +1,13 @@
+@import "../mixin.scss";
+
+.programs {
+  padding: 0 20px;
+}
+
 .programs__list {
   padding: 9px 0 0 0;
+
+  list-style-type: none;
 }
 
 .programs-item {
@@ -14,65 +22,82 @@
   margin: 0;
   padding-right: 61px;
 
-  font-size: 24px;
-  line-height: 37px;
-  text-align: right;
+  @include Oswald-style(24px, 37px, #111111, right, none);
+
+  &--pro {
+    padding-right: 33px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    left: 22px;
+    top: 24px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+
+  &--slim::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 49px;
+    left: 30px;
+    top: 23px;
+
+    background-image: url("../../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--pro::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 67px;
+    height: 28px;
+    left: 13px;
+    top: 35px;
+
+    background-image: url("../../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .programs-item__link {
-  font-size: 16px;
-  line-height: 16px;
-}
+  @include Oswald-style(16px, 16px, #111111, right, uppercase);
+  text-decoration: none;
 
-.programs-item__header--pro {
-  padding-right: 33px;
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 12px;
+    margin-left: 11px;
 
-.programs-item__header,
-.programs-item__link {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  color: #111111;
-  text-transform: uppercase;
-}
+    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
 
-.programs-item__header::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  left: 22px;
-  top: 24px;
+  &:hover::after,
+  &:focus::after {
+    width: 34px;
+    height: 12px;
 
-  background-color: #68b738;
-  border-radius: 50%;
-}
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+  }
 
-.programs-item__header--slim::after {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 35px;
-  height: 49px;
-  left: 30px;
-  top: 23px;
-
-  background-image: url("/img/icon-cat-slim.svg");
-  background-repeat: no-repeat;
-}
-
-.programs-item__header--pro::after {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 67px;
-  height: 28px;
-  left: 13px;
-  top: 35px;
-
-  background-image: url("/img/icon-cat-pro.svg");
-  background-repeat: no-repeat;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .programs-item__description {
@@ -83,31 +108,25 @@
   font-size: 14px;
 }
 
-.programs-item__link {
-  font-size: 16px;
+.button-link {
+  display: block;
+  flex-grow: 1;
+  padding: 12px 0;
+  width: 100%;
+
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
   text-decoration: none;
+
+  background-color: #68b738;
 }
 
-.programs-item__link::after {
-  content: "";
-  display: inline-block;
-  width: 25px;
-  height: 12px;
-  margin-left: 11px;
-
-  background-image: url("/img/icon-right-arrow-long.svg");
-  background-repeat: no-repeat;
+.button-link:hover,
+.button-link:focus {
+  background-color: #5eaa2f;
 }
 
-.programs-item__link:hover::after,
-.programs-item__link:focus::after {
-  width: 34px;
-  height: 12px;
+.button-link:active {
+  color: rgba(255, 255, 255, 0.3);
 
-  background-image: url("/img/icon-right-arrow-verylong.svg");
-}
-
-.programs-item__link:active {
-  opacity: 0.3;
-
+  background-color: #5eaa2f;
 }

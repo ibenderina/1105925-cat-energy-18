@@ -1,11 +1,15 @@
-.add-products__gifts {
-  background-image: url("/img/gift-photo-mobile@1x.jpg");
-  background-color: #68b738;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+@import "../mixin.scss";
 
+.add-products {
+  padding: 0 20px;
+}
+
+.add-products__gifts {
   padding: 232px 79px 32px 70px;
+
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+
+  @include back(#68b738);
 }
 
 .add-products__gifts-text {
@@ -15,34 +19,31 @@
   line-height: 20px;
   text-align: center;
   color: #ffffff;
-}
 
-.add-products__gifts-text::before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-  top: -154px;
-  left: 39px;
-  width: 56px;
-  height: 61px;
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: -154px;
+    left: 39px;
+    width: 56px;
+    height: 61px;
 
-  background-image: url("/img/icon-gift.svg");
+    background-image: url("../../img/icon-gift.svg");
 
-  background-repeat: no-repeat;
-  background-size: cover;
+    @include back(transparent);
+  }
 }
 
 .add-products__header {
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  color: #111111;
-  font-weight: 500;
+  @include Oswald-style(24px, 24px, #111111, left, none);
 }
 
 .product-list {
   padding: 0;
+
+  list-style-type: none;
 }
 
 .product-list__item {
@@ -50,19 +51,14 @@
   padding-bottom: 17px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
 
-.product-list__item:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  &:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
 }
 
 .product-list__name {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #222222;
-  font-weight: 500;
+  @include Oswald-style(16px, 16px, #222222, left, uppercase);
 }
 
 .product-list__contain {
@@ -82,4 +78,27 @@
 
 .contain__description {
   text-align: right;
+}
+
+.button-link {
+  display: block;
+  flex-grow: 1;
+  padding: 12px 0;
+  width: 100%;
+
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
+  text-decoration: none;
+
+  background-color: #68b738;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5eaa2f;
+  }
 }
