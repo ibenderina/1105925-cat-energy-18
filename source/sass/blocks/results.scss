@@ -1,13 +1,12 @@
 @import "../mixin.scss";
 
 .results {
-  padding: 60px 21px 39px 20px;
+  padding: 0 21px 35px 20px;
   background-color: #f2f2f2;
 }
 
 .results__header {
-  margin: 0;
-  padding-bottom: 30px;
+  margin: 39px 0 23px 0;
 
   @include Oswald-style(36px, 60px, #111111, left, none);
 }
@@ -16,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 25px;
+  margin-top: 27px;
   margin-bottom: 61px;
 
   &--style {
@@ -51,10 +50,19 @@
   @include Oswald-style(14px, 20px, #111111, center, uppercase);
 }
 
+.results__photo-item {
+  margin: 21px 0 35px -16px;
+
+  &--after {
+    display: none;
+  }
+}
+
 .results__range {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 38px 0 43px;
 }
 
 .results__range-button {

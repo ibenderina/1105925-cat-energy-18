@@ -5,14 +5,14 @@
 }
 
 .programs__list {
-  padding: 9px 0 0 0;
+  padding: 8px 0 0 0;
 
   list-style-type: none;
 }
 
 .programs-item {
   position: relative;
-  padding: 40px 19px 19px 19px;
+  padding: 30px 32px 19px 19px;
   margin: 0 0 20px 0;
 
   background-color: #f2f2f2;
@@ -20,12 +20,12 @@
 
 .programs-item__header {
   margin: 0;
-  padding-right: 61px;
+  padding-right: 47px;
 
-  @include Oswald-style(24px, 37px, #111111, right, none);
+  @include Oswald-style(24px, 37px, #111111, right, uppercase);
 
   &--pro {
-    padding-right: 33px;
+    padding-right: 19px;
   }
 
   &::before {
@@ -102,31 +102,14 @@
 
 .programs-item__description {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 39px 0 21px 0;
+  padding: 29px 0 24px 0;
   margin: 0 0 18px 0;
 
   font-size: 14px;
+  line-height: 18px;
 }
 
-.button-link {
-  display: block;
-  flex-grow: 1;
-  padding: 12px 0;
-  width: 100%;
-
-  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
-  text-decoration: none;
-
-  background-color: #68b738;
-}
-
-.button-link:hover,
-.button-link:focus {
-  background-color: #5eaa2f;
-}
-
-.button-link:active {
-  color: rgba(255, 255, 255, 0.3);
-
-  background-color: #5eaa2f;
+.programs__select-link {
+  @include green-button(11px 0);
+  @include Oswald-style(14px, 18px, #ffffff, center, uppercase);
 }

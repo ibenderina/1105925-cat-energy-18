@@ -5,7 +5,8 @@
 }
 
 .add-products__gifts {
-  padding: 232px 79px 32px 70px;
+  padding: 171px 59px 27px 60px;
+  margin-bottom: 34px;
 
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
 
@@ -25,8 +26,8 @@
     display: inline-block;
     vertical-align: middle;
     position: absolute;
-    top: -154px;
-    left: 39px;
+    top: -122px;
+    left: 53px;
     width: 56px;
     height: 61px;
 
@@ -37,18 +38,22 @@
 }
 
 .add-products__header {
+  margin: 29px 0 0 0;
+  padding-bottom: 19px;
+
   @include Oswald-style(24px, 24px, #111111, left, none);
 }
 
 .product-list {
   padding: 0;
+  margin-bottom: 40px;
 
   list-style-type: none;
 }
 
 .product-list__item {
   margin: 0;
-  padding-bottom: 17px;
+  padding-bottom: 18px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
@@ -58,6 +63,8 @@
 }
 
 .product-list__name {
+  margin: 14px 0 0 0;
+
   @include Oswald-style(16px, 16px, #222222, left, uppercase);
 }
 
@@ -80,25 +87,7 @@
   text-align: right;
 }
 
-.button-link {
-  display: block;
-  flex-grow: 1;
-  padding: 12px 0;
-  width: 100%;
-
+.product-list__link {
+  @include green-button(9px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
-  text-decoration: none;
-
-  background-color: #68b738;
-
-  &:hover,
-  &:focus {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-
-    background-color: #5eaa2f;
-  }
 }

@@ -11,7 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 0;
-  padding: 20px 20px;
+  padding: 0 20px 24px 20px;
 
   border-bottom: solid 1px #ededed;
 
@@ -22,10 +22,22 @@
   &:last-of-type {
     display: block;
     text-align: center;
+    padding-top: 26px;
 
     .catalog-item__header {
-      padding: 0;
+      padding: 22px 0 0 0;
 
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .catalog-item__text {
+      margin: 0;
+      padding: 8px 0 21px 0;
+
+      font-size: 12px;
+      line-height: 16px;
       text-align: center;
     }
 
@@ -46,17 +58,21 @@
 
 .catalog-item__header {
   position: relative;
-  padding: 0 50px 0 0;
+  margin: 0;
+  padding: 21px 50px 0 0;
 
   @include Oswald-style(16px, 20px, #111111, left, uppercase);
   text-decoration: none;
 }
 
 .catalog-item__link {
+  @include green-button(10px 0);
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
+
   &--more {
     display: block;
     flex-grow: 1;
-    padding: 12px 0;
+    padding: 10px 0;
     width: 100%;
 
     @include Oswald-style(16px, 20px, #444444, center, uppercase);
@@ -81,6 +97,8 @@
   display: inline-block;
   vertical-align: middle;
   width: 100%;
+  margin: 0;
+  padding-top: 11px;
 }
 
 .features__text,
@@ -102,27 +120,4 @@
   width: 49%;
 
   text-align: right;
-}
-
-.button-link {
-  display: block;
-  flex-grow: 1;
-  padding: 12px 0;
-  width: 100%;
-
-  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
-  text-decoration: none;
-
-  background-color: #68b738;
-
-  &:hover,
-  &:focus {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-
-    background-color: #5eaa2f;
-  }
 }

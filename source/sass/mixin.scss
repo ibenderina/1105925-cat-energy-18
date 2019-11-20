@@ -14,3 +14,25 @@
   background-repeat: no-repeat;
   background-color: $background-color;
 }
+
+@mixin green-button($padding) {
+  display: block;
+  flex-grow: 1;
+  padding: $padding;
+  width: 100%;
+
+  text-decoration: none;
+
+  background-color: #68b738;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5eaa2f;
+  }
+}

@@ -2,9 +2,13 @@
 
 .menu-form {
   padding: 0 20px;
+  margin-top: -3px;
 }
 
 .menu-form__description {
+  margin: 0;
+  padding: 0 17px 40px 0;
+
   @include Oswald-style(14px, 18px, #111111, left, uppercase);
 }
 
@@ -36,8 +40,8 @@
   display: flex;
   position: relative;
   justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: baseline;
+  margin-bottom: 14px;
 }
 
 .options__name {
@@ -51,7 +55,7 @@
 
 .options__input {
   width: 100%;
-  padding: 10px 13px 10px 14px;
+  padding: 17px 11px 13px 13px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
   outline: none;
@@ -80,7 +84,7 @@
 
 .options__input:focus,
 .options__textarea:focus {
-  padding: 9px 12px 9px 13px;
+  padding: 16px 10px 12px 12px;
 
   border: solid 2px #444444;
 
@@ -92,7 +96,7 @@
 
 .options__input:invalid,
 .options__textarea:invalid {
-  padding: 9px 12px 9px 13px;
+  padding: 16px 10px 12px 12px;
 
   border: solid 2px #ff8282;
 
@@ -108,8 +112,6 @@
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  top: 7px;
-  right: 30px;
 
   filter: grayscale(1) brightness(2) invert(1);
 
@@ -121,6 +123,8 @@
 .options__input--email::after {
   width: 18px;
   height: 14px;
+  top: 14px;
+  right: 32px;
 
   background-image: url("../../img/icon-mail.svg");
 }
@@ -128,6 +132,8 @@
 .options__input--phone::after {
   width: 21px;
   height: 21px;
+  top: 12px;
+  right: 30px;
 
   background-image: url("../../img/icon-phone.svg");
 }
@@ -142,7 +148,8 @@
 }
 
 .menu-form__options-button {
-  @include Oswald-style(16px, 20px, #ffffff, center, none);
+  @include green-button(9px 0);
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
 }
 
 .menu-form__options-note {
@@ -224,27 +231,4 @@
 
   border-radius: 25px;
   background-color: #68b738;
-}
-
-.button-link {
-  display: block;
-  flex-grow: 1;
-  padding: 12px 0;
-  width: 100%;
-
-  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
-  text-decoration: none;
-
-  background-color: #68b738;
-
-  &:hover,
-  &:focus {
-    background-color: #5eaa2f;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-
-    background-color: #5eaa2f;
-  }
 }
