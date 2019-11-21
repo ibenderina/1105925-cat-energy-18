@@ -1,0 +1,8 @@
+@import "../mixin.scss";
+
+.main__header {
+  margin: 0;
+  padding: 15px 20px 28px 20px;
+
+  @include Oswald-style(36px, 60px, #111111, left, none);
+}

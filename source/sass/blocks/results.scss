@@ -1,0 +1,118 @@
+@import "../mixin.scss";
+
+.results {
+  padding: 0 21px 35px 20px;
+  background-color: #f2f2f2;
+}
+
+.results__header {
+  margin: 39px 0 23px 0;
+
+  @include Oswald-style(36px, 60px, #111111, left, none);
+}
+
+.results__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 27px;
+  margin-bottom: 61px;
+
+  &--style {
+    width: 31%;
+    padding: 14px 17px 0;
+    margin-bottom: -28px;
+
+    text-align: center;
+
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+  }
+}
+
+.results__list-value {
+  @include Oswald-style(24px, 24px, #111111, center, uppercase);
+}
+
+.results__list-info {
+  margin-left: 0;
+  margin-bottom: -14px;
+  padding-top: 7px;
+
+  font-size: 12px;
+  line-height: 12px;
+  word-spacing: 30px;
+
+  background-color: #f2f2f2;
+}
+
+.results__total {
+  @include Oswald-style(14px, 20px, #111111, center, uppercase);
+}
+
+.results__photo-item {
+  margin: 21px 0 35px -16px;
+
+  &--after {
+    display: none;
+  }
+}
+
+.results__range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 38px 0 43px;
+}
+
+.results__range-button {
+  padding: 0;
+
+  @include Oswald-style(16px, 20px, #111111, center, uppercase);
+
+  border: none;
+  border-bottom: dotted 1px rgba(7, 7, 7, 0.23);
+  background: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: solid 1px rgba(7, 7, 7, 0.4);
+  }
+
+  &:active {
+    border-bottom: solid 1px transparent;
+  }
+}
+
+.results__range-scale {
+  position: relative;
+  width: 84px;
+  height: 14px;
+
+  border-radius: 6px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    border: solid 1px #68b738;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 35px;
+    height: 6px;
+
+    border-radius: 10px;
+    background-color: #68b738;
+  }
+}

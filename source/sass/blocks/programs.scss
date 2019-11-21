@@ -1,0 +1,115 @@
+@import "../mixin.scss";
+
+.programs {
+  padding: 0 20px;
+}
+
+.programs__list {
+  padding: 8px 0 0 0;
+
+  list-style-type: none;
+}
+
+.programs-item {
+  position: relative;
+  padding: 30px 32px 19px 19px;
+  margin: 0 0 20px 0;
+
+  background-color: #f2f2f2;
+}
+
+.programs-item__header {
+  margin: 0;
+  padding-right: 47px;
+
+  @include Oswald-style(24px, 37px, #111111, right, uppercase);
+
+  &--pro {
+    padding-right: 19px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    left: 22px;
+    top: 24px;
+
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+
+  &--slim::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 49px;
+    left: 30px;
+    top: 23px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--pro::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 67px;
+    height: 28px;
+    left: 13px;
+    top: 35px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.programs-item__link {
+  @include Oswald-style(16px, 16px, #111111, right, uppercase);
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 12px;
+    margin-left: 11px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 34px;
+    height: 12px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.programs-item__description {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 29px 0 24px 0;
+  margin: 0 0 18px 0;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.programs__select-link {
+  @include green-button(11px 0);
+  @include Oswald-style(14px, 18px, #ffffff, center, uppercase);
+}

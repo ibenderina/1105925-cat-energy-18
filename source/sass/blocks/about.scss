@@ -1,0 +1,29 @@
+@import "../mixin.scss";
+
+.about {
+  position: relative;
+  height: 278px;
+  padding-top: 28px;
+  margin-bottom: 135px;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+
+  @include back(#68b738);
+}
+
+.about__header {
+  margin: 0;
+  padding-bottom: 11px;
+
+  @include Oswald-style(36px, 36px, #ffffff, center, none);
+}
+
+.about__description {
+  padding-bottom: 14px;
+
+  @include Oswald-style(14px, 14px, #ffffff, center, uppercase);
+}
+
+.about__img {
+  padding: 0 20px;
+}

@@ -1,0 +1,42 @@
+@import "../mixin.scss";
+
+.contacts {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 13px 20px 0 20px;
+}
+
+.contacts__text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 44%;
+
+  @include Oswald-style(16px, 20px, #111111, left, uppercase);
+}
+
+.contacts__address {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  padding-top: 3px;
+
+  line-height: 20px;
+}
+
+.contacts__map {
+  margin-bottom: -5px;
+  padding: 0;
+  width: 320px;
+  height: 371px;
+  border: none;
+
+  background-image: url("../img/bg-map-mobile@1x.png");
+
+  @include back(#a0a0a0);
+}

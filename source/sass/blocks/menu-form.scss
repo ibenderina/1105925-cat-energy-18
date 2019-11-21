@@ -1,0 +1,234 @@
+@import "../mixin.scss";
+
+.menu-form {
+  padding: 0 20px;
+  margin-top: -3px;
+}
+
+.menu-form__description {
+  margin: 0;
+  padding: 0 17px 40px 0;
+
+  @include Oswald-style(14px, 18px, #111111, left, uppercase);
+}
+
+.options {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  &:nth-of-type(2) {
+    margin: 0 -20px;
+    padding: 20px;
+    border: 1px solid #ededed;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    border-top: solid 3px #68b738;
+    margin-right: -20px;
+
+    .options__label {
+      padding-right: 20px;
+    }
+  }
+}
+
+.options__label {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.options__name {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+
+  @include Oswald-style(16px, 18px, #222222, left, uppercase);
+  white-space: nowrap;
+}
+
+.options__input {
+  width: 100%;
+  padding: 17px 11px 13px 13px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  outline: none;
+
+  &::placeholder {
+    @include Oswald-style(16px, 18px, #444444, left, uppercase);
+  }
+}
+
+.options__textarea {
+  display: inline-block;
+  min-height: 128px;
+
+  resize: none;
+}
+
+.options__input:hover,
+.options__textarea:hover {
+  border: 1px solid rgba(205, 205, 205, 1);
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: none;
+  }
+}
+
+.options__input:focus,
+.options__textarea:focus {
+  padding: 16px 10px 12px 12px;
+
+  border: solid 2px #444444;
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: none;
+  }
+}
+
+.options__input:invalid,
+.options__textarea:invalid {
+  padding: 16px 10px 12px 12px;
+
+  border: solid 2px #ff8282;
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: brightness(0.6) saturate(159%) invert(1) hue-rotate(90deg);
+  }
+}
+
+.options__input--email::after,
+.options__input--phone::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+
+  filter: grayscale(1) brightness(2) invert(1);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.options__input--email::after {
+  width: 18px;
+  height: 14px;
+  top: 14px;
+  right: 32px;
+
+  background-image: url("../../img/icon-mail.svg");
+}
+
+.options__input--phone::after {
+  width: 21px;
+  height: 21px;
+  top: 12px;
+  right: 30px;
+
+  background-image: url("../../img/icon-phone.svg");
+}
+
+.options__header {
+  display: inline-block;
+  margin: 0 77px 0 0;
+  vertical-align: middle;
+  padding: 4px 22px 10px 0;
+
+  @include Oswald-style(24px, 24px, #111111, left, none);
+}
+
+.menu-form__options-button {
+  @include green-button(9px 0);
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
+}
+
+.menu-form__options-note {
+  line-height: 16px;
+  text-align: center;
+}
+
+.options__checkbox:hover + .options__name::before,
+.options__radio:hover + .options__name::before {
+  border: solid 1px #bababa;
+}
+
+.options__checkbox:active + .options__name,
+.options__radio:active + .options__name {
+  opacity: 0.3;
+  border-color: #bababa;
+}
+
+.options__checkbox:focus + .options__name,
+.options__radio:focus + .options__name {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.options__checkbox + .options__name::before {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  border: solid 1px #cdcdcd;
+}
+
+.options__checkbox:checked + .options__name::after {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  width: 22px;
+  height: 17px;
+
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.options__radio + .options__name::before {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  border: solid 1px #cdcdcd;
+  border-radius: 25px;
+}
+
+.options__radio:checked + .options__name::after {
+  content: "";
+
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 6px;
+
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  margin-left: 4px;
+
+  border-radius: 25px;
+  background-color: #68b738;
+}

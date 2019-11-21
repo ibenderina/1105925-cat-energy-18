@@ -1,0 +1,26 @@
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 82px 16px 73px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  list-style-type: none;
+}
+
+.social-list__icon {
+  filter: grayscale(1) brightness(2) invert(1);
+}
+
+.social-list__link {
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
+    filter: none;
+  }
+
+  &:active .social-list__icon {
+    opacity: 0.3;
+  }
+}

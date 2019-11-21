@@ -1,0 +1,123 @@
+@import "../mixin.scss";
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.catalog-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0;
+  padding: 0 20px 24px 20px;
+
+  border-bottom: solid 1px #ededed;
+
+  &:first-of-type {
+    border-top: solid 1px #ededed;
+  }
+
+  &:last-of-type {
+    display: block;
+    text-align: center;
+    padding-top: 26px;
+
+    .catalog-item__header {
+      padding: 22px 0 0 0;
+
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .catalog-item__text {
+      margin: 0;
+      padding: 8px 0 21px 0;
+
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+    }
+
+    .catalog-item__img {
+      display: block;
+      width: 100%;
+
+      opacity: 0.2;
+    }
+  }
+}
+
+.catalog-item__info {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+.catalog-item__header {
+  position: relative;
+  margin: 0;
+  padding: 21px 50px 0 0;
+
+  @include Oswald-style(16px, 20px, #111111, left, uppercase);
+  text-decoration: none;
+}
+
+.catalog-item__link {
+  @include green-button(10px 0);
+  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
+
+  &--more {
+    display: block;
+    flex-grow: 1;
+    padding: 10px 0;
+    width: 100%;
+
+    @include Oswald-style(16px, 20px, #444444, center, uppercase);
+    text-decoration: none;
+
+    background-color: #f2f2f2;
+  }
+
+  &--more:hover,
+  &--more:focus {
+    background-color: #ebebeb;
+  }
+
+  &--more:active {
+    color: rgba(68, 68, 68, 0.3);
+
+    background-color: #ebebeb;
+  }
+}
+
+.features {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0;
+  padding-top: 11px;
+}
+
+.features__text,
+.features__description {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.features__text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48%;
+}
+
+.features__description {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 49%;
+
+  text-align: right;
+}

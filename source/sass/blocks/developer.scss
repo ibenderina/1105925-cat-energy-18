@@ -1,0 +1,32 @@
+.developer__link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .developer__img {
+      filter: none;
+    }
+  }
+
+  &:active {
+    .developer__img,
+    .developer__name {
+      opacity: 0.3;
+    }
+  }
+}
+
+.developer__name {
+  color: #444444;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.developer__img {
+  filter: grayscale(1) brightness(2) invert(1);
+}

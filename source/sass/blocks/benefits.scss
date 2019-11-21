@@ -1,0 +1,83 @@
+@import "../mixin.scss";
+
+.benefits {
+  position: relative;
+  padding: 0 20px;
+}
+
+.benefits__header {
+  margin: 0 0 27px 0;
+
+  @include Oswald-style(36px, 60px, #111111, left, none);
+}
+
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.benefits__list-text {
+  padding-top: 2px;
+  margin: 0;
+  width: 70%;
+}
+
+.benefits__list-item {
+  position: relative;
+  display: flex;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: #68b738;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(1)::after {
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &:nth-child(2)::after {
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &:nth-child(3)::after {
+    width: 40px;
+    height: 50px;
+
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &:nth-child(4)::after {
+    width: 45px;
+    height: 50px;
+
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
