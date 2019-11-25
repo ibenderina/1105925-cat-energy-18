@@ -62,7 +62,7 @@
   .main-nav__list {
     display: flex;
     justify-content: space-around;
-    width: 435px;
+    width: 50%;
     margin: 0;
   }
 
@@ -71,32 +71,13 @@
 
     @include Oswald-style(18px, 25px, #222222, center, uppercase);
   }
-
-  .main-nav__list-link {
-    text-decoration: none;
-    color: inherit;
-
-    &:hover,
-    &:focus {
-      color: rgba(17, 17, 17, 0.6);
-    }
-
-    &:active {
-      color: rgba(17, 17, 17, 0.3);
-    }
-
-    &--active {
-      color: #111111;
-      border-bottom: 2px solid #68b738;
-    }
-  }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    display: block;
-    flex-grow: 0;
-    padding-top: 11px
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 0 0 0 41px;
   }
 
   .main-nav__toggle {
@@ -105,16 +86,15 @@
 
   .main-nav__list {
     display: flex;
-    width: 700px;
-    justify-content: space-between;
-    margin: 0 50px;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
   }
 
   .main-nav__list-item {
     border-top: none;
-    padding: 20px 0;
 
-    @include Oswald-style(20px, 20px, #111111, center, none);
+    @include Oswald-style(20px, 25px, #ffffff, left, uppercase);
   }
 
   .main-nav__list-link {
@@ -123,17 +103,16 @@
 
     &:hover,
     &:focus {
-      color: rgba(17, 17, 17, 0.6);
+      opacity: 0.6;
     }
 
     &:active {
-      color: rgba(17, 17, 17, 0.3);
+      opacity: 0.3;
     }
 
     &--active {
-      color: #111111;
-      border-bottom: 2px solid #68b738;
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
     }
   }
 }
-

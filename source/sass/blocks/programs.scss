@@ -149,3 +149,48 @@
     @include Oswald-style(20px, 20px, #111111, left, uppercase);
   }
 }
+
+@media (min-width: $desktop-width) {
+  .programs__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .programs-item {
+    width: 40%;
+    padding: 41px 56px 62px 53px;
+  }
+
+  .programs-item__header {
+    @include Oswald-style(36px, 37px, #111111, right, uppercase);
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      left: 47px;
+      top: 20px;
+    }
+
+    &--slim::after {
+      width: 71px;
+      height: 97px;
+      left: 70px;
+      top: 21px;
+    }
+
+    &--pro::after {
+      width: 134px;
+      height: 57px;
+      left: 13px;
+      top: 29px;
+    }
+  }
+
+  .programs-item__description {
+    font-size: 16px;
+    line-height: 24px;
+
+    padding-top: 75px;
+  }
+}

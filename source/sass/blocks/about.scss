@@ -104,3 +104,68 @@
     padding: 0 20px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .about {
+    position: relative;
+    background: none;
+    margin-bottom: 0;
+  }
+
+  .about__header {
+    margin: 0;
+    padding: 113px 0 0 0;
+    width: 493px;
+
+    @include Oswald-style(60px, 60px, #111111, left, none);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      top: -119px;
+      right: -551px;
+      z-index: -2;
+
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 552px;
+      height: 499px;
+      top: 32px;
+      right: -177px;
+      z-index: -2;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+
+      @include back(transparent);
+    }
+  }
+
+  .about__description {
+    padding: 33px 0 53px 0;
+
+    @include Oswald-style(20px, 20px, #111111, left, uppercase);
+  }
+
+  .about__img {
+    display: none;
+  }
+
+  .about__select-link {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 245px;
+    margin: 0;
+    padding: 10px 20px;
+
+    @include green-button(17px 26px);
+    @include Oswald-style(20px, 20px, #ffffff, center, uppercase);
+  }
+}

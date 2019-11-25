@@ -31,3 +31,14 @@
     border-bottom: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding: 24px 32px 23px 31px;
+    border-bottom: none;
+  }
+
+  .header__logo-link {
+    width: 50%;
+  }
+}

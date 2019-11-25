@@ -178,3 +178,8 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .benefits__list-item {
+    width: 20%;
+  }
+}
