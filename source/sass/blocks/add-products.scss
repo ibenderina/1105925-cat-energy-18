@@ -92,3 +92,51 @@
   @include green-button(9px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
 }
+
+@media (min-width: $tablet-width) {
+  .add-products__header {
+    @include Oswald-style(36px, 36px, #111111, left, none);
+  }
+
+  .add-products__product-list {
+    padding: 0;
+
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+
+  .product-list__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 28px 40px;
+
+    border-top: none;
+  }
+
+  .product-list__name {
+    display: inline-flex;
+    width: 30%;
+
+    @include Oswald-style(20px, 20px, #222222, left, uppercase);
+  }
+
+  .contain {
+    display: inline-flex;
+    width: 30%;
+  }
+
+  .contain__text {
+    width: 70%;
+  }
+
+  .contain__description {
+    width: 30%;
+  }
+
+  .contain__text,
+  .contain__description {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
