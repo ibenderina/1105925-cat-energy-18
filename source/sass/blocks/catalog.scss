@@ -1,4 +1,5 @@
 @import "../mixin.scss";
+@import "../variables.scss";
 
 .catalog__list {
   margin: 0;
@@ -75,7 +76,7 @@
     padding: 10px 0;
     width: 100%;
 
-    @include Oswald-style(16px, 20px, #444444, center, uppercase);
+    @include Oswald-style(16px, 20px, $font-darkgrey, center, uppercase);
     text-decoration: none;
 
     background-color: #f2f2f2;

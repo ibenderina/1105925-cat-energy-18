@@ -1,4 +1,5 @@
 @import "../mixin.scss";
+@import "../variables.scss";
 
 .menu-form {
   padding: 0 20px;
@@ -19,8 +20,8 @@
   border: none;
 
   &:nth-of-type(2) {
-    margin: 0 -20px;
-    padding: 20px;
+    margin: 9px -20px;
+    padding: 18px 18px 6px 18px;
     border: 1px solid #ededed;
   }
 
@@ -32,6 +33,14 @@
 
     .options__label {
       padding-right: 20px;
+    }
+  }
+
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    .options__header {
+      padding: 15px 23px 19px 0px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -47,7 +56,7 @@
 .options__name {
   display: flex;
   align-items: center;
-  padding-right: 15px;
+  padding-right: 10px;
 
   @include Oswald-style(16px, 18px, #222222, left, uppercase);
   white-space: nowrap;
@@ -67,7 +76,8 @@
 
 .options__textarea {
   display: inline-block;
-  min-height: 128px;
+  min-height: 124px;
+  padding: 12px 11px 12px 14px;
 
   resize: none;
 }
@@ -96,7 +106,7 @@
 
 .options__input:invalid,
 .options__textarea:invalid {
-  padding: 16px 10px 12px 12px;
+  padding: 14px 10px 12px 12px;
 
   border: solid 2px #ff8282;
 
@@ -124,7 +134,7 @@
   width: 18px;
   height: 14px;
   top: 14px;
-  right: 32px;
+  right: 36px;
 
   background-image: url("../../img/icon-mail.svg");
 }
@@ -133,26 +143,30 @@
   width: 21px;
   height: 21px;
   top: 12px;
-  right: 30px;
+  right: 33px;
 
   background-image: url("../../img/icon-phone.svg");
 }
 
 .options__header {
   display: inline-block;
-  margin: 0 77px 0 0;
+  margin: 0 99px 33px 0;
   vertical-align: middle;
-  padding: 4px 22px 10px 0;
+  padding: 20px 0 3px 0;
 
   @include Oswald-style(24px, 24px, #111111, left, none);
 }
 
 .menu-form__options-button {
+  margin: 19px 0 21px 0;
+
   @include green-button(9px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
 }
 
 .menu-form__options-note {
+  margin: 0 0 31px 0;
+
   line-height: 16px;
   text-align: center;
 }
@@ -178,9 +192,9 @@
 
   display: inline-block;
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 27px;
+  height: 27px;
+  margin-right: 17px;
 
   border: solid 1px #cdcdcd;
 }
@@ -207,9 +221,9 @@
 
   display: inline-block;
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+  margin-right: 16px;
 
   border: solid 1px #cdcdcd;
   border-radius: 25px;

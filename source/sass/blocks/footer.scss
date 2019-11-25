@@ -1,3 +1,6 @@
+@import "../mixin.scss";
+@import "../variables.scss";
+
 .footer {
   padding: 20px 20px;
 
@@ -18,5 +21,20 @@
 
   &:active .footer__logo {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding: 20px 30px;
+  }
+
+  .footer__logo-link {
+    display: inline-flex;
+    text-align: left;
+    width: 128px;
+    height: 24px;
+
+    border-bottom: none;
   }
 }

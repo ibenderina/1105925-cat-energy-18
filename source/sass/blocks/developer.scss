@@ -1,3 +1,6 @@
+@import "../mixin.scss";
+@import "../variables.scss";
+
 .developer__link {
   display: flex;
   justify-content: space-between;
@@ -29,4 +32,11 @@
 
 .developer__img {
   filter: grayscale(1) brightness(2) invert(1);
+}
+
+@media (min-width: $tablet-width) {
+  .developer {
+    display: inline-flex;
+    width: 25%;
+  }
 }

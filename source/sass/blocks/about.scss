@@ -1,10 +1,11 @@
 @import "../mixin.scss";
+@import "../variables.scss";
 
 .about {
   position: relative;
   height: 278px;
   padding-top: 28px;
-  margin-bottom: 135px;
+  margin-bottom: 203px;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
 
@@ -25,5 +26,81 @@
 }
 
 .about__img {
+  position: absolute;
   padding: 0 20px;
+  top: 183px;
+}
+
+.about__select-link {
+  margin-top: 307px;
+
+  @include green-button(11px 0);
+  @include Oswald-style(14px, 18px, #ffffff, center, uppercase);
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    padding: 0 100px;
+    margin-bottom: 501px;
+
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .about__header {
+    margin: 0;
+    @include Oswald-style(60px, 60px, #111111, left, none);
+  }
+
+  .about__description {
+    @include Oswald-style(20px, 20px, #111111, left, uppercase);
+  }
+
+  .about__img {
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    padding: 0 20px;
+    top: 183px;
+    z-index: -1;
+  }
+
+  .about__select-link {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 245px;
+    margin: 0;
+    padding: 10px 20px;
+
+    @include green-button(17px 26px);
+    @include Oswald-style(20px, 20px, #ffffff, center, uppercase);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    width: 720px;
+    height: 696px;
+
+    background-image: url("../img/index-background-mobile@1x.jpg");
+
+    @include back(#68b738);
+  }
+
+  .about__header {
+    margin: 0;
+    padding-bottom: 0;
+
+    @include Oswald-style(36px, 36px, #ffffff, center, none);
+  }
+
+  .about__description {
+    padding-bottom: 0;
+
+    @include Oswald-style(14px, 14px, #ffffff, center, uppercase);
+  }
+
+  .about__img {
+    padding: 0 20px;
+  }
 }

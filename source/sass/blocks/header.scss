@@ -1,3 +1,6 @@
+@import "../mixin.scss";
+@import "../variables.scss";
+
 .header {
   max-width: 100%;
   display: flex;
@@ -19,5 +22,12 @@
 
   &:active .header__logo {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    padding: 24px 32px 23px 31px;
+    border-bottom: none;
   }
 }
