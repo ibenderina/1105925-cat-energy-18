@@ -246,3 +246,59 @@
   border-radius: 25px;
   background-color: #68b738;
 }
+
+@media (min-width: $tablet-width) {
+  .menu-form {
+    padding: 0 40px;
+  }
+
+  .menu-form__description {
+    width: 50%;
+
+    @include Oswald-style(20px, 30px, #111111, left, uppercase);
+  }
+
+  .options:nth-of-type(2) {
+    margin: 9px 0;
+  }
+
+  .options__name {
+    @include Oswald-style(20px, 20px, #222222, left, uppercase);
+  }
+
+  .options__input::placeholder {
+    @include Oswald-style(20px, 20px, #444444, left, uppercase);
+  }
+
+  .options__header {
+    @include Oswald-style(36px, 36px, #111111, left, none);
+  }
+
+  .menu-form__options-button {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 45%;
+    padding: 17px 10px 17px 60px;
+
+    @include Oswald-style(20px, 20px, #ffffff, center, uppercase);
+  }
+
+  .menu-form__options-note {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 45%;
+    text-align: center;
+
+    font-size: 16px;
+  }
+
+  .options__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .options__label {
+      width: 45%;
+    }
+  }
+}
