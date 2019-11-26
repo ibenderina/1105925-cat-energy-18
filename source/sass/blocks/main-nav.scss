@@ -93,13 +93,12 @@
 
   .main-nav__list-item {
     border-top: none;
-
-    @include Oswald-style(20px, 25px, #ffffff, left, uppercase);
   }
 
-  .main-nav__list-link {
+  .main-nav__list-link--white {
     text-decoration: none;
-    color: inherit;
+
+    @include Oswald-style(20px, 25px, #ffffff, left, uppercase);
 
     &:hover,
     &:focus {
@@ -110,7 +109,7 @@
       opacity: 0.3;
     }
 
-    &--active {
+    &-active {
       color: #ffffff;
       border-bottom: 2px solid #ffffff;
     }

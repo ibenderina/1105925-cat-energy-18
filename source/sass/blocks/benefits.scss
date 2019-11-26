@@ -179,6 +179,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .benefits {
+    border-bottom: none;
+  }
+
   .benefits__list-item {
     width: 20%;
   }
