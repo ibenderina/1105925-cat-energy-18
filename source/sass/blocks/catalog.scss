@@ -217,3 +217,9 @@
     margin-right: -10px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .catalog-item {
+    width: 220px;
+  }
+}

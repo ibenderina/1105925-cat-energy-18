@@ -42,3 +42,33 @@
 
   @include back(#a0a0a0);
 }
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+    margin: 0 -30px -7px -30px;
+    padding: 0;
+  }
+
+  .contacts__item {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    padding: 69px 90px 59px 76px;
+
+    background-color: #ffffff;
+  }
+
+  .contacts__text,
+  .contacts__address {
+    margin: 0;
+  }
+
+  .contacts__map {
+    margin: 0;
+    padding: 0;
+    height: 400px;
+
+    background-color: #f2f2f2;
+  }
+}

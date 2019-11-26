@@ -38,3 +38,11 @@
     border-bottom: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .footer {
+    margin: 0 -30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

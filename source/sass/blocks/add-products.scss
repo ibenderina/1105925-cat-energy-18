@@ -140,3 +140,32 @@
     line-height: 16px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .add-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .add-products__header {
+    display: block;
+    width: 100%;
+  }
+
+  .add-products__product-list {
+    width: 60%;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .product-list__link {
+    max-width: 20%;
+  }
+
+  .add-products__gifts {
+    max-width: 20%;
+    min-height: 100%;
+  }
+}

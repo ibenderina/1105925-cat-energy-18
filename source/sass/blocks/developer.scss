@@ -40,3 +40,10 @@
     width: 25%;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .developer {
+    display: inline;
+    width: 15%;
+  }
+}
