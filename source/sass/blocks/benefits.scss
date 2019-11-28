@@ -87,7 +87,8 @@
 
 @media (min-width: $tablet-width) {
   .benefits {
-    padding: 0 30px;
+    margin: 0 -30px;
+    padding: 0 50px;
   }
 
   .benefits__header {

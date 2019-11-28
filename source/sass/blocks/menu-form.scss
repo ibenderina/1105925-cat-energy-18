@@ -302,3 +302,45 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .menu-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-form__description {
+    display: block;
+    width: 100%;
+
+    @include Oswald-style(20px, 30px, #111111, left, uppercase);
+  }
+
+  .menu-form__options:first-of-type {
+    display: flex;
+    width: 45%;
+  }
+
+  .menu-form__options:nth-of-type(2) {
+    display: flex;
+    width: 45%;
+  }
+
+  .menu-form__options:nth-of-type(3),
+  .menu-form__options:nth-of-type(4),
+  .menu-form__options:nth-of-type(5) {
+    width: 100%;
+  }
+
+  .options__list {
+    .options__label {
+      width: 22%;
+    }
+  }
+
+  .menu-form__options-button {
+    padding: 17px 206px;
+  }
+}
+
