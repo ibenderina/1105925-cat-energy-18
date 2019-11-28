@@ -4,8 +4,8 @@
 .about {
   position: relative;
   height: 278px;
-  padding-top: 28px;
-  margin-bottom: 203px;
+  padding: 28px 0 0 0;
+  margin: 0 -20px 203px -20px;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
 
@@ -32,7 +32,8 @@
 }
 
 .about__select-link {
-  margin-top: 307px;
+  margin: 307px 0 0 20px;
+  width: 87%;
 
   @include green-button(11px 0);
   @include Oswald-style(14px, 18px, #ffffff, center, uppercase);
@@ -49,6 +50,7 @@
 
   .about__header {
     margin: 0;
+
     @include Oswald-style(60px, 60px, #111111, left, none);
   }
 
@@ -62,6 +64,7 @@
     position: absolute;
     padding: 0 20px;
     top: 183px;
+    left: 38px;
     z-index: -1;
   }
 

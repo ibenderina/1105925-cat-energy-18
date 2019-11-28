@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .programs {
-  padding: 0 20px;
+  padding: 0;
 }
 
 .programs__list {
@@ -109,7 +109,7 @@
 
 @media (min-width: $tablet-width) {
   .programs {
-    padding: 0 30px;
+    padding: 0;
   }
 
   .programs-item {

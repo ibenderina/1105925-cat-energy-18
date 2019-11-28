@@ -3,15 +3,13 @@
 
 .benefits {
   position: relative;
-  padding: 0 20px;
-
-  border-bottom: solid 1px #ededed;
+  padding: 0;
 }
 
 .benefits__header {
   margin: 0 0 27px 0;
 
-  @include Oswald-style(60px, 60px, #111111, left, none);
+  @include Oswald-style(36px, 60px, #111111, left, none);
 }
 
 .benefits__list {
@@ -33,7 +31,7 @@
 .benefits__list-item {
   position: relative;
   display: flex;
-  padding-bottom: 87px;
+  padding-bottom: 20px;
 
   &::before {
     content: "";
@@ -88,7 +86,9 @@
 @media (min-width: $tablet-width) {
   .benefits {
     margin: 0 -30px;
-    padding: 0 50px;
+    padding: 0 30px;
+
+    border-bottom: solid 1px #ededed;
   }
 
   .benefits__header {
@@ -105,6 +105,7 @@
   .benefits__list-item {
     width: 40%;
     flex-direction: column;
+    padding-bottom: 87px;
     margin-bottom: 10px;
 
     &::before {

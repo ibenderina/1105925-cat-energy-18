@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .menu-form {
-  padding: 0 20px;
+  padding: 0;
   margin-top: -3px;
 }
 
@@ -159,6 +159,7 @@
 
 .menu-form__options-button {
   margin: 19px 0 21px 0;
+  width: 100%;
 
   @include green-button(9px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
@@ -249,7 +250,7 @@
 
 @media (min-width: $tablet-width) {
   .menu-form {
-    padding: 0 40px;
+    padding: 0;
   }
 
   .menu-form__description {

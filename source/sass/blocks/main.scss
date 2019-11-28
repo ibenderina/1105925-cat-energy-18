@@ -1,14 +1,22 @@
 @import "../mixin.scss";
 @import "../variables.scss";
 
+.main {
+  padding: 0 20px;
+}
+
 .main__header {
   margin: 0;
-  padding: 15px 20px 28px 20px;
+  padding: 15px 0 28px 0;
 
   @include Oswald-style(36px, 60px, #111111, left, none);
 }
 
 @media (min-width: $tablet-width) {
+  .main {
+    padding: 0 30px;
+  }
+
   .main__header {
     padding-bottom: 56px;
 

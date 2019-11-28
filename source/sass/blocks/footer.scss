@@ -26,6 +26,9 @@
 
 @media (min-width: $tablet-width) {
   .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     padding: 20px 30px;
   }
 
@@ -41,7 +44,7 @@
 
 @media (min-width: $desktop-width) {
   .footer {
-    margin: 0 -30px;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
   }
