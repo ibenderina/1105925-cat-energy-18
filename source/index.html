@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -15,15 +16,15 @@
   <nav class="main-nav">
     <ul class="main-nav__list">
       <li class="main-nav__list-item">
-        <a class="main-nav__list-link main-nav__list-link--active">Главная
+        <a class="main-nav__list-link main-nav__list-link--white main-nav__list-link--active main-nav__list-link--white-active">Главная
         </a>
       </li>
       <li class="main-nav__list-item">
-        <a class="main-nav__list-link" href="catalog.html">Каталог продукции
+        <a class="main-nav__list-link main-nav__list-link--white" href="catalog.html">Каталог продукции
         </a>
       </li>
       <li class="main-nav__list-item">
-        <a class="main-nav__list-link" href="form.html">Подбор программы
+        <a class="main-nav__list-link main-nav__list-link--white" href="form.html">Подбор программы
         </a>
       </li>
     </ul>
@@ -33,11 +34,11 @@
   <section class="about">
     <h1 class="about__header">Функциональное питание для котов</h1>
     <p class="about__description">Занялся собой? Займись котом!</p>
+    <a class="about__select-link" href="">Подобрать программу</a>
     <img class="about__img" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Упаковка функционального корма">
   </section>
   <section class="programs">
     <h2 class="visually-hidden">Программы</h2>
-    <a class="programs__select-link" href="">Подобрать программу</a>
     <ul class="programs__list">
       <li class="programs__items programs-item">
         <h3 class="programs-item__header programs-item__header--slim">Похудение</h3>
@@ -94,8 +95,8 @@
     </dl>
     <p class="results__total">Затраты на питание: 15 000 руб.</p>
     <div class="results__photo">
-      <img class="results__photo-item results__photo-item--before" src="img/before-mobile@1x.png" width="311" height="232" alt="Фото кота до">
-      <img class="results__photo-item results__photo-item--after" src="img/after-mobile@1x.png" width="311" height="232" alt="Фото кота после">
+      <div class="results__photo-item results__photo-item--after"></div>
+      <div class="results__photo-item results__photo-item--before"></div>
     </div>
     <div class="results__range">
       <button class="results__range-button results__range-button--before" type="button">Было</button>
@@ -119,17 +120,17 @@
   <ul class="social-list">
     <li class="social-list__item">
       <a class="social-list__link" href="" aria-label="Перейти во вконтакте">
-        <img class="social-list__icon" src="img/icon-vk.svg" width="22" height="12" alt="Вконтакте">
+        <img class="social-list__icon social-list__icon--vk" src="img/icon-vk.svg" width="22" height="12" alt="Вконтакте">
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link" href="" aria-label="Перейти в инстаграм">
-        <img class="social-list__icon" src="img/icon-insta.svg" width="17" height="17" alt="Инстаграм">
+        <img class="social-list__icon social-list__icon--insta" src="img/icon-insta.svg" width="17" height="17" alt="Инстаграм">
       </a>
     </li>
     <li class="social-list__item">
       <a class="social-list__link" href="" aria-label="Перейти в фейсбук">
-        <img class="social-list__icon" src="img/icon-fb.svg" width="10" height="19" alt="Фейсбук">
+        <img class="social-list__icon social-list__icon--fb" src="img/icon-fb.svg" width="10" height="19" alt="Фейсбук">
       </a>
     </li>
   </ul>

@@ -24,3 +24,37 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    display: inline-flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+
+    border-bottom: none;
+  }
+
+  .social-list__icon {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    width: 10%;
+  }
+}

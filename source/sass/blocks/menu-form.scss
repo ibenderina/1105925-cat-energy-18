@@ -1,7 +1,5 @@
-@import "../mixin.scss";
-
 .menu-form {
-  padding: 0 20px;
+  padding: 0;
   margin-top: -3px;
 }
 
@@ -19,8 +17,8 @@
   border: none;
 
   &:nth-of-type(2) {
-    margin: 0 -20px;
-    padding: 20px;
+    margin: 9px -20px;
+    padding: 18px 18px 6px 18px;
     border: 1px solid #ededed;
   }
 
@@ -32,6 +30,14 @@
 
     .options__label {
       padding-right: 20px;
+    }
+  }
+
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    .options__header {
+      padding: 15px 23px 19px 0px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -47,7 +53,7 @@
 .options__name {
   display: flex;
   align-items: center;
-  padding-right: 15px;
+  padding-right: 10px;
 
   @include Oswald-style(16px, 18px, #222222, left, uppercase);
   white-space: nowrap;
@@ -55,10 +61,12 @@
 
 .options__input {
   width: 100%;
-  padding: 17px 11px 13px 13px;
+  padding: 4px 11px 9px 13px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
-  outline: none;
+  outline: 1px solid transparent;
+
+  @include Oswald-style(20px, 20px, #444444, left, uppercase);
 
   &::placeholder {
     @include Oswald-style(16px, 18px, #444444, left, uppercase);
@@ -67,7 +75,11 @@
 
 .options__textarea {
   display: inline-block;
-  min-height: 128px;
+  min-height: 124px;
+  padding: 14px 11px 9px 13px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  outline: none;
 
   resize: none;
 }
@@ -84,9 +96,8 @@
 
 .options__input:focus,
 .options__textarea:focus {
-  padding: 16px 10px 12px 12px;
-
-  border: solid 2px #444444;
+  border: solid 1px #444444;
+  outline: 1px solid #444444;
 
   & + .options__input--email::after,
   & + .options__input--phone::after {
@@ -96,9 +107,8 @@
 
 .options__input:invalid,
 .options__textarea:invalid {
-  padding: 16px 10px 12px 12px;
-
-  border: solid 2px #ff8282;
+  border: 2px solid #ff8282;
+  outline: 1px solid transparent;
 
   & + .options__input--email::after,
   & + .options__input--phone::after {
@@ -124,7 +134,7 @@
   width: 18px;
   height: 14px;
   top: 14px;
-  right: 32px;
+  right: 36px;
 
   background-image: url("../../img/icon-mail.svg");
 }
@@ -133,26 +143,31 @@
   width: 21px;
   height: 21px;
   top: 12px;
-  right: 30px;
+  right: 33px;
 
   background-image: url("../../img/icon-phone.svg");
 }
 
 .options__header {
   display: inline-block;
-  margin: 0 77px 0 0;
+  margin: 0 99px 33px 0;
   vertical-align: middle;
-  padding: 4px 22px 10px 0;
+  padding: 20px 0 3px 0;
 
   @include Oswald-style(24px, 24px, #111111, left, none);
 }
 
 .menu-form__options-button {
+  margin: 19px 0 21px 0;
+  width: 100%;
+
   @include green-button(9px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
 }
 
 .menu-form__options-note {
+  margin: 0 0 31px 0;
+
   line-height: 16px;
   text-align: center;
 }
@@ -178,9 +193,9 @@
 
   display: inline-block;
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 27px;
+  height: 27px;
+  margin-right: 17px;
 
   border: solid 1px #cdcdcd;
 }
@@ -191,8 +206,8 @@
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  top: 10px;
-  left: 6px;
+  top: 5px;
+  left: 5px;
   width: 22px;
   height: 17px;
 
@@ -207,9 +222,9 @@
 
   display: inline-block;
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+  margin-right: 16px;
 
   border: solid 1px #cdcdcd;
   border-radius: 25px;
@@ -220,8 +235,8 @@
 
   display: inline-block;
   position: absolute;
-  top: 10px;
-  left: 6px;
+  top: 9px;
+  left: 5px;
 
   vertical-align: middle;
   width: 12px;
@@ -231,4 +246,107 @@
 
   border-radius: 25px;
   background-color: #68b738;
+}
+
+@media (min-width: $tablet-width) {
+  .menu-form {
+    padding: 0;
+  }
+
+  .menu-form__description {
+    width: 50%;
+
+    @include Oswald-style(20px, 30px, #111111, left, uppercase);
+  }
+
+  .options:nth-of-type(2) {
+    margin: 9px 0;
+  }
+
+  .options__name {
+    @include Oswald-style(20px, 20px, #222222, left, uppercase);
+  }
+
+  .options__input::placeholder {
+    @include Oswald-style(20px, 20px, #444444, left, uppercase);
+  }
+
+  .options__header {
+    @include Oswald-style(36px, 36px, #111111, left, none);
+  }
+
+  .menu-form__options-button {
+    padding: 17px 26px;
+    width: 45%;
+    display: inline-block;
+    vertical-align: middle;
+
+    @include Oswald-style(20px, 20px, #ffffff, center, uppercase);
+  }
+
+  .menu-form__options-note {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 40px 0 0 20px;
+
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .options__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .options__label {
+      width: 45%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-form__description {
+    display: block;
+    width: 100%;
+
+    @include Oswald-style(20px, 30px, #111111, left, uppercase);
+  }
+
+  .menu-form__options:first-of-type {
+    display: flex;
+    width: 45%;
+  }
+
+  .menu-form__options:nth-of-type(2) {
+    display: flex;
+    width: 45%;
+  }
+
+  .menu-form__options:nth-of-type(3),
+  .menu-form__options:nth-of-type(4),
+  .menu-form__options:nth-of-type(5) {
+    width: 100%;
+  }
+
+  .options__list {
+    .options__label {
+      width: 22%;
+    }
+  }
+
+  .menu-form__options-button {
+    padding: 17px 206px;
+  }
+
+  .menu-form__options-note {
+    width: 40%;
+
+    text-align: left;
+  }
 }

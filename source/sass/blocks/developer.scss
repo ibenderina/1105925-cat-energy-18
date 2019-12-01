@@ -30,3 +30,17 @@
 .developer__img {
   filter: grayscale(1) brightness(2) invert(1);
 }
+
+@media (min-width: $tablet-width) {
+  .developer {
+    display: inline-flex;
+    width: 25%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .developer {
+    display: inline;
+    width: 15%;
+  }
+}

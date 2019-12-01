@@ -1,10 +1,8 @@
-@import "../mixin.scss";
-
 .about {
   position: relative;
   height: 278px;
-  padding-top: 28px;
-  margin-bottom: 135px;
+  padding: 28px 0 0 0;
+  margin: 0 -20px 203px -20px;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
 
@@ -25,5 +23,149 @@
 }
 
 .about__img {
+  position: absolute;
   padding: 0 20px;
+  top: 183px;
+}
+
+.about__select-link {
+  margin: 307px 0 0 20px;
+  width: 87%;
+
+  @include green-button(11px 0);
+  @include Oswald-style(14px, 18px, #ffffff, center, uppercase);
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    padding: 0 100px;
+    margin-bottom: 501px;
+
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .about__header {
+    margin: 0;
+
+    @include Oswald-style(60px, 60px, #111111, left, none);
+  }
+
+  .about__description {
+    @include Oswald-style(20px, 20px, #111111, left, uppercase);
+  }
+
+  .about__img {
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    padding: 0 20px;
+    top: 183px;
+    left: 38px;
+    z-index: -1;
+  }
+
+  .about__select-link {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 245px;
+    margin: 0;
+    padding: 10px 20px;
+
+    @include green-button(17px 26px);
+    @include Oswald-style(20px, 20px, #ffffff, center, uppercase);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    width: 720px;
+    height: 696px;
+
+    background-image: url("../img/index-background-mobile@1x.jpg");
+
+    @include back(#68b738);
+  }
+
+  .about__header {
+    margin: 0;
+    padding-bottom: 0;
+
+    @include Oswald-style(36px, 36px, #ffffff, center, none);
+  }
+
+  .about__description {
+    padding-bottom: 0;
+
+    @include Oswald-style(14px, 14px, #ffffff, center, uppercase);
+  }
+
+  .about__img {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    position: relative;
+    background: none;
+    margin-bottom: 0;
+  }
+
+  .about__header {
+    margin: 0;
+    padding: 113px 0 0 0;
+    width: 493px;
+
+    @include Oswald-style(60px, 60px, #111111, left, none);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      top: -119px;
+      right: -551px;
+      z-index: -2;
+
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 552px;
+      height: 499px;
+      top: 32px;
+      right: -177px;
+      z-index: -2;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+
+      @include back(transparent);
+    }
+  }
+
+  .about__description {
+    padding: 33px 0 53px 0;
+
+    @include Oswald-style(20px, 20px, #111111, left, uppercase);
+  }
+
+  .about__img {
+    display: none;
+  }
+
+  .about__select-link {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 245px;
+    margin: 0;
+    padding: 10px 20px;
+
+    @include green-button(17px 26px);
+    @include Oswald-style(20px, 20px, #ffffff, center, uppercase);
+  }
 }

@@ -1,7 +1,5 @@
-@import "../mixin.scss";
-
 .add-products {
-  padding: 0 20px;
+  padding: 0;
 }
 
 .add-products__gifts {
@@ -90,4 +88,125 @@
 .product-list__link {
   @include green-button(9px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
+}
+
+@media (min-width: $tablet-width) {
+  .add-products {
+    padding: 0;
+  }
+
+  .add-products__header {
+    @include Oswald-style(36px, 36px, #111111, left, none);
+  }
+
+  .add-products__product-list {
+    padding: 0;
+
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+  }
+
+  .product-list__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 28px 40px;
+
+    border-top: none;
+  }
+
+  .product-list__name {
+    display: inline-flex;
+    width: 30%;
+
+    @include Oswald-style(20px, 20px, #222222, left, uppercase);
+  }
+
+  .contain {
+    display: inline-flex;
+    width: 50%;
+  }
+
+  .contain__text {
+    width: 70%;
+  }
+
+  .contain__description {
+    width: 30%;
+  }
+
+  .contain__text,
+  .contain__description {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .product-list__link {
+    width: 100%;
+  }
+
+  .add-products__gifts {
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 125px 69px 424px;
+    margin-bottom: 0;
+  }
+
+  .add-products__gifts-text {
+    text-align: left;
+
+    &::before {
+      top: -7px;
+      left: -326px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .add-products__header {
+    display: block;
+    width: 100%;
+  }
+
+  .add-products__product-list {
+    width: 70%;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .product-list__item {
+    padding: 20px;
+  }
+
+  .product-list__link {
+    max-width: 20%;
+  }
+
+  .contain {
+    width: 30%;
+  }
+
+  .add-products__gifts {
+    padding: 300px 10px 10px 10px;
+    margin: 20px 0;
+    width: 20%;
+    max-height: 300px;
+  }
+
+  .add-products__gifts-text {
+    margin: 0;
+    text-align: center;
+
+    &::before {
+      top: -50px;
+      left: 20px;
+    }
+  }
 }

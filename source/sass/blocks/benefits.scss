@@ -1,8 +1,6 @@
-@import "../mixin.scss";
-
 .benefits {
   position: relative;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .benefits__header {
@@ -79,5 +77,112 @@
     height: 50px;
 
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .benefits {
+    margin: 0 -30px;
+    padding: 0 30px;
+
+    border-bottom: solid 1px #ededed;
+  }
+
+  .benefits__header {
+    margin: 0 0 49px 0;
+
+    @include Oswald-style(60px, 60px, #111111, left, none);
+  }
+
+  .benefits__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .benefits__list-item {
+    width: 40%;
+    flex-direction: column;
+    padding-bottom: 87px;
+    margin-bottom: 10px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 15px;
+    }
+
+    &:nth-child(1)::after {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:nth-child(2)::after {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:nth-child(3)::after {
+      width: 40px;
+      height: 50px;
+    }
+
+    &:nth-child(4)::after {
+      width: 45px;
+      height: 50px;
+    }
+
+    &:nth-child(1) {
+      .benefits__list-text::before {
+        content: "1";
+      }
+    }
+
+    &:nth-child(2) {
+      .benefits__list-text::before {
+        content: "2";
+      }
+    }
+
+    &:nth-child(3) {
+      .benefits__list-text::before {
+        content: "3";
+      }
+    }
+
+    &:nth-child(4) {
+      .benefits__list-text::before {
+        content: "4";
+      }
+    }
+  }
+
+  .benefits__list-text {
+    padding-top: 37px;
+    margin: 0;
+    width: 90%;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: -39px;
+      right: 34px;
+      z-index: -1;
+
+      @include Oswald-style(281px, 281px, #f2f2f2, right, none);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .benefits {
+    border-bottom: none;
+  }
+
+  .benefits__list-item {
+    width: 20%;
   }
 }

@@ -1,3 +1,6 @@
+@import "mixin.scss";
+@import "variables.scss";
+
 body {
   width: 320px;
   margin: 0 auto;
@@ -11,6 +14,21 @@ body {
 
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    width: 768px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    width: 1440px;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active),

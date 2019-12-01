@@ -20,3 +20,29 @@
     opacity: 0.6;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 30px;
+  }
+
+  .footer__logo-link {
+    display: inline-flex;
+    text-align: left;
+    width: 128px;
+    height: 24px;
+
+    border-bottom: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
