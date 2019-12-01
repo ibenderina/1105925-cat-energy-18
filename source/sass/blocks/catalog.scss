@@ -1,6 +1,3 @@
-@import "../mixin.scss";
-@import "../variables.scss";
-
 .catalog {
   margin: 0 -20px;
 }
@@ -236,7 +233,24 @@
   }
 
   .catalog-item {
-    width: 210px;
+    width: 193px;
+
+    &:last-of-type {
+      .catalog-item__header {
+        padding: 100px 3px 20px 30px;
+      }
+
+      .catalog-item__text {
+        padding: 22px 10px 66px 10px;
+
+        font-size: 16px;
+        color: #444444;
+      }
+    }
+  }
+
+  .catalog-item__header {
+    padding: 0 50px 20px 50px;
   }
 
   .catalog-item__info::before {

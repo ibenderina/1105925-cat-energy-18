@@ -1,6 +1,3 @@
-@import "../mixin.scss";
-@import "../variables.scss";
-
 .add-products {
   padding: 0;
 }
@@ -178,10 +175,14 @@
   }
 
   .add-products__product-list {
-    width: 60%;
+    width: 70%;
 
     border-left: none;
     border-right: none;
+  }
+
+  .product-list__item {
+    padding: 20px;
   }
 
   .product-list__link {
@@ -194,8 +195,8 @@
 
   .add-products__gifts {
     padding: 300px 10px 10px 10px;
-    margin: 0;
-    width: 30%;
+    margin: 20px 0;
+    width: 20%;
     max-height: 300px;
   }
 
