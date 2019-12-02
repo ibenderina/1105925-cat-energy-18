@@ -1,7 +1,29 @@
 .main-nav {
   display: block;
+  width: 100%;
+  position: relative;
   flex-grow: 1;
   padding-top: 11px;
+
+  background-color: green;
+
+  animation-name: navigation;
+  animation-duration: 1s;
+  opacity: 1;
+}
+
+@keyframes navigation {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
 }
 
 .main-nav__toggle {
@@ -9,8 +31,33 @@
   height: 19px;
 
   border: none;
+  cursor: pointer;
   background-image: url("../img/icon-mobile-menu.svg");
   background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.main-nav__toggle--close {
+  width: 19px;
+  height: 19px;
+
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/icon-close.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.main-nav--closed {
+  display: none;
+}
+
+.main-nav--nojs {
+  display: block;
+}
+
+.main-nav--opened {
+  display: block;
 }
 
 .main-nav__list {

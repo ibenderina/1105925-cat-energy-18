@@ -1,9 +1,10 @@
 .about {
   position: relative;
   height: 278px;
-  padding: 28px 0 0 0;
+  padding: 28px 20px 0 20px;
   margin: 0 -20px 203px -20px;
 
+  text-align: center;
   background-image: url("../img/index-background-mobile@1x.jpg");
 
   @include back(#68b738);
@@ -26,6 +27,7 @@
   position: absolute;
   padding: 0 20px;
   top: 183px;
+  left: 5%;
 }
 
 .about__select-link {

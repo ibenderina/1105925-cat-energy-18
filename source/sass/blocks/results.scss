@@ -59,13 +59,19 @@
 
   &--before {
     display: block;
+    width: 100%;
     background-image: url("../img/before-mobile@1x.png");
   }
 
   &--after {
-    display: none;
+    display: block;
+    width: 100%;
     background-image: url("../img/after-mobile@1x.png");
   }
+}
+
+.results__photo-item--closed {
+  display: none;
 }
 
 .results__range {
@@ -117,7 +123,7 @@
     border: solid 1px #68b738;
   }
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 30%;
@@ -128,6 +134,27 @@
     border-radius: 10px;
     background-color: #68b738;
   }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    width: 35px;
+    height: 6px;
+
+    border-radius: 10px;
+    background-color: #68b738;
+  }
+}
+
+@keyframes range {
+  from {
+
+
+  }
+
 }
 
 @media (min-width: $tablet-width) {

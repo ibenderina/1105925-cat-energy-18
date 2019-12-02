@@ -67,6 +67,8 @@
 }
 
 .catalog-item__link {
+  width: 100%;
+
   @include green-button(10px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
 
