@@ -12,8 +12,8 @@
   <a class="header__logo-link">
     <img class="header__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
   </a>
-  <button class="main-nav__toggle" type="button" aria-label="Развернуть меню"></button>
-  <nav class="main-nav">
+  <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="Развернуть меню"></button>
+  <nav class="main-nav main-nav--closed main-nav--nojs">
     <ul class="main-nav__list">
       <li class="main-nav__list-item">
         <a class="main-nav__list-link main-nav__list-link--white main-nav__list-link--active main-nav__list-link--white-active">Главная
@@ -95,7 +95,7 @@
     </dl>
     <p class="results__total">Затраты на питание: 15 000 руб.</p>
     <div class="results__photo">
-      <div class="results__photo-item results__photo-item--after"></div>
+      <div class="results__photo-item results__photo-item--after results__photo-item--closed"></div>
       <div class="results__photo-item results__photo-item--before"></div>
     </div>
     <div class="results__range">
@@ -141,5 +141,6 @@
     </a>
   </div>
 </footer>
+<script src="../js/script.js"></script>
 </body>
 </html>

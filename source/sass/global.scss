@@ -2,7 +2,8 @@
 @import "variables.scss";
 
 body {
-  width: 320px;
+  width: 100vw;
+  max-width: 100%;
   margin: 0 auto;
 
   font-family: "Arial", sans-serif;
@@ -18,7 +19,8 @@ body {
 
 @media (min-width: $tablet-width) {
   body {
-    width: 768px;
+    width: 100vw;
+    max-width: 100%;
 
     font-size: 16px;
     line-height: 24px;
@@ -27,7 +29,8 @@ body {
 
 @media (min-width: $desktop-width) {
   body {
-    width: 1440px;
+    width: 100vw;
+    max-width: 100%;
   }
 }
 
