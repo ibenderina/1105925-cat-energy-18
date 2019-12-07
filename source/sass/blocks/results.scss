@@ -1,12 +1,12 @@
 .results {
-  padding: 0 21px 35px 20px;
+  padding: 1px 21px 35px 20px;
   margin: 0 -20px;
 
   background-color: #f2f2f2;
 }
 
 .results__header {
-  margin: 39px 0 23px 0;
+  margin: 15px 0 23px 0;
 
   @include Oswald-style(36px, 60px, #111111, left, none);
 }
@@ -51,11 +51,11 @@
 }
 
 .results__photo-item {
-  margin: 21px 0 35px -16px;
+  margin: 34px 0 39px 0;
   width: 311px;
   height: 232px;
 
-  @include back(#f2f2f2);
+  @include back(#f2f2f2, auto);
 
   &--before {
     display: block;
@@ -64,7 +64,6 @@
   }
 
   &--after {
-    display: none;
     display: block;
     width: 100%;
     background-image: url("../img/after-mobile@1x.png");
@@ -153,24 +152,27 @@
 
 @media (min-width: $tablet-width) {
   .results {
-    padding: 0 30px;
+    padding: 43px 21px 62px 19px;
     background-color: inherit;
   }
 
   .results__header {
-    margin: 50px 0 27px 0;
+    margin: 0;
 
     @include Oswald-style(60px, 60px, #111111, left, none);
   }
 
   .results__description {
+    margin: 0;
+    padding: 64px 10px 26px 0;
+
     font-size: 16px;
     line-height: 24px;
   }
 
   .results__list {
     display: inline-flex;
-    width: 55%;
+    width: 52%;
 
     &--style {
       width: 35%;
@@ -183,6 +185,7 @@
 
   .results__list-info {
     margin-bottom: -6px;
+    padding-top: 11px;
 
     font-size: 14px;
     line-height: 14px;
@@ -192,12 +195,13 @@
   }
 
   .results__total {
-    padding: 29px 0;
+    padding: 14px 0;
+
     word-spacing: normal;
     width: 25%;
     float: right;
 
-    @include Oswald-style(20px, 20px, #111111, right, uppercase);
+    @include Oswald-style(20px, 29px, #111111, right, uppercase);
   }
 
   .results__photo {
@@ -207,8 +211,8 @@
   .results__photo-item {
     position: absolute;
     height: 517px;
-    top: 0;
-    left: 50px;
+    top: 18px;
+    left: 15px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -242,12 +246,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 570px 0 0 0;
-    width: 515px;
+    padding: 585px 0 0 0;
+    width: 569px;
   }
 
   .results__range-button {
-    padding: 0;
+    padding: 0 0 5px 0;
 
     @include Oswald-style(20px, 20px, #111111, center, uppercase);
 
@@ -288,10 +292,10 @@
     &::before {
       content: "";
       position: absolute;
-      top: 37%;
-      right: -184px;
+      left: -576%;
+      top: 33%;
       z-index: -1;
-      width: 400px;
+      width: 426px;
       height: 4px;
 
       border-radius: 2.5px;

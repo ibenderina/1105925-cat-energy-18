@@ -8,11 +8,11 @@
   text-align: $text-align;
 }
 
-@mixin back($background-color) {
-  background-size: cover;
+@mixin back($background-color, $background-size) {
   background-position: center;
   background-repeat: no-repeat;
   background-color: $background-color;
+  background-size: $background-size;
 }
 
 @mixin green-button($padding) {

@@ -109,8 +109,20 @@
     padding: 0;
   }
 
+  .programs__list {
+    padding: 8px 0 0 0;
+  }
+
   .programs-item {
-    padding: 81px 326px 62px 52px;
+    margin: 0 0 30px 0;
+
+    &:first-child {
+      padding: 76px 282px 56px 52px;
+    }
+
+    &:last-child {
+      padding: 76px 315px 56px 52px;
+    }
   }
 
   .programs-item__header {
@@ -119,31 +131,45 @@
     &::before {
       width: 200px;
       height: 200px;
-      left: 447px;
-      top: 73px;
+      left: 445px;
+      top: 92px;
     }
 
     &--slim::after {
       width: 141px;
       height: 194px;
-      left: 470px;
-      top: 71px;
+      left: 475px;
+      top: 80px;
     }
 
     &--pro::after {
       width: 268px;
       height: 113px;
-      left: 403px;
-      top: 129px;
+      left: 411px;
+      top: 135px;
     }
   }
 
   .programs-item__description {
+    padding: 25px 0 38px 0;
+
     border-bottom: none;
   }
 
   .programs-item__link {
     @include Oswald-style(20px, 20px, #111111, left, uppercase);
+
+    &::after {
+      width: 24px;
+      height: 17px;
+      margin-left: 24px;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 34px;
+      height: 17px;
+    }
   }
 }
 

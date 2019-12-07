@@ -11,11 +11,11 @@
 
 @media (min-width: $tablet-width) {
   .main {
-    padding: 0 30px;
+    padding: 54px 30px 0 29px;
   }
 
   .main__header {
-    padding-bottom: 56px;
+    padding: 0;
 
     @include Oswald-style(60px, 60px, #111111, left, none);
   }

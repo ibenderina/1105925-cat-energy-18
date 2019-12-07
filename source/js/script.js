@@ -25,9 +25,10 @@ navToggle.addEventListener('click', function() {
 });
 
 var catBefore = document.querySelector('.results__photo-item--before');
+var catAfter = document.querySelector('.results__photo-item--after');
 var buttonBefore = document.querySelector('.results__range-button--before');
 var buttonAfter = document.querySelector('.results__range-button--after');
-var toggle = document.querySelector('.results__range-scale');
+var commonRange = document.querySelector('.results__range-scale');
 
 commonRange.addEventListener ('click', function() {
   if (catAfter.classList.contains('results__photo-item--closed')) {

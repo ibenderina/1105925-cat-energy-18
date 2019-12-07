@@ -26,7 +26,6 @@
   &:nth-of-type(4),
   &:nth-of-type(5) {
     border-top: solid 3px #68b738;
-    margin-right: -20px;
 
     .options__label {
       padding-right: 20px;
@@ -37,7 +36,7 @@
   &:nth-of-type(5) {
     .options__header {
       padding: 15px 23px 19px 0;
-      margin-bottom: 15px;
+      margin-bottom: 17px;
     }
   }
 }
@@ -51,9 +50,8 @@
 }
 
 .options__name {
-  display: flex;
   align-items: center;
-  padding-right: 10px;
+  padding-right: 14px;
 
   @include Oswald-style(16px, 18px, #222222, left, uppercase);
   white-space: nowrap;
@@ -76,7 +74,7 @@
 .options__textarea {
   display: inline-block;
   min-height: 124px;
-  padding: 14px 11px 9px 13px;
+  padding: 11px 11px 9px 13px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
   outline: none;
@@ -150,7 +148,7 @@
 
 .options__header {
   display: inline-block;
-  margin: 0 99px 33px 0;
+  margin: 0 99px 28px 0;
   vertical-align: middle;
   padding: 20px 0 3px 0;
 
@@ -250,25 +248,58 @@
 
 @media (min-width: $tablet-width) {
   .menu-form {
-    padding: 0;
+    padding: 56px 38px 0 40px;
   }
 
   .menu-form__description {
-    width: 50%;
+    width: 52%;
+    padding: 0 0 66px 0;
+    margin: 0;
 
     @include Oswald-style(20px, 30px, #111111, left, uppercase);
   }
 
   .options:nth-of-type(2) {
-    margin: 9px 0;
+    margin: 52px 0 97px 0;
+    padding: 23px 0 9px 27px;
+
+    .options__label {
+      margin-bottom: 10px;
+    }
+
+    .options__name {
+      line-height: 40px;
+    }
+  }
+
+  .options:nth-of-type(3) {
+    margin: 0 -70px 0 -70px;
+    padding: 0 70px 0 70px;
+
+    .options__header {
+      margin: -40px 0 0 -40px;
+      background-color: #ffffff;
+      width: 88%;
+      padding: 0 0 0 39px;
+    }
   }
 
   .options__name {
+    padding-right: 17px;
+
     @include Oswald-style(20px, 20px, #222222, left, uppercase);
   }
 
-  .options__input::placeholder {
-    @include Oswald-style(20px, 20px, #444444, left, uppercase);
+  .options__input {
+    padding: 10px 11px 10px 19px;
+
+    &::placeholder {
+      @include Oswald-style(20px, 20px, #444444, left, uppercase);
+    }
+  }
+
+  .options__label {
+    margin-bottom: 20px;
   }
 
   .options__header {
@@ -301,6 +332,18 @@
     .options__label {
       width: 45%;
     }
+  }
+
+  .options__radio + .options__name::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .options__radio:checked + .options__name::after {
+    width: 18px;
+    height: 18px;
+    top: 14px;
+    left: 8px;
   }
 }
 

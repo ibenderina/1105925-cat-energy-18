@@ -28,8 +28,10 @@
 @media (min-width: $tablet-width) {
   .social-list {
     display: inline-flex;
-    width: 30%;
-    justify-content: space-around;
+    width: 18%;
+    padding: 0 0 4px 0;
+    margin: 0;
+    justify-content: space-between;
     align-items: center;
 
     border-bottom: none;

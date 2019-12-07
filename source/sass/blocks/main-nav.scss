@@ -4,25 +4,7 @@
   position: relative;
   flex-grow: 1;
   padding-top: 11px;
-  background-color: green;
-
-  animation-name: navigation;
-  animation-duration: 1s;
-  opacity: 1;
-}
-
-@keyframes navigation {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-    visibility: hidden;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-    display: block;
-  }
+  background-color: inherit;
 }
 
 .main-nav__toggle {
@@ -87,6 +69,8 @@
   }
 
   &--active {
+    padding-bottom: 7px;
+    
     color: #111111;
     border-bottom: 2px solid #68b738;
   }
@@ -95,8 +79,9 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     display: inline-block;
+    width: 60%;
     vertical-align: baseline;
-    padding: 0 0 0 41px;
+    padding: 0 0 0 76px;
   }
 
   .main-nav__toggle {
@@ -105,7 +90,7 @@
 
   .main-nav__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
   }
 
