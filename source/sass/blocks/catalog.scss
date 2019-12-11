@@ -77,7 +77,7 @@
     padding: 10px 0;
     width: 100%;
 
-    @include Oswald-style(16px, 20px, $font-darkgrey, center, uppercase);
+    @include Oswald-style(16px, 20px, #111111, center, uppercase);
     text-decoration: none;
 
     background-color: #f2f2f2;

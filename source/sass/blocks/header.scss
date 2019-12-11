@@ -27,15 +27,32 @@
     padding: 21px 30px 0 30px;
     border-bottom: none;
   }
+
+  .header__logo {
+    width: auto;
+    height: auto;
+  }
+
+  .header__logo-link {
+    width: 174px;
+    height: 59px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    padding: 24px 32px 23px 31px;
+    padding: 53px 110px 0 109px;
     border-bottom: none;
   }
 
+  .header__logo {
+    width: auto;
+    height: auto;
+  }
+
   .header__logo-link {
-    width: 50%;
+    width: 203px;
+    height: 60px;
+    padding-bottom: 6px;
   }
 }

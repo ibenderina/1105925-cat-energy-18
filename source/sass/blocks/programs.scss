@@ -174,46 +174,63 @@
 }
 
 @media (min-width: $desktop-width) {
+  .programs {
+    padding: 0 111px 0 109px;
+    margin: 279px 0 0 0;
+  }
+
   .programs__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
   }
 
-  .programs-item {
+  .programs-item:first-child,
+  .programs-item:last-child {
     width: 40%;
-    padding: 41px 56px 62px 53px;
+    padding: 76px 30px 55px 53px;
+  }
+
+  .programs-item:first-child .programs-item__header {
+    padding-left: 47px;
+  }
+
+  .programs-item:last-child .programs-item__header {
+    padding-left: 61px;
   }
 
   .programs-item__header {
-    @include Oswald-style(36px, 37px, #111111, right, uppercase);
+    @include Oswald-style(36px, 37px, #111111, center, uppercase);
 
     &::before {
       width: 100px;
       height: 100px;
-      left: 47px;
-      top: 20px;
+      left: 53px;
+      top: 47px;
     }
 
     &--slim::after {
       width: 71px;
       height: 97px;
-      left: 70px;
-      top: 21px;
+      left: 67px;
+      top: 41px;
     }
 
     &--pro::after {
       width: 134px;
       height: 57px;
-      left: 13px;
-      top: 29px;
+      left: 36px;
+      top: 68px;
     }
   }
 
   .programs-item__description {
+    padding: 74px 0 31px 0;
+    margin: 0;
+
     font-size: 16px;
     line-height: 24px;
-
-    padding-top: 75px;
   }
 }

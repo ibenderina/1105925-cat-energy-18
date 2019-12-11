@@ -70,7 +70,6 @@
 
   &--active {
     padding-bottom: 7px;
-    
     color: #111111;
     border-bottom: 2px solid #68b738;
   }
@@ -79,9 +78,9 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     display: inline-block;
-    width: 60%;
+    max-width: 62%;
     vertical-align: baseline;
-    padding: 0 0 0 76px;
+    padding: 0 0 0 93px;
   }
 
   .main-nav__toggle {
@@ -103,9 +102,8 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    display: inline-block;
-    vertical-align: baseline;
-    padding: 0 0 0 41px;
+    padding: 0 0 0 0;
+    max-width: 39%;
   }
 
   .main-nav__toggle {
@@ -113,13 +111,12 @@
   }
 
   .main-nav__list {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0;
+    padding: 0 0 0 0;
   }
 
   .main-nav__list-item {
+    padding: 0 0 0 0;
+
     border-top: none;
   }
 

@@ -11,13 +11,13 @@
 }
 
 .options {
-  padding: 0;
-  margin: 0;
+  padding: 0 20px;
+  margin: 0 -20px;
 
   border: none;
 
   &:nth-of-type(2) {
-    margin: 9px -20px;
+    margin: 9px -20px 18px -20px;
     padding: 18px 18px 6px 18px;
     border: 1px solid #ededed;
   }
@@ -26,19 +26,24 @@
   &:nth-of-type(4),
   &:nth-of-type(5) {
     border-top: solid 3px #68b738;
-
-    .options__label {
-      padding-right: 20px;
-    }
   }
+}
 
-  &:nth-of-type(4),
-  &:nth-of-type(5) {
-    .options__header {
-      padding: 15px 23px 19px 0;
-      margin-bottom: 17px;
-    }
+.options__header {
+  display: inline;
+  max-width: 79%;
+  margin: 0 0 43px -20px;
+  padding: 12px 20px;
+
+  @include Oswald-style(24px, 24px, #111111, left, none);
+
+  &--mod {
+    margin-bottom: 23px;
   }
+}
+
+.options__header--br {
+  position: absolute;
 }
 
 .options__label {
@@ -55,6 +60,10 @@
 
   @include Oswald-style(16px, 18px, #222222, left, uppercase);
   white-space: nowrap;
+
+  &--mod {
+    padding-right: 9px;
+  }
 }
 
 .options__input {
@@ -74,7 +83,7 @@
 .options__textarea {
   display: inline-block;
   min-height: 124px;
-  padding: 11px 11px 9px 13px;
+  padding: 11px 11px 15px 13px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
   outline: none;
@@ -131,8 +140,8 @@
 .options__input--email::after {
   width: 18px;
   height: 14px;
-  top: 14px;
-  right: 36px;
+  top: 16px;
+  right: 17px;
 
   background-image: url("../../img/icon-mail.svg");
 }
@@ -140,19 +149,10 @@
 .options__input--phone::after {
   width: 21px;
   height: 21px;
-  top: 12px;
-  right: 33px;
+  top: 11px;
+  right: 13px;
 
   background-image: url("../../img/icon-phone.svg");
-}
-
-.options__header {
-  display: inline-block;
-  margin: 0 99px 28px 0;
-  vertical-align: middle;
-  padding: 20px 0 3px 0;
-
-  @include Oswald-style(24px, 24px, #111111, left, none);
 }
 
 .menu-form__options-button {
@@ -269,18 +269,6 @@
 
     .options__name {
       line-height: 40px;
-    }
-  }
-
-  .options:nth-of-type(3) {
-    margin: 0 -70px 0 -70px;
-    padding: 0 70px 0 70px;
-
-    .options__header {
-      margin: -40px 0 0 -40px;
-      background-color: #ffffff;
-      width: 88%;
-      padding: 0 0 0 39px;
     }
   }
 

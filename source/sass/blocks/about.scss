@@ -46,7 +46,7 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    padding: 53px 100px 23px 106px;
+    padding: 0 100px 23px 106px;
     margin-bottom: 501px;
 
     background-image: none;
@@ -72,8 +72,8 @@
     height: 603px;
     position: absolute;
     padding: 0 20px;
-    top: 256px;
-    left: 78px;
+    top: 201px;
+    left: 83px;
     z-index: -1;
   }
 
@@ -91,48 +91,16 @@
 
 @media (min-width: $desktop-width) {
   .about {
-    width: 720px;
-    height: 696px;
-
-    background-image: url("../img/index-background-mobile@1x.jpg");
-
-    @include back(#68b738, cover);
-  }
-
-  .about__header {
-    margin: 0;
-    padding-bottom: 0;
-
-    @include Oswald-style(36px, 36px, #ffffff, center, none);
-  }
-
-  .about__description {
-    padding-bottom: 0;
-
-    @include Oswald-style(14px, 14px, #ffffff, center, uppercase);
-  }
-
-  .about__img {
-    width: 635px;
-    height: 605px;
-    position: absolute;
-    padding: 0 20px;
-    top: 253px;
-    left: 75px;
-    z-index: -1;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .about {
     position: relative;
     background: none;
+    padding: 99px 0 0 135px;
     margin-bottom: 0;
+    width: 100%;
   }
 
   .about__header {
     margin: 0;
-    padding: 113px 0 0 0;
+    padding: 4px 0 8px 74px;
     width: 493px;
 
     @include Oswald-style(60px, 60px, #111111, left, none);
@@ -141,13 +109,17 @@
       content: "";
       display: inline-block;
       position: absolute;
-      width: 720px;
+      width: 100%;
       height: 696px;
-      top: -119px;
-      right: -511px;
+      top: -120px;
+      right: -738px;
       z-index: -2;
 
       background-color: #68b738;
+      background-image: url(../img/index-background-desktop@1x.jpg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 46% 100%;
     }
 
     &::after {
@@ -156,8 +128,8 @@
       position: absolute;
       width: 552px;
       height: 499px;
-      top: 32px;
-      right: -177px;
+      top: 21px;
+      right: 446px;
       z-index: -2;
 
       background-image: url("../img/index-can-desktop@1x.png");
@@ -167,7 +139,7 @@
   }
 
   .about__description {
-    padding: 33px 0 53px 0;
+    padding: 33px 0 53px 75px;
 
     @include Oswald-style(20px, 20px, #111111, left, uppercase);
   }
@@ -179,11 +151,10 @@
   .about__select-link {
     display: inline-block;
     vertical-align: middle;
-    max-width: 245px;
-    margin: 0;
-    padding: 10px 20px;
+    max-width: 193px;
+    margin: 0 0 0 74px;
 
-    @include green-button(17px 26px);
+    @include green-button(16px 26px);
     @include Oswald-style(20px, 20px, #ffffff, center, uppercase);
   }
 }
