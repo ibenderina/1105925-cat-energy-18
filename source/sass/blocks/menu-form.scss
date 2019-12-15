@@ -434,10 +434,10 @@
       width: 47%;
       display: inline-flex;
     }
+  }
 
-    .options__label:first-child {
-      margin-right: 68px;
-    }
+  .options__label--mod {
+    margin-right: 68px;
   }
 
   .options:last-of-type {
