@@ -1,17 +1,13 @@
 .header {
+  width: 100vw;
   max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 11px 19px;
-
-  align-items: center;
-  justify-content: space-between;
 
   border-bottom: solid 1px #ededed;
 }
 
 .header__logo-link {
+  padding: 10px 0 11px 19px;
+
   &:hover .header__logo,
   &:focus .header__logo {
     opacity: 0.8;

@@ -27,8 +27,8 @@
 .about__img {
   position: absolute;
   padding: 0 20px;
-  top: 167px;
-  left: 0;
+  top: 140px;
+  left: -21px;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -93,14 +93,26 @@
   .about {
     position: relative;
     background: none;
-    padding: 99px 0 0 135px;
+    padding: 99px 0 0 0;
     margin-bottom: 0;
     width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 698px;
+      top: -121px;
+      left: 0;
+
+      background-image: linear-gradient(to right, transparent 57%, #64a83b 43%);
+      z-index: -100;
+    }
   }
 
   .about__header {
     margin: 0;
-    padding: 4px 0 8px 74px;
+    padding: 4px 0 8px 0;
     width: 493px;
 
     @include Oswald-style(60px, 60px, #111111, left, none);
@@ -109,17 +121,17 @@
       content: "";
       display: inline-block;
       position: absolute;
-      width: 100%;
-      height: 696px;
-      top: -121px;
-      right: -738px;
+      width: 720px;
+      height: 697px;
+      top: -219px;
+      left: 738px;
       z-index: -2;
 
       background-color: #68b738;
       background-image: url(../img/index-background-desktop@1x.jpg);
       background-repeat: no-repeat;
       background-position: left;
-      background-size: 50% 100%;
+      background-size: 100%;
     }
 
     &::after {
@@ -128,8 +140,8 @@
       position: absolute;
       width: 552px;
       height: 499px;
-      top: 21px;
-      right: 302px;
+      top: -77px;
+      left: 579px;
       z-index: -2;
 
       background-image: url("../img/index-can-desktop@1x.png");
@@ -139,7 +151,7 @@
   }
 
   .about__description {
-    padding: 33px 0 53px 75px;
+    padding: 33px 0 53px 0;
 
     @include Oswald-style(20px, 20px, #111111, left, uppercase);
   }
@@ -152,7 +164,7 @@
     display: inline-block;
     vertical-align: middle;
     max-width: 193px;
-    margin: 0 0 0 74px;
+    margin: 0;
 
     @include green-button(16px 26px);
     @include Oswald-style(20px, 20px, #ffffff, center, uppercase);

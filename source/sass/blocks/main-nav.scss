@@ -3,13 +3,13 @@
   width: 100%;
   position: relative;
   flex-grow: 1;
-  padding-top: 11px;
   background-color: inherit;
 }
 
 .main-nav__toggle {
   width: 25px;
   height: 19px;
+  margin: 21px 20px 0 0;
 
   border: none;
   cursor: pointer;
@@ -21,6 +21,7 @@
 .main-nav__toggle--close {
   width: 19px;
   height: 19px;
+  margin: 21px 20px 0 0;
 
   border: none;
   cursor: pointer;

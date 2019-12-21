@@ -21,12 +21,6 @@
     padding: 18px 18px 6px 18px;
     border: 1px solid #ededed;
   }
-
-  &:nth-of-type(3),
-  &:nth-of-type(4),
-  &:nth-of-type(5) {
-    border-top: solid 3px #68b738;
-  }
 }
 
 .options__header {
@@ -36,13 +30,22 @@
   padding: 12px 20px;
 
   @include Oswald-style(24px, 24px, #111111, left, none);
+}
 
-  &--mod {
-    margin-bottom: 23px;
+.options__header--border {
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100vw;
+    height: 3px;
+    margin-right: -100vw;
+    margin-left: 40px;
+    vertical-align: middle;
+    background-color: #68b738;
   }
 }
 
-.options__header--br {
+.options__header {
   position: absolute;
 }
 
@@ -337,6 +340,30 @@
     }
   }
 
+  .options__header--border {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: 40px;
+      margin-left: -100vw;
+      vertical-align: middle;
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: -100vw;
+      margin-left: 40px;
+      vertical-align: middle;
+      background-color: #68b738;
+    }
+  }
+
   .menu-form__options-button {
     padding: 17px 26px;
     width: 45%;
@@ -396,8 +423,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 -87px;
-    padding: 58px 154px 62px 153px;
+    margin: 0;
+    padding: 0;
   }
 
   .menu-form__description {
@@ -434,6 +461,30 @@
     .options__label {
       width: 47%;
       display: inline-flex;
+    }
+  }
+
+  .options__header--border {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: 40px;
+      margin-left: -100vw;
+      vertical-align: middle;
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: -100vw;
+      margin-left: 40px;
+      vertical-align: middle;
+      background-color: #68b738;
     }
   }
 

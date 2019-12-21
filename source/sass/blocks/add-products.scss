@@ -40,6 +40,17 @@
   padding-bottom: 19px;
 
   @include Oswald-style(24px, 24px, #111111, left, none);
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100vw;
+    height: 3px;
+    margin-right: -100vw;
+    margin-left: 22px;
+    vertical-align: middle;
+    background-color: #68b738;
+  }
 }
 
 .product-list {
@@ -94,8 +105,6 @@
   .add-products {
     margin: 87px -30px 75px -30px;
     padding: 0 30px;
-
-    border-top: 3px solid #68b738;
   }
 
   .add-products__header {
@@ -106,6 +115,28 @@
     @include Oswald-style(36px, 36px, #111111, left, none);
 
     background-color: #ffffff;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: 40px;
+      margin-left: -100vw;
+      vertical-align: middle;
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: -100vw;
+      margin-left: 40px;
+      vertical-align: middle;
+      background-color: #68b738;
+    }
   }
 
   .add-products__product-list {
@@ -179,14 +210,35 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 141px 0 120px;
+    padding: 0;
     margin-bottom: 86px;
   }
 
   .add-products__header {
     display: block;
     margin: -24px 0 79px -21px;
-    width: 28%;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: 40px;
+      margin-left: -100vw;
+      vertical-align: middle;
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: -100vw;
+      margin-left: 40px;
+      vertical-align: middle;
+      background-color: #68b738;
+    }
   }
 
   .add-products__product-list {

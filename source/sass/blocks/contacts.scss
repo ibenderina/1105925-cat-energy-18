@@ -76,12 +76,14 @@
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
+    margin: 0 0 -7px 0;
+    padding: 0;
   }
 
   .contacts__item {
     position: absolute;
-    top: 23%;
-    left: 9%;
+    margin-top: 116px;
+    left: 8%;
     max-width: 494px;
     padding: 66px 0 34px 80px;
 
