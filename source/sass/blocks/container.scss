@@ -18,7 +18,14 @@
 @media (min-width: $tablet-width) {
   .container {
     margin: 0 auto;
-    width: 1220px;
+    width: 100%;
+
+    &--footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+    }
   }
 }
 
@@ -46,7 +53,7 @@
 
       background-color: #ffffff;
       background-image: linear-gradient(to bottom, #ffffff 125px, transparent 125px),
-                        linear-gradient(to right, #f2f2f2 70%, #eaeaea 30%);
+        linear-gradient(to right, #f2f2f2 70%, #eaeaea 30%);
     }
 
     &--catalog {

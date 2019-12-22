@@ -1,5 +1,6 @@
 .add-products {
   padding: 0;
+  position: relative;
 }
 
 .add-products__gifts {
@@ -29,7 +30,7 @@
     width: 56px;
     height: 61px;
 
-    background-image: url("../../img/icon-gift.svg");
+    background-image: url("../img/icon-gift.svg");
 
     @include back(transparent, cover);
   }
@@ -37,74 +38,30 @@
 
 .add-products__header {
   margin: 29px 0 0 0;
+  width: 87%;
+  max-width: 250px;
   padding-bottom: 19px;
+  background-color: #ffffff;
 
   @include Oswald-style(24px, 24px, #111111, left, none);
 
-  &::after {
+  &::before {
+    position: absolute;
     content: "";
-    display: inline-block;
-    width: 100vw;
+    width: 93vw;
     height: 3px;
-    margin-right: -100vw;
-    margin-left: 22px;
-    vertical-align: middle;
-    background-color: #68b738;
+    top: 13px;
+    z-index: -1;
+    background-color: red;
   }
-}
-
-.product-list {
-  padding: 0;
-  margin-bottom: 40px;
-
-  list-style-type: none;
-}
-
-.product-list__item {
-  margin: 0;
-  padding-bottom: 18px;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-  &:first-child {
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-  }
-}
-
-.product-list__name {
-  margin: 14px 0 0 0;
-
-  @include Oswald-style(16px, 16px, #222222, left, uppercase);
-}
-
-.product-list__contain {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.contain__text,
-.contain__description {
-  margin: 0;
-  width: 49%;
-
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.contain__description {
-  text-align: right;
-}
-
-.product-list__link {
-  @include green-button(9px 0);
-  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
 }
 
 @media (min-width: $tablet-width) {
   .add-products {
     margin: 87px -30px 75px -30px;
     padding: 0 30px;
+
+    border-top: 3px solid #68b738;
   }
 
   .add-products__header {
@@ -115,77 +72,6 @@
     @include Oswald-style(36px, 36px, #111111, left, none);
 
     background-color: #ffffff;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 100vw;
-      height: 3px;
-      margin-right: 40px;
-      margin-left: -100vw;
-      vertical-align: middle;
-      background-color: #68b738;
-    }
-
-    &::after {
-      content: "";
-      display: inline-block;
-      width: 100vw;
-      height: 3px;
-      margin-right: -100vw;
-      margin-left: 40px;
-      vertical-align: middle;
-      background-color: #68b738;
-    }
-  }
-
-  .add-products__product-list {
-    padding: 0;
-    margin: 0 0 69px 0;
-
-    border-left: 1px solid #cdcdcd;
-    border-right: 1px solid #cdcdcd;
-  }
-
-  .product-list__item {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 11px 37px 28px 37px;
-
-    border-top: none;
-  }
-
-  .product-list__name {
-    display: inline-flex;
-    width: 30%;
-
-    @include Oswald-style(20px, 20px, #222222, left, uppercase);
-  }
-
-  .contain {
-    display: inline-flex;
-    margin: 20px 0 25px 0;
-    width: 50%;
-    text-align: right;
-  }
-
-  .contain__text {
-    width: 70%;
-  }
-
-  .contain__description {
-    width: 30%;
-  }
-
-  .contain__text,
-  .contain__description {
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  .product-list__link {
-    width: 100%;
   }
 
   .add-products__gifts {
@@ -217,28 +103,7 @@
   .add-products__header {
     display: block;
     margin: -24px 0 79px -21px;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 100vw;
-      height: 3px;
-      margin-right: 40px;
-      margin-left: -100vw;
-      vertical-align: middle;
-      background-color: #68b738;
-    }
-
-    &::after {
-      content: "";
-      display: inline-block;
-      width: 100vw;
-      height: 3px;
-      margin-right: -100vw;
-      margin-left: 40px;
-      vertical-align: middle;
-      background-color: #68b738;
-    }
+    width: 28%;
   }
 
   .add-products__product-list {
@@ -248,32 +113,6 @@
 
     border-left: none;
     border-right: none;
-  }
-
-  .product-list__item {
-    padding: 15px 0 16px 0;
-    align-items: baseline;
-  }
-
-  .product-list__link {
-    max-width: 26%;
-
-    padding: 10px 5px;
-  }
-
-  .product-list__name {
-    margin: 0;
-  }
-
-  .contain {
-    max-width: 34%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .contain__text {
-    padding-right: 89px;
-    text-align: left;
   }
 
   .add-products__gifts {

@@ -32,9 +32,9 @@ var slider = document.querySelector('.slider__button');
 var container = document.querySelector('.slider__container');
 
 toggleAfter.addEventListener('click', function() {
-  if (photoAfter.classList.contains('results__photo-item--closed')) {
-    photoAfter.classList.remove('results__photo-item--closed');
-    photoBefore.classList.add('results__photo-item--closed');
+  if (photoAfter.classList.contains('slider__photo-item--closed')) {
+    photoAfter.classList.remove('slider__photo-item--closed');
+    photoBefore.classList.add('slider__photo-item--closed');
     slider.classList.add('slider__button--after');
     container.classList.remove('slider__container--before');
     container.classList.add('slider__container--after');
@@ -48,10 +48,10 @@ toggleAfter.addEventListener('click', function() {
 });
 
 toggleBefore.addEventListener('click', function() {
-  if (photoBefore.classList.contains('results__photo-item--closed')
+  if (photoBefore.classList.contains('slider__photo-item--closed')
     && slider.classList.contains('slider__button--after')) {
-    photoBefore.classList.remove('results__photo-item--closed');
-    photoAfter.classList.add('results__photo-item--closed');
+    photoBefore.classList.remove('slider__photo-item--closed');
+    photoAfter.classList.add('slider__photo-item--closed');
     slider.classList.remove('slider__button--after');
     container.classList.remove('slider__button--after');
     container.classList.add('slider__button--before');

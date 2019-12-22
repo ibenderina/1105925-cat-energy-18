@@ -1,0 +1,382 @@
+.options {
+  padding: 0 20px;
+  margin: 0 -20px;
+
+  border: none;
+
+  &:nth-of-type(2) {
+    margin: 9px -20px 18px -20px;
+    padding: 18px 18px 6px 18px;
+    border: 1px solid #ededed;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    border-top: solid 3px #68b738;
+  }
+}
+
+.options__header {
+  display: inline;
+  max-width: 79%;
+  margin: 0 0 43px -20px;
+  padding: 12px 20px;
+
+  @include Oswald-style(24px, 24px, #111111, left, none);
+
+  &--mod {
+    margin-bottom: 23px;
+  }
+}
+
+.options__header--br {
+  position: absolute;
+}
+
+.options__label {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.options__name {
+  align-items: center;
+  padding-right: 14px;
+
+  @include Oswald-style(16px, 18px, #222222, left, uppercase);
+  white-space: nowrap;
+
+  &--mod {
+    padding-right: 9px;
+  }
+}
+
+.options__input {
+  width: 100%;
+  padding: 4px 11px 9px 13px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  outline: 1px solid transparent;
+
+  @include Oswald-style(20px, 20px, #444444, left, uppercase);
+
+  &::placeholder {
+    @include Oswald-style(16px, 18px, #444444, left, uppercase);
+  }
+}
+
+.options__textarea {
+  display: inline-block;
+  min-height: 124px;
+  padding: 11px 11px 15px 13px;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  outline: none;
+
+  resize: none;
+}
+
+.options__input:hover,
+.options__textarea:hover {
+  border: 1px solid rgba(205, 205, 205, 1);
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: none;
+  }
+}
+
+.options__input:focus,
+.options__textarea:focus {
+  border: solid 1px #444444;
+  outline: 1px solid #444444;
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: none;
+  }
+}
+
+.options__input:invalid,
+.options__textarea:invalid {
+  border: 2px solid #ff8282;
+  outline: 1px solid transparent;
+
+  & + .options__input--email::after,
+  & + .options__input--phone::after {
+    filter: brightness(0.6) saturate(159%) invert(1) hue-rotate(90deg);
+  }
+}
+
+.options__input--email::after,
+.options__input--phone::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+
+  filter: grayscale(1) brightness(2) invert(1);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.options__input--email::after {
+  width: 18px;
+  height: 14px;
+  top: 16px;
+  right: 17px;
+
+  background-image: url("../../img/icon-mail.svg");
+}
+
+.options__input--phone::after {
+  width: 21px;
+  height: 21px;
+  top: 11px;
+  right: 13px;
+
+  background-image: url("../../img/icon-phone.svg");
+}
+
+.options__checkbox:hover + .options__name::before,
+.options__radio:hover + .options__name::before {
+  border: solid 1px #bababa;
+}
+
+.options__checkbox:active + .options__name,
+.options__radio:active + .options__name {
+  opacity: 0.3;
+  border-color: #bababa;
+}
+
+.options__checkbox:focus + .options__name,
+.options__radio:focus + .options__name {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.options__checkbox + .options__name::before {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 27px;
+  margin-right: 17px;
+
+  border: solid 1px #cdcdcd;
+}
+
+.options__checkbox:checked + .options__name::after {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 22px;
+  height: 17px;
+
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.options__radio + .options__name::before {
+  content: "";
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  margin-right: 16px;
+
+  border: solid 1px #cdcdcd;
+  border-radius: 25px;
+}
+
+.options__radio:checked + .options__name::after {
+  content: "";
+
+  display: inline-block;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  margin-left: 4px;
+
+  border-radius: 25px;
+  background-color: #68b738;
+}
+
+@media (min-width: $tablet-width) {
+  .options {
+    margin: 0 -71px;
+    padding: 0 69px;
+  }
+
+  .options:nth-of-type(2) {
+    margin: 52px 0 63px 0;
+    padding: 23px 0 9px 27px;
+
+    .options__label {
+      margin-bottom: 10px;
+    }
+
+    .options__name {
+      line-height: 40px;
+    }
+  }
+
+  .options:nth-of-type(3) {
+    margin-bottom: 33px;
+  }
+
+  .options:last-of-type {
+    margin-top: 33px;
+
+    .options__header {
+      margin-bottom: 44px;
+    }
+
+    .options__label {
+      margin-bottom: 29px;
+    }
+  }
+
+  .options__name {
+    padding-right: 17px;
+
+    @include Oswald-style(20px, 20px, #222222, left, uppercase);
+  }
+
+  .options__input {
+    padding: 10px 11px 10px 19px;
+
+    &::placeholder {
+      @include Oswald-style(20px, 20px, #444444, left, uppercase);
+    }
+  }
+
+  .options__textarea {
+    min-height: 156px;
+    padding: 16px 11px 3px 19px;
+  }
+
+  .options__input--email::after {
+    top: 22px;
+    right: 20px;
+  }
+
+  .options__input--phone::after {
+    top: 16px;
+    right: 17px;
+  }
+
+  .options__label {
+    margin-bottom: 20px;
+  }
+
+  .options__header {
+    max-width: 90%;
+    margin: 0 0 62px -20px;
+
+    @include Oswald-style(36px, 36px, #111111, left, none);
+
+    &--br {
+      position: relative;
+    }
+  }
+
+  .options__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2px 7px 0 0;
+
+    .options__label {
+      width: 45%;
+    }
+  }
+
+  .options__radio + .options__name::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .options__radio:checked + .options__name::after {
+    width: 18px;
+    height: 18px;
+    top: 14px;
+    left: 8px;
+  }
+
+  .options__checkbox + .options__name::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .options__checkbox:checked + .options__name::after {
+    width: 21px;
+    height: 16px;
+    top: 10px;
+    left: 11px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .options:first-of-type {
+    display: flex;
+    width: 47%;
+  }
+
+  .options:nth-of-type(2) {
+    width: 44%;
+    margin: 0 0 61px 0;
+    padding: 23px 1px 10px 31px;
+
+    .options__label {
+      margin-left: -5px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .options:nth-of-type(3),
+  .options:nth-of-type(4),
+  .options:nth-of-type(5) {
+    width: 100%;
+  }
+
+  .options:nth-of-type(3) {
+    .options__label {
+      width: 47%;
+      display: inline-flex;
+    }
+  }
+
+  .options__label--mod {
+    margin-right: 68px;
+  }
+
+  .options:last-of-type {
+    margin-top: 36px;
+  }
+
+  .options__list {
+    width: 103%;
+
+    .options__label {
+      width: 22%;
+    }
+  }
+}

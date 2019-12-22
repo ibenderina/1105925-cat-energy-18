@@ -25,10 +25,9 @@
 }
 
 .about__img {
-  position: absolute;
-  padding: 0 20px;
-  top: 140px;
-  left: -21px;
+  z-index: 5000;
+  display: inline-block;
+  margin: -313px 0 78px 0;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -128,7 +127,7 @@
       z-index: -2;
 
       background-color: #68b738;
-      background-image: url(../img/index-background-desktop@1x.jpg);
+      background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position: left;
       background-size: 100%;

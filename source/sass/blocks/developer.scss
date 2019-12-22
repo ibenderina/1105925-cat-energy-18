@@ -1,5 +1,6 @@
 .developer {
   margin: -4px 0 0 0;
+  padding: 0;
 }
 
 .developer__link {
@@ -39,7 +40,8 @@
   .developer {
     display: inline-flex;
     width: 24%;
-    padding-bottom: 12px;
+    max-width: 170px;
+    padding: 0 0 6px 0;
   }
 
   .developer__img {

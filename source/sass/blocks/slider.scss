@@ -17,7 +17,7 @@
   flex-shrink: 0;
   align-items: center;
   width: 84px;
-  margin: 0 auto;
+  margin: 0 16px 0 10px;
   padding-top: 6px;
   padding-bottom: 6px;
 
@@ -87,7 +87,7 @@
   margin: 0 auto;
 }
 
-.results__photo-item--closed {
+.slider__photo-item--closed {
   display: none;
 }
 
@@ -97,17 +97,17 @@
     margin: 54px -30px 0 -30px;
 
     background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
-                      linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+      linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .slider__container--before {
     background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
-                      linear-gradient(to right, #f2f2f2 0%, #eaeaea 100%);
+      linear-gradient(to right, #f2f2f2 0%, #eaeaea 100%);
   }
 
   .slider__container--after {
     background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
-                      linear-gradient(to left, #f2f2f2 0%, #eaeaea 0%);
+      linear-gradient(to left, #f2f2f2 0%, #eaeaea 0%);
   }
 
   .slider__photos {
@@ -157,8 +157,7 @@
 
     width: 428px;
     height: 6px;
-    margin-right: 21px;
-    margin-left: 22px;
+    margin: 0 21px 0 22px;
     padding: 0;
 
     background-color: #dcdcdc;
@@ -230,17 +229,17 @@
 
     .slider__container {
       background-image: linear-gradient(to bottom, #ffffff 205px, transparent 205px),
-                        linear-gradient(to right, #f2f2f2 405px, #eaeaea 1px);
+        linear-gradient(to right, #f2f2f2 405px, #eaeaea 1px);
     }
 
     //.slider__container--before {
     //  background-image: linear-gradient(to bottom, #ffffff 208px, transparent 208px),
-    //                    linear-gradient(to right, #f2f2f2 0%, #eaeaea 100%);
+    //    linear-gradient(to right, #f2f2f2 0%, #eaeaea 100%);
     //}
     //
     //.slider__container--after {
     //  background-image: linear-gradient(to bottom, #ffffff 208px, transparent 208px),
-    //                    linear-gradient(to left, #f2f2f2 0%, #eaeaea 0%);
+    //    linear-gradient(to left, #f2f2f2 0%, #eaeaea 0%);
     //}
 
     .slider__photos {
