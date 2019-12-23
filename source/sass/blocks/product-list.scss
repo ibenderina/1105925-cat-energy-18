@@ -64,6 +64,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .product-list {
+    margin: 0;
+  }
+
   .product-list__item {
     padding: 15px 0 16px 0;
     align-items: baseline;

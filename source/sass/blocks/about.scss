@@ -90,7 +90,7 @@
     position: relative;
     background: none;
     padding: 100px 0 0 139px;
-    margin-bottom: 0;
+    margin: 0;
 
     &::before {
       content: "";
@@ -121,8 +121,6 @@
       top: -219px;
       left: 529px;
       z-index: -2;
-
-      clip: rect(5px 647px auto 40px);
 
       background-color: #68b738;
       background-image: url("../img/index-background-desktop@1x.jpg");

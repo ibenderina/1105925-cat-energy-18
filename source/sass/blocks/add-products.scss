@@ -106,18 +106,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
-    margin-bottom: 86px;
+    padding: 52px 0 86px 0;
+    margin: 0;
   }
 
   .add-products__header {
-    display: block;
-    margin: -24px 0 79px -21px;
-    width: 28%;
+    display: inline-block;
+    margin: 0 0 80px 0;
+    padding: 0 35px 0 0;
+
+    &::before {
+      top: 74px;
+    }
   }
 
   .add-products__product-list {
-    width: 72%;
+    width: 73%;
     padding: 0 0 0 19px;
     margin: 0;
 
@@ -126,14 +130,14 @@
   }
 
   .add-products__gifts {
-    padding: 183px 0 0 0;
+    padding: 187px 0 0 0;
     max-width: 20%;
   }
 
   .add-products__gifts-text {
     margin: 0;
     text-align: center;
-    padding: 0 43px 0 44px;
+    padding: 0 39px 0 39px;
 
     &::before {
       top: -118px;
