@@ -20,8 +20,9 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    padding: 21px 0 0 0;
+    padding: 23px 31px 0 29px;
     border-bottom: none;
+    width: auto;
   }
 
   .header__logo {
@@ -32,13 +33,16 @@
   .header__logo-link {
     width: 174px;
     height: 59px;
+
+    padding: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    padding: 53px 0 0 0;
+    padding: 53px 40px 0 40px;
     border-bottom: none;
+    width: 1220px;
   }
 
   .header__logo {
@@ -49,6 +53,6 @@
   .header__logo-link {
     width: 203px;
     height: 60px;
-    padding-bottom: 6px;
+    padding: 0 0 0 69px;
   }
 }

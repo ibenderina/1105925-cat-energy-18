@@ -18,7 +18,19 @@
 @media (min-width: $tablet-width) {
   .container {
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
+
+    &--header {
+      padding: 0;
+    }
+
+    &--about {
+      padding: 4px 0 0 0;
+    }
+
+    &--form {
+      padding: 2px 0 0 0;
+    }
 
     &--footer {
       display: flex;
@@ -60,7 +72,7 @@
       padding: 24px 111px 0 109px;
     }
 
-    &form {
+    &--form {
       margin: 0 -87px;
       padding: 58px 154px 62px 153px;
     }

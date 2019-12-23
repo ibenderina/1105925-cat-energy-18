@@ -52,32 +52,42 @@
     height: 3px;
     top: 13px;
     z-index: -1;
-    background-color: red;
+    background-color: #68b738;
   }
 }
 
 @media (min-width: $tablet-width) {
   .add-products {
-    margin: 87px -30px 75px -30px;
+    margin: 76px -30px 75px -30px;
     padding: 0 30px;
-
-    border-top: 3px solid #68b738;
   }
 
   .add-products__header {
-    margin: -25px 0 80px -2px;
+    display: inline-block;
+    vertical-align: baseline;
+    margin: -12px 0 80px -2px;
     padding: 0 38px;
-    width: 48%;
+    width: auto;
+    max-width: none;
 
     @include Oswald-style(36px, 36px, #111111, left, none);
 
     background-color: #ffffff;
+
+    &::before {
+      content: "";
+      top: 10px;
+      left: 0;
+      width: 100vw;
+      height: 3px;
+      background-color: #68b738;
+    }
   }
 
   .add-products__gifts {
     display: flex;
     justify-content: space-between;
-    padding: 56px 124px 52px 424px;
+    padding: 56px 122px 52px 424px;
     margin-bottom: 0;
   }
 

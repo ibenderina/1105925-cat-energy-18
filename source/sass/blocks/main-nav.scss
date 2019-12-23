@@ -79,9 +79,9 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     display: inline-block;
-    max-width: 62%;
     vertical-align: baseline;
-    padding: 0 0 0 93px;
+    flex-basis: 64%;
+    flex-grow: 0;
   }
 
   .main-nav__toggle {
@@ -92,9 +92,14 @@
     display: flex;
     justify-content: space-between;
     margin: 0;
+    padding: 18px 0 0 13px;
+    max-width: 500px;
+    flex-wrap: wrap;
   }
 
   .main-nav__list-item {
+    padding: 0;
+
     border-top: none;
 
     @include Oswald-style(18px, 25px, #222222, center, uppercase);
@@ -112,7 +117,7 @@
   }
 
   .main-nav__list {
-    padding: 0 0 0 0;
+    padding: 18px 0 0 0;
   }
 
   .main-nav__list-item {

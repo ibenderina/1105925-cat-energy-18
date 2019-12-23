@@ -25,9 +25,9 @@
 }
 
 .about__img {
-  z-index: 5000;
+  z-index: 10;
   display: inline-block;
-  margin: -313px 0 78px 0;
+  margin: -313px auto 78px auto;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
 @media (min-width: $tablet-width) {
   .about {
     padding: 0 100px 23px 106px;
-    margin-bottom: 501px;
+    margin-bottom: 505px;
 
     background-image: none;
     background-color: transparent;
@@ -67,13 +67,10 @@
   }
 
   .about__img {
-    width: 663px;
-    height: 613px;
-    position: absolute;
-    padding: 0 20px;
-    top: 197px;
-    left: 40px;
-    z-index: -1;
+    z-index: -10;
+    margin: -93px auto 0 -51px;
+    width: 670px;
+    height: 621px;
   }
 
   .about__select-link {
@@ -92,9 +89,8 @@
   .about {
     position: relative;
     background: none;
-    padding: 99px 0 0 0;
+    padding: 104px 0 0 0;
     margin-bottom: 0;
-    width: 100%;
 
     &::before {
       content: "";
