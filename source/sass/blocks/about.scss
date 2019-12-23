@@ -89,7 +89,7 @@
   .about {
     position: relative;
     background: none;
-    padding: 100px 0 0 139px;
+    padding: 100px 0 0 0;
     margin: 0;
 
     &::before {
@@ -119,7 +119,7 @@
       width: 720px;
       height: 703px;
       top: -219px;
-      left: 529px;
+      left: 651px;
       z-index: -2;
 
       background-color: #68b738;
@@ -136,7 +136,7 @@
       width: 552px;
       height: 499px;
       top: -72px;
-      left: 371px;
+      left: 491px;
       z-index: -2;
 
       background-image: url("../img/index-can-desktop@1x.png");
