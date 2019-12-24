@@ -132,7 +132,7 @@
 @media (min-width: $desktop-width) {
   .results {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 
     background-color: #ffffff;
     background-image: linear-gradient(to bottom, #ffffff 129px, transparent 129px),

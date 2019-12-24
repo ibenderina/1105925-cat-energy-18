@@ -63,7 +63,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
-    padding: 55px 0 0 0;
+    padding: 0;
   }
 
   .menu-form__description {
@@ -76,14 +76,14 @@
 
   .menu-form__options-button {
     padding: 17px 0;
-    margin: 23px 0 81px 0;
+    margin: 28px 0 17px 0;
     width: 47%;
     flex-grow: 0;
   }
 
   .menu-form__options-note {
     width: 47%;
-    margin: 42px -5px 0 0;
+    margin: 45px 0 0 0;
     text-align: left;
   }
 }

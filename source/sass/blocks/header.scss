@@ -1,6 +1,8 @@
 .header {
   width: 100vw;
   max-width: 100%;
+  z-index: 1;
+  position: relative;
 
   border-bottom: solid 1px #ededed;
 }
