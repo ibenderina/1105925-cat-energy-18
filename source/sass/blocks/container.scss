@@ -1,6 +1,6 @@
 .container {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 
   &--header {
     display: flex;
@@ -17,7 +17,6 @@
 
 @media (min-width: $tablet-width) {
   .container {
-    margin: 0 auto;
     max-width: 100%;
 
     &--header {
@@ -43,7 +42,6 @@
 
 @media (min-width: $desktop-width) {
   .container {
-    margin: 0 auto;
     width: 1220px;
 
     &--header {
@@ -74,8 +72,7 @@
     }
 
     &--form {
-      margin: 0 -87px;
-      padding: 58px 40px 62px 40px;
+      padding: 7px 0 0 0;
     }
 
     &--contacts {

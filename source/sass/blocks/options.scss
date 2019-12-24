@@ -345,6 +345,53 @@
 }
 
 @media (min-width: $desktop-width) {
+  .options {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &:nth-of-type(3),
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      width: 100%;
+      border-top: none;
+    }
+  }
+
+  .options__header {
+    max-width: none;
+  }
+
+  .options__header--border {
+    margin: 0;
+    padding: 12px 0 74px 0;
+
+    background-color: #ffffff;
+
+    //&::before {
+    //  content: "";
+    //  display: inline-block;
+    //  width: 100vw;
+    //  height: 3px;
+    //  margin-right: 40px;
+    //  margin-left: -100%;
+    //  vertical-align: middle;
+    //  background-color: #68b738;
+    //}
+    //
+    //&::after {
+    //  content: "";
+    //  display: inline-block;
+    //  width: 100vw;
+    //  max-width: max-content;
+    //  height: 3px;
+    //  margin-right: -100vw;
+    //  margin-left: 40px;
+    //  vertical-align: middle;
+    //  background-color: #68b738;
+    //}
+  }
+
   .options:first-of-type {
     display: flex;
     width: 47%;
@@ -359,12 +406,6 @@
       margin-left: -5px;
       margin-bottom: 8px;
     }
-  }
-
-  .options:nth-of-type(3),
-  .options:nth-of-type(4),
-  .options:nth-of-type(5) {
-    width: 100%;
   }
 
   .options:nth-of-type(3) {
@@ -384,6 +425,7 @@
 
   .options__list {
     width: 103%;
+    padding: 21px 0 3px 0;
 
     .options__label {
       width: 22%;
