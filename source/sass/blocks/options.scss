@@ -1,7 +1,7 @@
 .options {
   display: block;
   padding: 0;
-  margin: 55px 0 0 0;
+  margin: 29px 0 0 0;
 
   border: none;
 
@@ -15,8 +15,8 @@
 }
 
 .options__header--border {
-  margin-right: -40px;
-  margin-left: -40px;
+  margin: 0 0 54px 0;
+  position: relative;
 
   font-size: 36px;
   line-height: 36px;
@@ -28,7 +28,7 @@
     width: 100vw;
     height: 3px;
     margin-right: 40px;
-    margin-left: -103vw;
+    margin-left: -113vw;
 
     vertical-align: middle;
 
@@ -42,12 +42,18 @@
     width: 100vw;
     height: 3px;
     margin-right: -100vw;
-    margin-left: 40px;
+    margin-left: 17px;
 
     vertical-align: middle;
 
     background-color: green;
   }
+}
+
+.options__header--br {
+  position: absolute;
+  display: block;
+  width: 100%;
 }
 
 .options--bordered {
@@ -73,10 +79,6 @@
   &--mod {
     margin-bottom: 23px;
   }
-}
-
-.options__header--br {
-  display: block;
 }
 
 .options__label {
@@ -116,7 +118,7 @@
 .options__textarea {
   display: inline-block;
   min-height: 124px;
-  padding: 11px 11px 15px 13px;
+  padding: 11px 11px 13px 13px;
   margin-top: -20px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
@@ -263,6 +265,10 @@
 
   border-radius: 25px;
   background-color: #68b738;
+}
+
+.options__list {
+  margin: -20px 0 0 0;
 }
 
 @media (min-width: $tablet-width) {

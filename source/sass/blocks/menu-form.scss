@@ -8,13 +8,13 @@
 
 .menu-form__description {
   margin: 0;
-  padding: 0 17px 40px 0;
+  padding: 0 17px 42px 0;
 
   @include Oswald-style(14px, 18px, #111111, left, uppercase);
 }
 
 .menu-form__options-button {
-  margin: 19px 0 21px 0;
+  margin: 35px 0 21px 0;
   width: 100%;
 
   @include green-button(9px 0);
