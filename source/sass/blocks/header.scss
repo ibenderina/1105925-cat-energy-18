@@ -1,8 +1,7 @@
 .header {
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 1;
-  position: relative;
 
   border-bottom: solid 1px #ededed;
 }
@@ -22,9 +21,9 @@
 
 @media (min-width: $tablet-width) {
   .header {
+    position: absolute;
     padding: 23px 31px 0 29px;
     border-bottom: none;
-    width: auto;
   }
 
   .header__logo {

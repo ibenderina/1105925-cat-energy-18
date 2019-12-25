@@ -39,63 +39,70 @@
 <main class="main">
   <div class="container container--form">
     <h1 class="main__header">Подбор программы</h1>
+    <p class="menu-form__description">Заполните анкету и мы подберем<br>
+      программу питания для вашего кота
+    </p>
     <form class="menu-form" method="post" action="https://echo.htmlacademy.ru">
-      <p class="menu-form__description">Заполните анкету и мы подберем
-        программу питания для вашего кота
-      </p>
       <h2 class="visually-hidden">Анкета</h2>
+      <div class="options__row">
+        <fieldset class="menu-form__options options options__col-half">
+          <legend class="visually-hidden">Личные данные</legend>
+          <label class="options__label">
+            <span class="options__name">Имя:*</span>
+            <input class="options__input" type="text" name="name" placeholder="Барсик">
+          </label>
+          <label class="options__label">
+            <span class="options__name">Вес (кг):*</span>
+            <input class="options__input" type="text" name="weight" placeholder="7">
+          </label>
+          <label class="options__label">
+            <span class="options__name">Возраст (лет):</span>
+            <input class="options__input" type="text" name="age" placeholder="7">
+          </label>
+        </fieldset>
+        <fieldset class="menu-form__options options options--bordered">
+          <legend class="visually-hidden">Ваша цель</legend>
+          <label class="options__label">
+            <input class="options__radio visually-hidden" type="radio" name="radio__goal" checked>
+            <span class="options__name">Похудение</span>
+          </label>
+          <label class="options__label">
+            <input class="options__radio visually-hidden" type="radio" name="radio__goal">
+            <span class="options__name">Набор массы</span>
+          </label>
+          <label class="options__label">
+            <input class="options__radio visually-hidden" type="radio" name="radio__goal">
+            <span class="options__name">Не знаю (Нужен ваш совет)</span>
+          </label>
+        </fieldset>
+      </div>
+
       <fieldset class="menu-form__options options">
-        <legend class="visually-hidden">Личные данные</legend>
-        <label class="options__label">
-          <span class="options__name">Имя:*</span>
-          <input class="options__input" type="text" name="name" placeholder="Барсик">
-        </label>
-        <label class="options__label">
-          <span class="options__name">Вес (кг):*</span>
-          <input class="options__input" type="text" name="weight" placeholder="7">
-        </label>
-        <label class="options__label">
-          <span class="options__name">Возраст (лет):</span>
-          <input class="options__input" type="text" name="age" placeholder="7">
-        </label>
-      </fieldset>
-      <fieldset class="menu-form__options options">
-        <legend class="visually-hidden">Ваша цель</legend>
-        <label class="options__label">
-          <input class="options__radio visually-hidden" type="radio" name="radio__goal" checked>
-          <span class="options__name">Похудение</span>
-        </label>
-        <label class="options__label">
-          <input class="options__radio visually-hidden" type="radio" name="radio__goal">
-          <span class="options__name">Набор массы</span>
-        </label>
-        <label class="options__label">
-          <input class="options__radio visually-hidden" type="radio" name="radio__goal">
-          <span class="options__name">Не знаю (Нужен ваш совет)</span>
-        </label>
-      </fieldset>
-      <fieldset class="menu-form__options options">
-        <legend class="options__header options__header--border">
-          <span>Контактные данные</span>
+        <legend class="options__header options__header--border">Контактные данные
           <span class="options__header--br">(владельца кота)</span>
         </legend>
-        <label class="options__label options__label--mod" for="email">
-          <span class="options__name options__name--mod">E-mail:*</span>
-          <input class="options__input options__input--error" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-          <span class="options__input--email"></span>
-        </label>
-        <label class="options__label" for="phone">
-          <span class="options__name options__name--mod">Телефон:*</span>
-          <input class="options__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
-          <span class="options__input--phone"></span>
-        </label>
+
+        <div class="options__row">
+          <label class="options__label options__col-half" for="email">
+            <span class="options__name">E-mail:*</span>
+            <input class="options__input options__input--error" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required="">
+            <span class="options__input--email"></span>
+          </label>
+          <label class="options__label options__col-half" for="phone">
+            <span class="options__name">Телефон:*</span>
+            <input class="options__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            <span class="options__input--phone"></span>
+          </label>
+        </div>
       </fieldset>
+
       <fieldset class="menu-form__options options">
         <legend class="options__header options__header--border">Комментарий</legend>
         <label class="options__label" for="behavior">
           <textarea class="options__input options__textarea" name="behavior" id="behavior" placeholder="Расскажите обо всех повадках кота"></textarea>
         </label>
-        </fieldset>
+      </fieldset>
+
       <fieldset class="menu-form__options options">
         <legend class="options__header options__header--border">Дополнительно</legend>
         <div class="options__list">
@@ -117,6 +124,7 @@
           </label>
         </div>
       </fieldset>
+
       <button class="menu-form__options-button" type="submit">Отправить заявку</button>
       <p class="menu-form__options-note">* — Обязательные поля</p>
     </form>

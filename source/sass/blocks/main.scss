@@ -24,9 +24,10 @@
 @media (min-width: $desktop-width) {
   .main {
     padding: 0;
+    overflow: hidden;
   }
 
   .main__header {
-    padding: 68px 0 0 0;
+    padding: 74px 0 0 23px;
   }
 }

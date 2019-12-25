@@ -1,4 +1,7 @@
 .menu-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding: 0;
   margin-top: -3px;
 }
@@ -27,12 +30,12 @@
 
 @media (min-width: $tablet-width) {
   .menu-form {
-    padding: 56px 38px 49px 40px;
+    padding: 3px 38px 49px 40px;
   }
 
   .menu-form__description {
     width: 52%;
-    padding: 0 0 66px 0;
+    padding: 54px 0px 11px 39px;
     margin: 0;
 
     @include Oswald-style(20px, 30px, #111111, left, uppercase);
@@ -59,17 +62,16 @@
 
 @media (min-width: $desktop-width) {
   .menu-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+    //justify-content: space-between;
     margin: 0;
-    padding: 0;
+    padding: 11px 7px 0 23px;
   }
 
   .menu-form__description {
     display: block;
     width: 100%;
-    padding: 0 894px 66px 0;
+    padding: 54px 8px 0 23px;
 
     @include Oswald-style(20px, 30px, #111111, left, uppercase);
   }

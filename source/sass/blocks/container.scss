@@ -13,6 +13,7 @@
   &--about {
     position: absolute;
     z-index: 2;
+    padding: 27px 0 0 0;
   }
 }
 
@@ -32,7 +33,7 @@
     }
 
     &--form {
-      padding: 2px 0 0 0;
+      padding: 82px 0 0 0;
     }
 
     &--footer {
@@ -47,7 +48,7 @@
 @media (min-width: $desktop-width) {
   .container {
     margin: 0 auto;
-    width: 1220px;
+    width: 1250px;
 
     &--header {
       display: flex;
@@ -79,7 +80,7 @@
     }
 
     &--form {
-      margin: 0 auto;
+      margin: 113px auto 0 auto;
       padding: 0;
       box-sizing: border-box;
     }

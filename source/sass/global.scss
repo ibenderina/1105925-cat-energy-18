@@ -15,6 +15,7 @@ body {
 
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
 }
 
 @media (min-width: $tablet-width) {
@@ -43,6 +44,18 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 //* {
