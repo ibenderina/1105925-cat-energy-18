@@ -53,6 +53,11 @@
 @media (min-width: $desktop-width) {
   .developer {
     width: 14%;
+    max-width: 163px;
     padding: 0;
+  }
+
+  .developer__img {
+    margin-right: -6px;
   }
 }

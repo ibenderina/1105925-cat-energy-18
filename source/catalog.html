@@ -176,7 +176,10 @@
           <a class="catalog-item__link" href="">Заказать</a>
         </li>
         <li class="catalog__item catalog-item catalog-item--more" >
-          <img class="catalog-item__img catalog-item__img--last" src="img/icon-plus-mobile.svg" width="31" height="31" alt="Фото упаковки крестика 'Показать больше товаров'">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/icon-plus.svg">
+            <img class="catalog-item__img catalog-item__img--last" src="img/icon-plus-mobile.svg" width="31" height="31" alt="Другие товары">
+          </picture>
           <h3 class="catalog-item__header">Показать еще 100500 товаров</h3>
           <p class="catalog-item__text">На самом деле вкусов гораздо больше!</p>
           <a class="catalog-item__link catalog-item__link--more" href="">Показать все</a>

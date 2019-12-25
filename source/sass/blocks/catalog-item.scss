@@ -117,10 +117,6 @@
       background-color: inherit;
       border: 1px solid #cdcdcd;
 
-      .catalog-item__img {
-        height: 61px;
-      }
-
       .catalog-item__header {
         padding: 50px 45px 24px 46px;
 
@@ -160,11 +156,11 @@
   }
 
   .catalog-item:last-child {
-    .catalog-item__img {
-      width: 31px;
-      height: 31px;
-      top: -47px;
-      right: 0;
+    .catalog-item__img--last {
+      width: 61px;
+      height: 61px;
+      top: 55px;
+      right: 129px;
     }
   }
 

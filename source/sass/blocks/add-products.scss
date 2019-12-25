@@ -89,6 +89,11 @@
     justify-content: space-between;
     padding: 56px 122px 52px 424px;
     margin-bottom: 0;
+
+    background-position: 100% 65%;
+    background-repeat: no-repeat;
+    background-color: #68b738;
+    background-size: cover;
   }
 
   .add-products__gifts-text {
@@ -131,8 +136,8 @@
     padding: 0 39px 0 39px;
 
     &::before {
-      top: -118px;
-      left: 99px;
+      top: -123px;
+      left: 96px;
     }
   }
 }

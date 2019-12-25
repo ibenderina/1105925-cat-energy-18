@@ -65,7 +65,8 @@
 
 @media (min-width: $tablet-width) {
   .results {
-    padding: 43px 20px 0 20px;
+    padding: 43px 0 0 0;
+    margin: 0;
 
     background-color: #ffffff;
     background-image: linear-gradient(to bottom, #ffffff 618px, transparent 618px),
@@ -131,7 +132,7 @@
 
 @media (min-width: $desktop-width) {
   .results {
-    padding: 0 0 0 40px;
+    padding: 0;
     margin: 0 auto;
 
     background-color: #ffffff;

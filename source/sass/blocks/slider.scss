@@ -35,7 +35,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -51%;
+    bottom: -2px;
     left: 6px;
 
     display: block;
@@ -92,9 +92,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .slider {
+    margin: 0 -30px;
+  }
+
   .slider__container {
     padding-bottom: 70px;
-    margin: 32px -10px 0 0;
+    margin: 55px 0 0 0;
 
     background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
       linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
@@ -221,14 +225,13 @@
     margin-left: 0;
   }
 
-@media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     .slider {
       margin: 0;
-      padding: 0 72px 0 0;
+      padding: 0 47px 0 0;
     }
 
     .slider__container {
-      //margin-right: -65px;
       margin: 54px -65px 0 0;
       background-image: linear-gradient(to bottom, #ffffff 208px, transparent 208px),
         linear-gradient(to right, #f2f2f2 405px, #eaeaea 1px);

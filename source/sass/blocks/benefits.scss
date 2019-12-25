@@ -198,7 +198,7 @@
 
 @media (min-width: $desktop-width) {
   .benefits {
-    padding: 44px 0 0 40px;
+    padding: 44px 0 0 0;
     margin: 0;
     border-bottom: none;
   }
@@ -210,26 +210,26 @@
   .benefits__list-item {
     padding: 0;
     margin: 0;
-    max-width: 22%;
+    max-width: 20%;
 
     &:nth-child(1) .benefits__list-text::before {
-      right: 45px;
+      right: 14px;
     }
 
     &:nth-child(2) .benefits__list-text::before {
-      right: 27px;
+      right: -1px;
     }
 
     &:nth-child(3) .benefits__list-text::before {
-      right: 25px;
+      right: -3px;
     }
 
     &:nth-child(4) .benefits__list-text::before {
-      right: 21px;
+      right: -4px;
     }
   }
 
   .benefits__list-text {
-    width: 90%;
+    width: 108%;
   }
 }
