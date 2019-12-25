@@ -1,0 +1,56 @@
+.features {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0;
+  padding-top: 11px;
+  line-height: 1px;
+}
+
+.features__text,
+.features__description {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.features__text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48%;
+}
+
+.features__description {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 49%;
+
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding: 0;
+    width: 103%;
+  }
+
+  .features__text,
+  .features__description {
+    margin: 0 0 8px 0;
+    padding-bottom: 7px;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .features__text {
+    margin-right: -4px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    width: 105%;
+  }
+}

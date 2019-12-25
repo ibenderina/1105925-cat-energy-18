@@ -1,17 +1,14 @@
 .header {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 11px 19px;
-
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
 
   border-bottom: solid 1px #ededed;
 }
 
 .header__logo-link {
+  padding: 10px 0 11px 19px;
+
   &:hover .header__logo,
   &:focus .header__logo {
     opacity: 0.8;
@@ -24,18 +21,37 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    padding: 24px 32px 23px 31px;
+    position: absolute;
+    padding: 23px 31px 0 29px;
     border-bottom: none;
+  }
+
+  .header__logo {
+    width: auto;
+    height: auto;
+  }
+
+  .header__logo-link {
+    width: 174px;
+    height: 59px;
+
+    padding: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    padding: 24px 32px 23px 31px;
+    padding: 53px 40px 0 40px;
     border-bottom: none;
   }
 
+  .header__logo {
+    width: auto;
+    height: auto;
+  }
+
   .header__logo-link {
-    width: 50%;
+    width: 203px;
+    height: 60px;
   }
 }

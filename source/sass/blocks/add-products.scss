@@ -1,5 +1,6 @@
 .add-products {
   padding: 0;
+  position: relative;
 }
 
 .add-products__gifts {
@@ -8,7 +9,7 @@
 
   background-image: url("../img/gift-photo-mobile@1x.jpg");
 
-  @include back(#68b738);
+  @include back(#68b738, cover);
 }
 
 .add-products__gifts-text {
@@ -24,131 +25,69 @@
     display: inline-block;
     vertical-align: middle;
     position: absolute;
-    top: -122px;
-    left: 53px;
+    top: -206%;
+    left: 32%;
     width: 56px;
     height: 61px;
 
-    background-image: url("../../img/icon-gift.svg");
+    background-image: url("../img/icon-gift.svg");
 
-    @include back(transparent);
+    @include back(transparent, cover);
   }
 }
 
 .add-products__header {
   margin: 29px 0 0 0;
+  width: 87%;
+  max-width: 250px;
   padding-bottom: 19px;
+  background-color: #ffffff;
 
   @include Oswald-style(24px, 24px, #111111, left, none);
-}
 
-.product-list {
-  padding: 0;
-  margin-bottom: 40px;
-
-  list-style-type: none;
-}
-
-.product-list__item {
-  margin: 0;
-  padding-bottom: 18px;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-  &:first-child {
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 93vw;
+    height: 3px;
+    top: 13px;
+    z-index: -1;
+    background-color: #68b738;
   }
-}
-
-.product-list__name {
-  margin: 14px 0 0 0;
-
-  @include Oswald-style(16px, 16px, #222222, left, uppercase);
-}
-
-.product-list__contain {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.contain__text,
-.contain__description {
-  margin: 0;
-  width: 49%;
-
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.contain__description {
-  text-align: right;
-}
-
-.product-list__link {
-  @include green-button(9px 0);
-  @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
 }
 
 @media (min-width: $tablet-width) {
   .add-products {
-    padding: 0;
+    margin: 76px -30px 75px -30px;
+    padding: 0 30px;
   }
 
   .add-products__header {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: -12px 0 80px -2px;
+    padding: 0 38px;
+    width: auto;
+    max-width: none;
+
     @include Oswald-style(36px, 36px, #111111, left, none);
-  }
 
-  .add-products__product-list {
-    padding: 0;
+    background-color: #ffffff;
 
-    border-left: 1px solid #cdcdcd;
-    border-right: 1px solid #cdcdcd;
-  }
-
-  .product-list__item {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 28px 40px;
-
-    border-top: none;
-  }
-
-  .product-list__name {
-    display: inline-flex;
-    width: 30%;
-
-    @include Oswald-style(20px, 20px, #222222, left, uppercase);
-  }
-
-  .contain {
-    display: inline-flex;
-    width: 50%;
-  }
-
-  .contain__text {
-    width: 70%;
-  }
-
-  .contain__description {
-    width: 30%;
-  }
-
-  .contain__text,
-  .contain__description {
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  .product-list__link {
-    width: 100%;
+    &::before {
+      content: "";
+      top: 10px;
+      left: 0;
+      width: 100vw;
+      height: 3px;
+      background-color: #68b738;
+    }
   }
 
   .add-products__gifts {
     display: flex;
     justify-content: space-between;
-    padding: 65px 125px 69px 424px;
+    padding: 56px 122px 52px 424px;
     margin-bottom: 0;
   }
 
@@ -157,7 +96,7 @@
 
     &::before {
       top: -7px;
-      left: -326px;
+      left: -334px;
     }
   }
 }
@@ -167,46 +106,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 52px 0 86px 0;
+    margin: 0;
   }
 
   .add-products__header {
-    display: block;
-    width: 100%;
-  }
+    display: inline-block;
+    margin: 0 0 80px 0;
+    padding: 0 35px 0 0;
 
-  .add-products__product-list {
-    width: 70%;
-
-    border-left: none;
-    border-right: none;
-  }
-
-  .product-list__item {
-    padding: 20px;
-  }
-
-  .product-list__link {
-    max-width: 20%;
-  }
-
-  .contain {
-    width: 30%;
+    &::before {
+      display: none;
+    }
   }
 
   .add-products__gifts {
-    padding: 300px 10px 10px 10px;
-    margin: 20px 0;
-    width: 20%;
-    max-height: 300px;
+    padding: 187px 0 0 0;
+    max-width: 20%;
   }
 
   .add-products__gifts-text {
     margin: 0;
     text-align: center;
+    padding: 0 39px 0 39px;
 
     &::before {
-      top: -50px;
-      left: 20px;
+      top: -118px;
+      left: 99px;
     }
   }
 }

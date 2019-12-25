@@ -2,7 +2,8 @@
 @import "variables.scss";
 
 body {
-  width: 320px;
+  width: 100vw;
+  max-width: 100%;
   margin: 0 auto;
 
   font-family: "Arial", sans-serif;
@@ -14,12 +15,11 @@ body {
 
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
 }
 
 @media (min-width: $tablet-width) {
   body {
-    width: 768px;
-
     font-size: 16px;
     line-height: 24px;
   }
@@ -27,7 +27,7 @@ body {
 
 @media (min-width: $desktop-width) {
   body {
-    width: 1440px;
+    border: none;
   }
 }
 
@@ -45,3 +45,19 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+//* {
+//  border: 1px solid red;
+//}

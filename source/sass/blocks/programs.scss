@@ -8,186 +8,27 @@
   list-style-type: none;
 }
 
-.programs-item {
-  position: relative;
-  padding: 30px 32px 19px 19px;
-  margin: 0 0 20px 0;
-
-  background-color: #f2f2f2;
-}
-
-.programs-item__header {
-  margin: 0;
-  padding-right: 47px;
-
-  @include Oswald-style(24px, 37px, #111111, right, uppercase);
-
-  &--pro {
-    padding-right: 19px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    left: 22px;
-    top: 24px;
-
-    background-color: #68b738;
-    border-radius: 50%;
-  }
-
-  &--slim::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 35px;
-    height: 49px;
-    left: 30px;
-    top: 23px;
-
-    background-image: url("../img/icon-cat-slim.svg");
-    background-repeat: no-repeat;
-  }
-
-  &--pro::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 67px;
-    height: 28px;
-    left: 13px;
-    top: 35px;
-
-    background-image: url("../img/icon-cat-pro.svg");
-    background-repeat: no-repeat;
-  }
-}
-
-.programs-item__link {
-  @include Oswald-style(16px, 16px, #111111, right, uppercase);
-  text-decoration: none;
-
-  &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 25px;
-    height: 12px;
-    margin-left: 11px;
-
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-repeat: no-repeat;
-  }
-
-  &:hover::after,
-  &:focus::after {
-    width: 34px;
-    height: 12px;
-
-    background-image: url("../img/icon-right-arrow-verylong.svg");
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.programs-item__description {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 29px 0 24px 0;
-  margin: 0 0 18px 0;
-}
-
 @media (min-width: $tablet-width) {
   .programs {
     padding: 0;
+    margin-top: -24px;
   }
 
-  .programs-item {
-    padding: 81px 326px 62px 52px;
-  }
-
-  .programs-item__header {
-    @include Oswald-style(36px, 37px, #111111, left, uppercase);
-
-    &::before {
-      width: 200px;
-      height: 200px;
-      left: 447px;
-      top: 73px;
-    }
-
-    &--slim::after {
-      width: 141px;
-      height: 194px;
-      left: 470px;
-      top: 71px;
-    }
-
-    &--pro::after {
-      width: 268px;
-      height: 113px;
-      left: 403px;
-      top: 129px;
-    }
-  }
-
-  .programs-item__description {
-    border-bottom: none;
-  }
-
-  .programs-item__link {
-    @include Oswald-style(20px, 20px, #111111, left, uppercase);
+  .programs__list {
+    padding: 8px 0 0 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .programs {
+    margin: 80px 25px 0 39px;
+  }
+
   .programs__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-
-  .programs-item {
-    width: 40%;
-    padding: 41px 56px 62px 53px;
-  }
-
-  .programs-item__header {
-    @include Oswald-style(36px, 37px, #111111, right, uppercase);
-
-    &::before {
-      width: 100px;
-      height: 100px;
-      left: 47px;
-      top: 20px;
-    }
-
-    &--slim::after {
-      width: 71px;
-      height: 97px;
-      left: 70px;
-      top: 21px;
-    }
-
-    &--pro::after {
-      width: 134px;
-      height: 57px;
-      left: 13px;
-      top: 29px;
-    }
-  }
-
-  .programs-item__description {
-    font-size: 16px;
-    line-height: 24px;
-
-    padding-top: 75px;
+    padding: 0;
+    margin: 0;
   }
 }

@@ -1,0 +1,48 @@
+.contain__text,
+.contain__description {
+  margin: 0;
+  width: 49%;
+
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.contain__description {
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .contain {
+    display: inline-flex;
+    margin: 20px 0 25px 0;
+    width: 50%;
+    text-align: right;
+  }
+
+  .contain__text {
+    width: 70%;
+  }
+
+  .contain__description {
+    width: 30%;
+  }
+
+  .contain__text,
+  .contain__description {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contain {
+    max-width: 34%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contain__text {
+    padding-left: 18px;
+    text-align: left;
+  }
+}

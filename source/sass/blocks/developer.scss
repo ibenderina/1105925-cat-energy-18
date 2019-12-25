@@ -1,3 +1,8 @@
+.developer {
+  margin: -4px 0 0 0;
+  padding: 0;
+}
+
 .developer__link {
   display: flex;
   justify-content: space-between;
@@ -34,13 +39,20 @@
 @media (min-width: $tablet-width) {
   .developer {
     display: inline-flex;
-    width: 25%;
+    width: 24%;
+    max-width: 170px;
+    padding: 0 0 6px 0;
+  }
+
+  .developer__img {
+    width: 41px;
+    height: 41px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .developer {
-    display: inline;
-    width: 15%;
+    width: 14%;
+    padding: 0;
   }
 }

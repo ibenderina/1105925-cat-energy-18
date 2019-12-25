@@ -1,16 +1,45 @@
 .main-nav {
   display: block;
+  width: 100%;
+  position: relative;
   flex-grow: 1;
-  padding-top: 11px;
+  background-color: inherit;
 }
 
 .main-nav__toggle {
   width: 25px;
   height: 19px;
+  margin: 21px 20px 0 0;
 
   border: none;
+  cursor: pointer;
   background-image: url("../img/icon-mobile-menu.svg");
   background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.main-nav__toggle--close {
+  width: 19px;
+  height: 19px;
+  margin: 21px 20px 0 0;
+
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/icon-close.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.main-nav--closed {
+  display: none;
+}
+
+.main-nav--nojs {
+  display: block;
+}
+
+.main-nav--opened {
+  display: block;
 }
 
 .main-nav__list {
@@ -41,6 +70,7 @@
   }
 
   &--active {
+    padding-bottom: 7px;
     color: #111111;
     border-bottom: 2px solid #68b738;
   }
@@ -50,7 +80,8 @@
   .main-nav {
     display: inline-block;
     vertical-align: baseline;
-    padding: 0 0 0 41px;
+    flex-basis: 64%;
+    flex-grow: 0;
   }
 
   .main-nav__toggle {
@@ -59,11 +90,16 @@
 
   .main-nav__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
+    padding: 18px 0 0 13px;
+    max-width: 500px;
+    flex-wrap: wrap;
   }
 
   .main-nav__list-item {
+    padding: 0;
+
     border-top: none;
 
     @include Oswald-style(18px, 25px, #222222, center, uppercase);
@@ -72,9 +108,8 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    display: inline-block;
-    vertical-align: baseline;
-    padding: 0 0 0 41px;
+    padding: 0 0 0 0;
+    max-width: 39%;
   }
 
   .main-nav__toggle {
@@ -82,13 +117,12 @@
   }
 
   .main-nav__list {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0;
+    padding: 18px 0 0 0;
   }
 
   .main-nav__list-item {
+    padding: 0 0 0 0;
+
     border-top: none;
   }
 

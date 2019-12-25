@@ -11,12 +11,23 @@
 
 @media (min-width: $tablet-width) {
   .main {
-    padding: 0 30px;
+    padding: 57px 31px 0 30px;
   }
 
   .main__header {
-    padding-bottom: 56px;
+    padding: 0;
 
     @include Oswald-style(60px, 60px, #111111, left, none);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .main__header {
+    padding: 74px 0 0 23px;
   }
 }
