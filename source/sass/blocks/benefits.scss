@@ -82,6 +82,24 @@
 
     background-image: url("../img/advantage-clock@1x.png");
   }
+
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    &:nth-child(1)::after {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+
+    &:nth-child(2)::after {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+
+    &:nth-child(3)::after {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+
+    &:nth-child(4)::after {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
