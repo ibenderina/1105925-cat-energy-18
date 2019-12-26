@@ -32,7 +32,7 @@
 
     vertical-align: middle;
 
-    background-color: green;
+    background-color: #68b738;
   }
 
   &::after {
@@ -46,7 +46,7 @@
 
     vertical-align: middle;
 
-    background-color: green;
+    background-color: #68b738;
   }
 }
 
@@ -273,9 +273,7 @@
 
 @media (min-width: $tablet-width) {
   .options {
-    //margin: 0 -71px;
-    //padding: 0 69px;
-    //padding: 0;
+    margin: 29px 0 26px 0;
   }
 
   .options__header--border {
@@ -290,10 +288,10 @@
     width: 100%;
   }
 
-  .options__row .options:last-child {
-    width: 74%;
-    margin-top: 73px;
-    padding: 26px 31px 26px 25px;
+  .options--bordered {
+    width: auto;
+    margin: 73px 0 36px 0;
+    padding: 22px 31px 23px 25px;
   }
 
   .options__name {
@@ -311,8 +309,8 @@
   }
 
   .options__textarea {
-    min-height: 156px;
-    padding: 16px 11px 3px 19px;
+    min-height: 139px;
+    padding: 16px 11px 18px 19px;
     margin-top: 1px;
   }
 
@@ -331,7 +329,7 @@
   }
 
   .options__header {
-    width: 101vw;
+    width: auto;
     margin: 0 0 64px 0;
     padding: 10px 0;
 
@@ -339,6 +337,7 @@
 
     &--br {
       position: relative;
+      display: inline;
     }
   }
 
@@ -346,10 +345,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 21px 8px 3px 0;
+    padding: 3px 8px 3px 0;
 
     .options__label {
       width: 45%;
+      margin-bottom: 33px;
     }
   }
 
@@ -366,21 +366,46 @@
   }
 
   .options__checkbox + .options__name::before {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 
   .options__checkbox:checked + .options__name::after {
     width: 21px;
     height: 16px;
-    top: 10px;
-    left: 11px;
+    top: 11px;
+    left: 9px;
+  }
+
+  .options__header--border::before {
+    margin-left: -105vw;
+  }
+
+  .options__header--border::after {
+    margin-left: 30px;
+  }
+
+  .options__submit {
+    margin: -12px 0 2px 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .options {
+    margin: 29px 0 -11px 0;
+  }
+
   .options:nth-child(4) {
     margin-top: 36px;
+  }
+
+  .options--bordered {
+    margin: 0;
+    width: 42%;
+  }
+
+  .options__header--border {
+    padding: 40px 0 11px 24px;
   }
 
   .options__label--mod {
@@ -389,6 +414,7 @@
 
   .options__list {
     width: 103%;
+    padding: 13px 0 0 0;
 
     .options__label {
       width: 22%;
@@ -405,10 +431,22 @@
 
   .options__col-half {
     width: 47%;
+    margin: 0;
   }
 
-  .options__row .options:last-child {
-    width: 42%;
-    margin-top: 55px;
+  .options__header--border::before {
+    margin-left: -105vw;
+  }
+
+  .options__header--style {
+    padding: 49px 0 0 24px;
+  }
+
+  .options__radio:checked + .options__name::after {
+    top: 12px;
+  }
+
+  .options__submit {
+    margin: 9px 0 0 0;
   }
 }

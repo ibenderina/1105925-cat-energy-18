@@ -40,7 +40,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    margin: 0 -30px -7px -30px;
+    margin: 0 -30px -3px -30px;
   }
 
   .contacts__item {
@@ -55,7 +55,7 @@
   }
 
   .contacts__address {
-    margin: 0;
+    margin: -3px 0 0 0;
     width: 31%;
 
     text-align: right;

@@ -136,13 +136,14 @@
   }
 
   .about__cat {
-    width: 100%;
+    width: 100vw;
     background-image: url(../img/index-background-desktop@1x.jpg);
     height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 700px;
     background-position: 1px 0;
     z-index: -100;
+    background-color: #64a83b;
   }
 
   .about__cat-wrapper {

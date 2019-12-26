@@ -46,13 +46,48 @@
   @include Oswald-style(24px, 24px, #111111, left, none);
 
   &::before {
-    position: absolute;
     content: "";
     width: 93vw;
     height: 3px;
     top: 13px;
     z-index: -1;
     background-color: #68b738;
+  }
+
+  &--border {
+    &::before {
+      content: "";
+
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: 40px;
+      margin-left: -103vw;
+
+      vertical-align: middle;
+
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+
+      display: inline-block;
+      width: 100vw;
+      height: 3px;
+      margin-right: -100vw;
+      margin-left: 17px;
+
+      vertical-align: middle;
+
+      background-color: #68b738;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .add-products__header--border::before {
+    content: none;
   }
 }
 
@@ -82,6 +117,10 @@
       height: 3px;
       background-color: #68b738;
     }
+  }
+
+  .add-products__header--border::before {
+    margin-left: -105vw;
   }
 
   .add-products__gifts {
@@ -119,10 +158,10 @@
     display: inline-block;
     margin: 0 0 80px 0;
     padding: 0 35px 0 0;
+  }
 
-    &::before {
-      display: none;
-    }
+  .add-products__header--border::before {
+    margin-left: -103vw;
   }
 
   .add-products__gifts {

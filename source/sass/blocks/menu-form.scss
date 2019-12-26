@@ -43,6 +43,7 @@
 
   .menu-form__options-button {
     padding: 17px 26px;
+    margin: 0;
     width: 45%;
     display: inline-block;
     vertical-align: middle;
@@ -62,16 +63,14 @@
 
 @media (min-width: $desktop-width) {
   .menu-form {
-
-    //justify-content: space-between;
     margin: 0;
-    padding: 11px 7px 0 23px;
+    padding: 67px 0 39px 0;
   }
 
   .menu-form__description {
     display: block;
     width: 100%;
-    padding: 54px 8px 0 23px;
+    padding: 54px 0 0 0;
 
     @include Oswald-style(20px, 30px, #111111, left, uppercase);
   }
@@ -84,8 +83,7 @@
   }
 
   .menu-form__options-note {
-    width: 47%;
-    margin: 45px 0 0 0;
+    margin: 6px 0 0 73px;
     text-align: left;
   }
 }
