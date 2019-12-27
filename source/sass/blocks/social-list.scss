@@ -12,15 +12,17 @@
 
 .social-list__icon {
   fill: #666666;
+}
 
-  &:hover,
-  &:focus {
+.social-list__link:hover,
+.social-list__link:focus {
+  .social-list__icon {
     fill: #68b738;
   }
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.social-list__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
