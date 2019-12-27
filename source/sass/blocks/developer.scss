@@ -11,11 +11,9 @@
 
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    .developer__img {
-      filter: none;
-    }
+  &:hover .developer__img,
+  &:focus .developer__img {
+    fill: red;
   }
 
   &:active {
@@ -33,7 +31,8 @@
 }
 
 .developer__img {
-  filter: grayscale(1) brightness(2) invert(1);
+  width: 37px;
+  height: 44px;
 }
 
 @media (min-width: $tablet-width) {

@@ -12,7 +12,9 @@
   @include back(#68b738, cover);
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
   .add-products__gifts {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
     background-size: contain;
@@ -144,8 +146,8 @@
   }
 
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5),
-  (min-width: 768px) and (min-resolution: 144dpi),
-  (min-width: 768px) and (min-resolution: 1.5dppx) {
+    (min-width: 768px) and (min-resolution: 144dpi),
+    (min-width: 768px) and (min-resolution: 1.5dppx) {
     .add-products__gifts {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
@@ -176,8 +178,18 @@
     padding: 0 35px 0 0;
   }
 
-  .add-products__header--border::before {
-    margin-left: -103vw;
+  .add-products__header--border {
+    position: relative;
+
+    &::before {
+      margin-left: -103vw;
+      position: absolute;
+      top: 23px;
+    }
+
+    &::after {
+      margin-left: 34px;
+    }
   }
 
   .add-products__gifts {
@@ -189,8 +201,8 @@
   }
 
   @media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 1.5),
-  (min-width: 1300px) and (min-resolution: 144dpi),
-  (min-width: 1300px) and (min-resolution: 1.5dppx) {
+    (min-width: 1300px) and (min-resolution: 144dpi),
+    (min-width: 1300px) and (min-resolution: 1.5dppx) {
     .add-products__gifts {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
     }

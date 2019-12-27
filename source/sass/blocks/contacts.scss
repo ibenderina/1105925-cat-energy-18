@@ -38,7 +38,9 @@
   @include back(#a0a0a0, contain);
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
   .contacts__map {
     background-image: url("../img/bg-map-mobile@2x.png");
     background-size: contain;
@@ -82,8 +84,8 @@
   }
 
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5),
-  (min-width: 768px) and (min-resolution: 144dpi),
-  (min-width: 768px) and (min-resolution: 1.5dppx) {
+    (min-width: 768px) and (min-resolution: 144dpi),
+    (min-width: 768px) and (min-resolution: 1.5dppx) {
     .contacts__map {
       background-image: url("../img/bg-map-tablet@2x.png");
     }
@@ -130,8 +132,8 @@
   }
 
   @media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 1.5),
-  (min-width: 1300px) and (min-resolution: 144dpi),
-  (min-width: 1300px) and (min-resolution: 1.5dppx) {
+    (min-width: 1300px) and (min-resolution: 144dpi),
+    (min-width: 1300px) and (min-resolution: 1.5dppx) {
     .contacts__map {
       background-image: url("../img/bg-map-desktop@2x.png");
     }
