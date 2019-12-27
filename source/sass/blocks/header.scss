@@ -24,6 +24,7 @@
     position: absolute;
     padding: 23px 31px 0 29px;
     border-bottom: none;
+    z-index: 1;
   }
 
   .header__logo {
@@ -43,6 +44,7 @@
   .header {
     padding: 53px 40px 0 40px;
     border-bottom: none;
+    z-index: 100;
   }
 
   .header__logo {
