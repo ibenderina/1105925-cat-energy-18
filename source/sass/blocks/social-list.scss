@@ -10,30 +10,17 @@
   list-style-type: none;
 }
 
-.social__link {
-  &:hover .social-list__icon,
-  &:focus .social-list__icon {
-    fill: red;
+.social-list__icon {
+  fill: #666666;
+
+  &:hover,
+  &:focus {
+    fill: #68b738;
   }
 
   &:active {
     opacity: 0.3;
   }
-}
-
-.social-list__icon--vk {
-  width: 22px;
-  height: 12px;
-}
-
-.social-list__icon--insta {
-  width: 16px;
-  height: 16px;
-}
-
-.social-list__icon--fb {
-  width: 10px;
-  height: 19px;
 }
 
 @media (min-width: $tablet-width) {

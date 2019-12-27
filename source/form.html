@@ -79,7 +79,6 @@
           </label>
         </fieldset>
       </div>
-
       <fieldset class="menu-form__options options">
         <legend class="options__header options__header--border">Контактные данные
           <span class="options__header--br">(владельца кота)</span>
@@ -87,17 +86,20 @@
         <div class="options__row">
           <label class="options__label options__col-half" for="email">
             <span class="options__name options__name--mod">E-mail:*</span>
-            <input class="options__input options__input--error" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required="">
-            <span class="options__input--email"></span>
+            <input class="options__input options__input--error" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+            <svg class="options__input--email" width="18" height="44">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
           </label>
           <label class="options__label options__col-half" for="phone">
             <span class="options__name options__name--mod">Телефон:*</span>
             <input class="options__input" type="text" name="phone" id="phone" placeholder="8 (960) 900-60-90">
-            <span class="options__input--phone"></span>
+            <svg class="options__input--phone" width="21" height="21">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
           </label>
         </div>
       </fieldset>
-
       <fieldset class="menu-form__options options">
         <legend class="options__header options__header--border">Комментарий</legend>
         <label class="options__label" for="behavior">
@@ -154,24 +156,32 @@
     <ul class="social-list">
       <li class="social-list__item">
         <a class="social-list__link" href="" aria-label="Перейти во вконтакте">
-          <img class="social-list__icon social-list__icon--vk" src="img/icon-vk.svg" width="22" height="12" alt="Вконтакте">
+          <svg class="social-list__icon social-list__icon--vk" width="22" height="12">
+            <use xlink:href="img/sprite.svg#icon-vk"></use>
+          </svg>
         </a>
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="" aria-label="Перейти в инстаграм">
-          <img class="social-list__icon social-list__icon--insta" src="img/icon-insta.svg" width="17" height="17" alt="Инстаграм">
+          <svg class="social-list__icon social-list__icon--insta" width="16" height="16" fill="red">
+            <use xlink:href="img/sprite.svg#icon-insta"></use>
+          </svg>
         </a>
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="" aria-label="Перейти в фейсбук">
-          <img class="social-list__icon social-list__icon--fb" src="img/icon-fb.svg" width="10" height="19" alt="Фейсбук">
+          <svg class="social-list__icon social-list__icon--fb" width="10" height="19">
+            <use xlink:href="img/sprite.svg#icon-fb"></use>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="developer">
       <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт разработчика">
         <span class="developer__name">HTML Academy</span>
-        <img class="developer__img" src="img/htmlacademy.svg" width="37" height="44" alt="Логотип разработчика">
+        <svg class="developer__img" width="37" height="44">
+          <use xlink:href="img/sprite.svg#htmacademy"></use>
+        </svg>
       </a>
     </div>
   </div>

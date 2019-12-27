@@ -115,6 +115,23 @@
   }
 }
 
+.options__input--email,
+.options__input--phone {
+  position: absolute;
+
+  fill: #222222;
+}
+
+.options__input--email {
+  top: 6px;
+  right: 23px;
+}
+
+.options__input--phone {
+  top: 18px;
+  right: 18px;
+}
+
 .options__textarea {
   display: inline-block;
   min-height: 124px;
@@ -130,11 +147,6 @@
 .options__input:hover,
 .options__textarea:hover {
   border: 1px solid rgba(205, 205, 205, 1);
-
-  & + .options__input--email::after,
-  & + .options__input--phone::after {
-    filter: none;
-  }
 }
 
 .options__input:focus,
@@ -142,9 +154,9 @@
   border: solid 1px #444444;
   outline: 1px solid #444444;
 
-  & + .options__input--email::after,
-  & + .options__input--phone::after {
-    filter: none;
+  ~ .options__input--email,
+  ~ .options__input--phone {
+    fill: #68b738;
   }
 }
 
@@ -153,42 +165,10 @@
   border: 2px solid #ff8282;
   outline: 1px solid transparent;
 
-  & + .options__input--email::after,
-  & + .options__input--phone::after {
-    filter: brightness(0.6) saturate(159%) invert(1) hue-rotate(90deg);
+  ~ .options__input--email,
+  ~ .options__input--phone {
+    fill: #ff8282;
   }
-}
-
-.options__input--email::after,
-.options__input--phone::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-
-  filter: grayscale(1) brightness(2) invert(1);
-
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.options__input--email::after {
-  width: 18px;
-  height: 14px;
-  top: 16px;
-  right: 17px;
-
-  background-image: url("../../img/icon-mail.svg");
-}
-
-.options__input--phone::after {
-  width: 21px;
-  height: 21px;
-  top: 11px;
-  right: 13px;
-
-  background-image: url("../../img/icon-phone.svg");
 }
 
 .options__checkbox:hover + .options__name::before,
