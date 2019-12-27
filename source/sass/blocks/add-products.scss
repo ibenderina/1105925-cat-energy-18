@@ -12,9 +12,7 @@
   @include back(#68b738, cover);
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5),
-    (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .add-products__gifts {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
     background-size: contain;
@@ -145,8 +143,7 @@
     background-size: contain;
   }
 
-  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5),
-    (min-width: 768px) and (min-resolution: 144dpi),
+  @media (min-width: 768px) and (min-resolution: 144dpi),
     (min-width: 768px) and (min-resolution: 1.5dppx) {
     .add-products__gifts {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
@@ -200,8 +197,7 @@
     background-size: contain;
   }
 
-  @media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 1.5),
-    (min-width: 1300px) and (min-resolution: 144dpi),
+  @media (min-width: 1300px) and (min-resolution: 144dpi),
     (min-width: 1300px) and (min-resolution: 1.5dppx) {
     .add-products__gifts {
       background-image: url("../img/gift-photo-desktop@2x.jpg");

@@ -7,16 +7,16 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
-    "gulp": "4.0.x",
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
     "gulp-plumber": "1.2.x",
-    "gulp-sourcemaps": "2.6.x",
     "gulp-postcss": "8.0.x",
     "gulp-sass": "4.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
+    "gulp-sourcemaps": "2.6.x",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "^0.1.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
