@@ -3,6 +3,9 @@
   "version": "17.0.0",
   "private": true,
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",

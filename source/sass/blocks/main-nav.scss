@@ -54,6 +54,7 @@
   padding: 20px 0;
 
   @include Oswald-style(20px, 20px, #111111, center, uppercase);
+  font-weight: 500;
 }
 
 .main-nav__list-link {

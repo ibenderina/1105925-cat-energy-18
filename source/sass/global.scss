@@ -45,19 +45,3 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.flex {
-  display: flex;
-}
-
-.flex--row {
-  flex-direction: row;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-//* {
-//  border: 1px solid red;
-//}
