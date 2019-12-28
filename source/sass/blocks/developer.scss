@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.developer__img {
+  fill: #666666;
+}
+
 .developer__link {
   display: flex;
   justify-content: space-between;
@@ -28,11 +32,6 @@
   color: #444444;
   font-size: 16px;
   line-height: 16px;
-}
-
-.developer__img {
-  width: 37px;
-  height: 44px;
 }
 
 @media (min-width: $tablet-width) {

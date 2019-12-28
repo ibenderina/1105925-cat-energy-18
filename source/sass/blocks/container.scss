@@ -27,9 +27,9 @@
     }
 
     &--about {
-      position: static;
+      position: unset;
       width: 535px;
-      padding: 113px 0 0 0;
+      padding: 0;
     }
 
     &--form {
