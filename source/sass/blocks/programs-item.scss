@@ -1,4 +1,7 @@
-.programs-item {
+.programs__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   padding: 30px 32px 19px 19px;
   margin: 0 0 20px 0;
@@ -6,15 +9,22 @@
   background-color: #f2f2f2;
 }
 
+.programs-item {
+  display: inline-block;
+}
+
 .programs-item__header {
+  display: inline-block;
   margin: 0;
   padding-right: 47px;
 
   @include Oswald-style(24px, 37px, #111111, right, uppercase);
+}
 
-  &--pro {
-    padding-right: 19px;
-  }
+.programs-item__image {
+  display: inline-block;
+  position: relative;
+  width: 200px;
 
   &::before {
     position: absolute;
@@ -30,20 +40,6 @@
     border-radius: 50%;
   }
 
-  &--slim::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 35px;
-    height: 49px;
-    left: 30px;
-    top: 23px;
-
-    background-image: url("../img/icon-cat-slim.svg");
-    background-repeat: no-repeat;
-  }
-
   &--pro::after {
     position: absolute;
     content: "";
@@ -55,6 +51,20 @@
     top: 35px;
 
     background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--slim::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 49px;
+    left: 30px;
+    top: 23px;
+
+    background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
   }
 }
@@ -94,104 +104,186 @@
   margin: 0 0 18px 0;
 }
 
-@media (min-width: $tablet-width) {
-  .programs-item {
-    margin: 0 0 30px 0;
-    padding: 76px 282px 56px 52px;
-  }
-
-  .programs-item__header {
-    @include Oswald-style(36px, 37px, #111111, left, uppercase);
+@media (max-width: $tablet-width - 1) {
+  .programs-item__image {
+    width: 0;
 
     &::before {
-      width: 200px;
-      height: 200px;
-      left: 445px;
-      top: 92px;
+      width: 51px;
+      height: 51px;
+      left: 2px;
+      top: -6px;
     }
 
     &--slim::after {
-      width: 141px;
-      height: 194px;
-      left: 475px;
-      top: 80px;
+      width: 37px;
+      height: 152px;
+      left: 10px;
+      top: -10px;
     }
 
     &--pro::after {
-      width: 268px;
-      height: 113px;
-      left: 411px;
-      top: 135px;
+      width: 67px;
+      height: 51px;
+      left: -7px;
+      top: 4px;
     }
   }
 
-  .programs-item__description {
-    padding: 25px 0 38px 0;
-
-    border-bottom: none;
-  }
-
-  .programs-item__link {
-    @include Oswald-style(20px, 20px, #111111, left, uppercase);
-
-    &::after {
-      width: 24px;
-      height: 17px;
-      margin-left: 24px;
+  .programs__item {
+    .programs-item {
+      order: 1;
     }
 
-    &:hover::after,
-    &:focus::after {
-      width: 34px;
-      height: 17px;
+    &:first-child .programs-item__header {
+      padding-left: 71px;
+    }
+
+    &:last-child .programs-item__header {
+      padding: 0 0 0 71px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs__item {
+    margin: 0 0 30px 0;
+    padding: 75px 32px 56px 52px;
+  }
+
+  .programs-item {
+    &--slim {
+      flex-basis: 60%;
+    }
+
+    &--pro {
+      flex-basis: 55%;
+    }
+
+    &__image {
+
+      &::before {
+        width: 200px;
+        height: 200px;
+        left: -30px;
+        top: 16px;
+      }
+
+      &--slim::after {
+        width: 192px;
+        height: 194px;
+        left: 0;
+        top: 4px;
+      }
+
+      &--pro::after {
+        width: 270px;
+        height: 113px;
+        left: -65px;
+        top: 59px;
+      }
+    }
+
+    &__header {
+      @include Oswald-style(36px, 37px, #111111, left, uppercase);
+    }
+
+    &__description {
+      padding: 20px 0 38px 0;
+
+      border-bottom: none;
+    }
+
+    &__link {
+      @include Oswald-style(20px, 20px, #111111, left, uppercase);
+
+      &::after {
+        width: 24px;
+        height: 17px;
+        margin-left: 24px;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        width: 34px;
+        height: 17px;
+      }
     }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .programs-item {
+  .programs__item {
+    flex-direction: column;
     width: 40%;
-    padding: 76px 30px 55px 53px;
+    padding: 74px 30px 55px 53px;
   }
 
-  .programs-item:first-child .programs-item__header {
-    padding-left: 43px;
-  }
-
-  .programs-item:last-child .programs-item__header {
-    padding-left: 61px;
-  }
-
-  .programs-item__header {
-    @include Oswald-style(36px, 37px, #111111, center, uppercase);
-
+  .programs-item__image {
     &::before {
       width: 100px;
       height: 100px;
-      left: 53px;
-      top: 47px;
+      left: -1px;
+      top: -28px;
     }
 
     &--slim::after {
-      width: 71px;
-      height: 97px;
-      left: 67px;
-      top: 41px;
+      width: 70px;
+      height: 194px;
+      left: 13px;
+      top: -34px;
     }
 
     &--pro::after {
       width: 134px;
-      height: 57px;
-      left: 36px;
-      top: 68px;
+      height: 113px;
+      left: -18px;
+      top: -6px;
     }
   }
 
-  .programs-item__description {
-    padding: 74px 0 31px 0;
-    margin: 0;
+  .programs-item {
+    order: 1;
 
-    font-size: 16px;
-    line-height: 24px;
+    &:first-child .programs-item__header {
+      padding-left: 162px;
+    }
+
+    &:last-child .programs-item__header {
+      padding-left: 61px;
+    }
+
+    &__header {
+      @include Oswald-style(36px, 37px, #111111, center, uppercase);
+
+      &::before {
+        width: 100px;
+        height: 100px;
+        left: 53px;
+        top: 47px;
+      }
+
+      &--slim::after {
+        width: 71px;
+        height: 97px;
+        left: 67px;
+        top: 41px;
+      }
+
+      &--pro::after {
+        width: 134px;
+        height: 57px;
+        left: 36px;
+        top: 68px;
+      }
+    }
+
+    &__description {
+      padding: 70px 0 31px 0;
+      margin: 0;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
