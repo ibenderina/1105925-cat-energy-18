@@ -10,10 +10,6 @@
   }
 }
 
-.options__row {
-  width: 100%;
-}
-
 .options__header--border {
   margin: 0 0 54px 0;
   position: relative;
@@ -50,7 +46,7 @@
   }
 }
 
-.options__header--br {
+.options__header-br {
   position: absolute;
   display: block;
   width: 100%;
@@ -115,19 +111,19 @@
   }
 }
 
-.options__input--email,
-.options__input--phone {
+.options__input-email,
+.options__input-phone {
   position: absolute;
 
   fill: #222222;
 }
 
-.options__input--email {
+.options__input-email {
   top: 4px;
   right: 17px;
 }
 
-.options__input--phone {
+.options__input-phone {
   top: 14px;
   right: 13px;
 }
@@ -154,8 +150,8 @@
   border: solid 1px #444444;
   outline: 1px solid #444444;
 
-  ~ .options__input--email,
-  ~ .options__input--phone {
+  ~ .options__input-email,
+  ~ .options__input-phone {
     fill: #68b738;
   }
 }
@@ -165,8 +161,8 @@
   border: 2px solid #ff8282;
   outline: 1px solid transparent;
 
-  ~ .options__input--email,
-  ~ .options__input--phone {
+  ~ .options__input-email,
+  ~ .options__input-phone {
     fill: #ff8282;
   }
 }
@@ -260,10 +256,6 @@
     margin: -10px 0 0 0;
   }
 
-  .options__row {
-    flex-direction: column;
-  }
-
   .options__col-half {
     width: 100%;
   }
@@ -294,12 +286,12 @@
     margin-top: 1px;
   }
 
-  .options__input--email::after {
+  .options__input-email::after {
     top: 22px;
     right: 20px;
   }
 
-  .options__input--phone::after {
+  .options__input-phone::after {
     top: 16px;
     right: 17px;
   }
@@ -364,10 +356,6 @@
   .options__header--border::after {
     margin-left: 30px;
   }
-
-  .options__submit {
-    margin: -12px 0 2px 0;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -411,14 +399,6 @@
     }
   }
 
-  .options__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 -15px 0 0;
-    width: 100%;
-  }
-
   .options__col-half {
     width: 47%;
     margin: 0;
@@ -434,9 +414,5 @@
 
   .options__radio:checked + .options__name::after {
     top: 12px;
-  }
-
-  .options__submit {
-    margin: 9px 0 0 0;
   }
 }

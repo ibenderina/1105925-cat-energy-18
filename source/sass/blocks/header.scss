@@ -19,6 +19,30 @@
   }
 }
 
+.header__nav-toggle {
+  width: 25px;
+  height: 19px;
+  margin: 21px 20px 0 0;
+
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.header__nav-toggle--close {
+  width: 19px;
+  height: 19px;
+  margin: 21px 20px 0 0;
+
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/icon-close.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
 @media (min-width: $tablet-width) {
   .header {
     position: absolute;
@@ -37,6 +61,10 @@
     height: 59px;
 
     padding: 0;
+  }
+
+  .header__nav-toggle {
+    display: none;
   }
 }
 

@@ -9,6 +9,13 @@
   @include Oswald-style(36px, 60px, #111111, left, none);
 }
 
+.main__form-description {
+  margin: 0;
+  padding: 0 17px 42px 0;
+
+  @include Oswald-style(14px, 18px, #111111, left, uppercase);
+}
+
 @media (min-width: $tablet-width) {
   .main {
     padding: 140px 31px 0 30px;
@@ -18,6 +25,14 @@
     padding: 0;
 
     @include Oswald-style(60px, 60px, #111111, left, none);
+  }
+
+  .main__form-description {
+    width: 52%;
+    padding: 54px 0 66px 39px;
+    margin: 0;
+
+    @include Oswald-style(20px, 30px, #111111, left, uppercase);
   }
 }
 
@@ -29,5 +44,13 @@
 
   .main__header {
     padding: 0;
+  }
+
+  .main__form-description {
+    display: block;
+    width: 100%;
+    padding: 54px 0 0 0;
+
+    @include Oswald-style(20px, 30px, #111111, left, uppercase);
   }
 }

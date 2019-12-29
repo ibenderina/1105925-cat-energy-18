@@ -20,7 +20,7 @@
         <img class="header__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
       </picture>
     </a>
-    <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="Развернуть меню"></button>
+    <button class="header__nav-toggle header__nav-toggle--close" type="button" aria-label="Развернуть меню"></button>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list">
         <li class="main-nav__list-item">
@@ -57,25 +57,19 @@
     <div class="container">
       <h2 class="visually-hidden">Программы</h2>
       <ul class="programs__list">
-        <li class="programs__item">
-          <div class="programs-item programs-item--slim">
-            <h3 class="programs-item__header">Похудение</h3>
-            <p class="programs-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-            </p>
-            <a class="programs-item__link" href="">Каталог Slim</a>
-          </div>
-          <div class="programs-item__image programs-item__image--slim"></div>
+        <li class="programs__items programs-item">
+          <h3 class="programs-item__header programs-item__header--slim">Похудение</h3>
+          <p class="programs-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+            Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+          </p>
+          <a class="programs-item__link" href="">Каталог Slim</a>
         </li>
-        <li class="programs__item">
-          <div class="programs-item programs-item--pro">
-            <h3 class="programs-item__header">Набор массы</h3>
-            <p class="programs-item__description">Заработать авторитет среди дворовых котов и даже собак?
-              Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-            </p>
-            <a class="programs-item__link" href="">Каталог pro</a>
-          </div>
-          <div class="programs-item__image programs-item__image--pro"></div>
+        <li class="programs__items programs-item">
+          <h3 class="programs-item__header programs-item__header--pro">Набор массы</h3>
+          <p class="programs-item__description">Заработать авторитет среди дворовых котов и даже собак?
+            Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+          </p>
+          <a class="programs-item__link" href="">Каталог pro</a>
         </li>
       </ul>
     </div>
@@ -114,11 +108,11 @@
         </p>
         <div class="results__options">
           <dl class="results__list">
-            <div class="results__list--style">
+            <div class="results__list-block">
               <dt class="results__list-value">5 кг</dt>
               <dd class="results__list-info">снижение веса</dd>
             </div>
-            <div class="results__list--style">
+            <div class="results__list-block">
               <dt class="results__list-value">60 дней</dt>
               <dd class="results__list-info">затрачено времени</dd>
             </div>
@@ -143,7 +137,7 @@
                 <img class="slider__photo-item slider__photo-item--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до">
               </picture>
             </div>
-            <div class="slider__photo slider__photo--after slider__photo-item--closed">
+            <div class="slider__photo slider__photo--after slider__photo--closed">
               <picture>
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">

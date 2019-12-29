@@ -6,13 +6,6 @@
   margin-top: -3px;
 }
 
-.menu-form__description {
-  margin: 0;
-  padding: 0 17px 42px 0;
-
-  @include Oswald-style(14px, 18px, #111111, left, uppercase);
-}
-
 .menu-form__options-button {
   margin: 35px 0 21px 0;
   width: 100%;
@@ -28,17 +21,13 @@
   text-align: center;
 }
 
+.menu-form__row {
+  width: 100%;
+}
+
 @media (min-width: $tablet-width) {
   .menu-form {
     padding: 3px 38px 49px 40px;
-  }
-
-  .menu-form__description {
-    width: 52%;
-    padding: 54px 0 66px 39px;
-    margin: 0;
-
-    @include Oswald-style(20px, 30px, #111111, left, uppercase);
   }
 
   .menu-form__options-button {
@@ -59,20 +48,20 @@
     text-align: center;
     font-size: 16px;
   }
+
+  .menu-form__row {
+    flex-direction: column;
+  }
+
+  .menu-form__submit {
+    margin: -12px 0 2px 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .menu-form {
     margin: 0;
     padding: 67px 0 39px 0;
-  }
-
-  .menu-form__description {
-    display: block;
-    width: 100%;
-    padding: 54px 0 0 0;
-
-    @include Oswald-style(20px, 30px, #111111, left, uppercase);
   }
 
   .menu-form__options-button {
@@ -85,5 +74,17 @@
   .menu-form__options-note {
     margin: 6px 0 0 73px;
     text-align: left;
+  }
+
+  .menu-form__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 -15px 0 0;
+    width: 100%;
+  }
+
+  .menu-form__submit {
+    margin: 9px 0 0 0;
   }
 }

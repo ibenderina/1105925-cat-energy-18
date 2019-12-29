@@ -6,30 +6,6 @@
   background-color: inherit;
 }
 
-.main-nav__toggle {
-  width: 25px;
-  height: 19px;
-  margin: 21px 20px 0 0;
-
-  border: none;
-  cursor: pointer;
-  background-image: url("../img/icon-mobile-menu.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-}
-
-.main-nav__toggle--close {
-  width: 19px;
-  height: 19px;
-  margin: 21px 20px 0 0;
-
-  border: none;
-  cursor: pointer;
-  background-image: url("../img/icon-close.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-}
-
 .main-nav--closed {
   display: none;
 }
@@ -83,10 +59,6 @@
     vertical-align: baseline;
     flex-basis: 64%;
     flex-grow: 0;
-  }
-
-  .main-nav__toggle {
-    display: none;
   }
 
   .main-nav__list {
