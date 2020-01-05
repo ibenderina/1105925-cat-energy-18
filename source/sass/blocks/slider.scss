@@ -34,7 +34,6 @@
 
   &::before {
     content: "";
-    position: absolute;
     bottom: -2px;
     left: 6px;
 
@@ -59,17 +58,7 @@
 
   @include Oswald-style(16px, 20px, #111111, right, uppercase);
 
-  border-bottom: 1px dotted rgba(190, 190, 190, 0.5);
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid rgba(190, 190, 190, 1);
-  }
-
-  &:active {
-    border-bottom: 1px solid transparent;
-  }
 }
 
 .slider__label--before {
@@ -87,7 +76,7 @@
   margin: 0 auto;
 }
 
-.slider__photo-item--closed {
+.slider__photo--closed {
   display: none;
 }
 
@@ -132,6 +121,7 @@
   }
 
   .slider__buttons-block {
+    width: 570px;
     justify-content: center;
   }
 
@@ -216,8 +206,18 @@
 
   .slider__label {
     width: 50px;
+    border-bottom: 1px dotted rgba(190, 190, 190, 0.5);
 
     @include Oswald-style(20px, 20px, #111111, right, uppercase);
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba(190, 190, 190, 1);
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
   }
 
   .slider__label--before {

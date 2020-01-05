@@ -25,17 +25,17 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0 0 61px 0;
+}
 
-  &--style {
-    width: 31%;
-    padding: 14px 17px 0;
-    margin-bottom: -28px;
+.results__list-block {
+  width: 31%;
+  padding: 14px 17px 0;
+  margin-bottom: -28px;
 
-    text-align: center;
+  text-align: center;
 
-    border: 1px solid #cdcdcd;
-    border-radius: 3px;
-  }
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .results__list-value {
@@ -98,10 +98,10 @@
   .results__list {
     display: inline-flex;
     width: 52%;
+  }
 
-    &--style {
-      width: 35%;
-    }
+  .results__list-block {
+    width: 35%;
   }
 
   .results__list-value {

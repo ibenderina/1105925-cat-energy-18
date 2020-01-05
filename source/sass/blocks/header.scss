@@ -41,6 +41,8 @@
   background-image: url("../img/icon-close.svg");
   background-color: transparent;
   background-repeat: no-repeat;
+
+  opacity: 0;
 }
 
 @media (min-width: $tablet-width) {

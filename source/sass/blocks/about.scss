@@ -1,5 +1,4 @@
 .about {
-  position: relative;
   margin: 0 -21px;
   padding: 0 0 44px 0;
 }
@@ -56,6 +55,7 @@
 
 .about__description {
   padding-bottom: 14px;
+  margin: 16px 0 0 0;
 
   @include Oswald-style(14px, 14px, #ffffff, center, uppercase);
 }
@@ -85,7 +85,7 @@
   }
 
   .about__description {
-    padding: 12px 0 28px 0;
+    padding: 12px 0 52px 0;
 
     @include Oswald-style(20px, 20px, #111111, left, uppercase);
   }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="fonts/oswaldmedium.woff" rel="preload">
   <link href="fonts/oswaldmedium.woff2" rel="preload">
@@ -20,7 +21,7 @@
         <img class="header__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
       </picture>
     </a>
-    <button class="header__nav-toggle header__nav-toggle--close" type="button" aria-label="Развернуть меню"></button>
+    <button class="header__nav-toggle header__nav-toggle--close" type="button" aria-label="Развернуть меню" onclick="change(this)"></button>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list">
         <li class="main-nav__list-item">
@@ -45,7 +46,7 @@
       <div class="container container--about">
         <h1 class="about__header">Функциональное питание для котов</h1>
         <p class="about__description">Занялся собой? Займись котом!</p>
-        <a class="about__select-link" href="">Подобрать программу</a>
+        <a class="about__select-link" href="form.html">Подобрать программу</a>
       </div>
       <div class="about__cat-wrapper">
         <div class="about__cat"></div>
@@ -152,7 +153,7 @@
             <label class="slider__label slider__label--before" for="toggle-before">Было</label>
             <div class="slider__control">
               <div class="slider__range"></div>
-              <button class="slider__button" type="button"></button>
+              <button class="slider__button" type="button" aria-label="Выбрать фото до или после"></button>
             </div>
             <label class="slider__label slider__label--after" for="toggle-after">Стало</label>
           </div>
@@ -212,6 +213,7 @@
     </div>
   </div>
 </footer>
+<!--<script src="js/svg4everybody.js"></script>-->
 <script src="js/script.js"></script>
 </body>
 </html>
