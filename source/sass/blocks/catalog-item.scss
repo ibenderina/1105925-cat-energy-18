@@ -200,6 +200,8 @@
     left: 0;
 
     &:last-of-type {
+      padding-top: 112px;
+
       .catalog-item__header {
         padding: 49px 8px 5px 10px;
       }

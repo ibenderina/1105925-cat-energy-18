@@ -65,7 +65,8 @@
 
 @media (min-width: $desktop-width) {
   .product-list {
-    width: 73%;
+    width: 74%;
+    max-width: 895px;
     padding: 0;
     margin: 0;
 
@@ -75,7 +76,7 @@
 
   .product-list__item {
     padding: 15px 0 16px 0;
-    align-items: baseline;
+    align-items: center;
   }
 
   .product-list__link {

@@ -65,14 +65,15 @@
   }
 
   .menu-form__options-button {
-    padding: 17px 0;
-    margin: 28px 0 17px 0;
+    padding: 15px 0;
+    margin: 31px 0 17px;
     width: 47%;
+    max-width: 568px;
     flex-grow: 0;
   }
 
   .menu-form__options-note {
-    margin: 6px 0 0 73px;
+    margin: 12px 0 0 83px;
     text-align: left;
   }
 

@@ -415,7 +415,7 @@
   }
 
   .options__list {
-    width: 103%;
+    width: 102%;
     padding: 13px 0 0 0;
 
     .options__label {
@@ -438,5 +438,9 @@
 
   .options__radio:checked + .options__name::after {
     top: 12px;
+  }
+
+  .options__input-email {
+    right: 23px;
   }
 }
