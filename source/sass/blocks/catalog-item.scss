@@ -60,6 +60,10 @@
   padding: 21px 50px 0 0;
 
   @include Oswald-style(16px, 20px, #111111, left, uppercase);
+}
+
+.catalog-item__header-link {
+  @include Oswald-style(16px, 20px, #111111, left, uppercase);
   text-decoration: none;
 }
 

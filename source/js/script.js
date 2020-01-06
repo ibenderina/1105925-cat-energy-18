@@ -26,40 +26,29 @@ navToggle.addEventListener('click', function() {
 });
 
 var toggleBefore = document.querySelector('.slider__toggle--before');
-var photoBefore = document.querySelector('.slider__photo--before');
+var photoBefore = document.querySelector('.slider__photo-item--before');
 var toggleAfter = document.querySelector('.slider__toggle--after');
-var photoAfter = document.querySelector('.slider__photo--after');
-var slider = document.querySelector('.slider__button');
-var container = document.querySelector('.slider__container');
+var photoAfter = document.querySelector('.slider__photo-item--after');
+var sliderButton = document.querySelector('.slider__button');
 
-toggleAfter.addEventListener('click', function() {
-  if (photoAfter.classList.contains('slider__photo--closed')) {
-    photoAfter.classList.remove('slider__photo--closed');
-    photoBefore.classList.add('slider__photo--closed');
-    slider.classList.add('slider__button--after');
-    container.classList.remove('slider__container--before');
-    container.classList.add('slider__container--after');
+toggleAfter.addEventListener('change', function() {
+  photoAfter.classList.remove('slider__photo-item--closed');
+  photoAfter.classList.add('slider__photo-item--active');
 
-    if (document.documentElement.clientWidth >= 768) {
-      slider.classList.remove('slider__button--before');
-      slider.classList.add('slider__button--after');
-      photoAfter.classList.add('slider__photo-item--active');
-    }
-  }
+  photoBefore.classList.remove('slider__photo-item--active');
+  photoBefore.classList.add('slider__photo-item--closed');
+
+  sliderButton.classList.remove('slider__button--before');
+  sliderButton.classList.add('slider__button--after');
 });
 
-toggleBefore.addEventListener('click', function() {
-  if (photoBefore.classList.contains('slider__photo--closed')
-    && slider.classList.contains('slider__button--after')) {
-    photoBefore.classList.remove('slider__photo--closed');
-    photoAfter.classList.add('slider__photo--closed');
-    slider.classList.remove('slider__button--after');
-    container.classList.remove('slider__button--after');
-    container.classList.add('slider__button--before');
+toggleBefore.addEventListener('change', function() {
+  photoBefore.classList.remove('slider__photo-item--closed');
+  photoBefore.classList.add('slider__photo-item--active');
 
-    if (document.documentElement.clientWidth >= 768) {
-      slider.classList.add('slider__button--before');
-      photoBefore.classList.add('slider__photo-item--active');
-    }
-  }
+  photoAfter.classList.remove('slider__photo-item--active');
+  photoAfter.classList.add('slider__photo-item--closed');
+
+  sliderButton.classList.remove('slider__button--after');
+  sliderButton.classList.add('slider__button--before');
 });
