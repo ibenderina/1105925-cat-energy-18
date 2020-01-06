@@ -25,7 +25,6 @@
 
   .contain__description {
     width: 30%;
-    text-align: left;
   }
 
   .contain__text,
@@ -49,5 +48,6 @@
   .contain__description {
     width: auto;
     flex-basis: 44px;
+    text-align: left;
   }
 }

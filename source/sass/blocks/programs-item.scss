@@ -99,6 +99,10 @@
   .programs-item {
     margin: 0 0 28px;
     padding: 76px 282px 56px 52px;
+
+    &:nth-child(2) {
+      padding: 76px 285px 56px 52px;
+    }
   }
 
   .programs-item__header {
@@ -160,6 +164,10 @@
   .programs-item {
     width: 40%;
     padding: 76px 30px 55px 53px;
+
+    &:nth-child(2) {
+      padding: 76px 30px 55px 53px;
+    }
   }
 
   .programs-item__header {
