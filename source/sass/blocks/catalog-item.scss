@@ -171,8 +171,9 @@
 
   .catalog-item__img {
     position: absolute;
-    display: inline-block;
     content: "";
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .catalog-item__header {
@@ -244,6 +245,7 @@
   .catalog-item__img {
     position: absolute;
     display: inline-block;
+    vertical-align: middle;
     content: "";
   }
 

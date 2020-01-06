@@ -19,13 +19,11 @@
 
   &::before {
     content: "";
-
     display: inline-block;
     width: 100vw;
     height: 3px;
     margin-right: 40px;
     margin-left: -113vw;
-
     vertical-align: middle;
 
     background-color: #68b738;
@@ -33,13 +31,11 @@
 
   &::after {
     content: "";
-
     display: inline-block;
     width: 100vw;
     height: 3px;
     margin-right: -100vw;
     margin-left: 17px;
-
     vertical-align: middle;
 
     background-color: #68b738;
@@ -53,9 +49,10 @@
 }
 
 .options--bordered {
-  border: 1px solid #ededed;
   padding: 22px 18px 22px 18px;
   margin: 23px -20px 0 -20px;
+
+  border: 1px solid #ededed;
 }
 
 .options--bordered .options__label {
@@ -130,14 +127,14 @@
 
 .options__textarea {
   display: inline-block;
+  vertical-align: middle;
   min-height: 124px;
   padding: 11px 11px 13px 13px;
   margin-top: -20px;
+  resize: none;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
   outline: none;
-
-  resize: none;
 }
 
 .options__input:hover,
@@ -185,7 +182,6 @@
 
 .options__checkbox + .options__name::before {
   content: "";
-
   display: inline-block;
   vertical-align: middle;
   width: 27px;
@@ -197,7 +193,6 @@
 
 .options__checkbox:checked + .options__name::after {
   content: "";
-
   display: inline-block;
   vertical-align: middle;
   position: absolute;
@@ -214,7 +209,6 @@
 
 .options__radio + .options__name::before {
   content: "";
-
   display: inline-block;
   vertical-align: middle;
   width: 28px;
@@ -227,12 +221,10 @@
 
 .options__radio:checked + .options__name::after {
   content: "";
-
   display: inline-block;
   position: absolute;
   top: 9px;
   left: 5px;
-
   vertical-align: middle;
   width: 12px;
   height: 12px;
@@ -267,8 +259,9 @@
   }
 
   .options--bordered .options__name {
-    letter-spacing: 0;
     margin-top: 1px;
+
+    letter-spacing: 0;
   }
 
   .options--bordered .options__label {
@@ -325,6 +318,7 @@
       display: inline;
       position: absolute;
       width: 87%;
+
       background-color: white;
     }
   }
@@ -350,7 +344,6 @@
   .options__radio + .options__name::before {
     width: 40px;
     height: 40px;
-
     margin-right: 18px;
   }
 

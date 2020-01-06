@@ -36,7 +36,6 @@
     content: "";
     bottom: -2px;
     left: 6px;
-
     display: block;
     width: 34px;
     height: 6px;
@@ -148,7 +147,6 @@
 
   .slider__control {
     position: relative;
-
     width: 428px;
     height: 6px;
     margin: 0 21px 0 22px;
@@ -175,11 +173,9 @@
 
     &::before {
       position: absolute;
-
       top: -2px;
       left: 11px;
       z-index: 2;
-
       width: 8px;
       height: 8px;
       margin: auto;

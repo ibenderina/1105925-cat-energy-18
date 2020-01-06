@@ -49,8 +49,9 @@
   .header {
     position: absolute;
     padding: 23px 31px 0 29px;
-    border-bottom: none;
     z-index: 1;
+
+    border-bottom: none;
   }
 
   .header__logo {
@@ -70,8 +71,9 @@
 @media (min-width: $desktop-width) {
   .header {
     padding: 53px 40px 0 40px;
-    border-bottom: none;
     z-index: 100;
+
+    border-bottom: none;
   }
 
   .header__logo {
