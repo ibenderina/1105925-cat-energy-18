@@ -50,6 +50,7 @@
   font-size: 12px;
   line-height: 12px;
   word-spacing: 30px;
+  letter-spacing: -1px;
 
   background-color: #f2f2f2;
 }
@@ -101,7 +102,10 @@
   }
 
   .results__list-block {
+    position: relative;
+
     width: 35%;
+    padding: 15px 19px 20px 13px;
   }
 
   .results__list-value {
@@ -109,11 +113,21 @@
   }
 
   .results__list-info {
-    margin-bottom: -9px;
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
 
     font-size: 14px;
     line-height: 21px;
     word-spacing: normal;
+    letter-spacing: 0;
 
     background-color: #ffffff;
   }
@@ -172,12 +186,11 @@
   .results__list-block {
     flex-grow: 1;
     max-width: 34%;
+    padding: 15px 17px 18px 18px;
   }
 
   .results__list-info {
-    margin-bottom: -4px;
-    padding-top: 13px;
-    width: 102%;
+    bottom: 10px;
 
     font-size: 14px;
     line-height: 10px;

@@ -4,6 +4,8 @@
 }
 
 .developer__img {
+  margin: 5px 0 0 0;
+
   fill: #666666;
 }
 
@@ -43,8 +45,9 @@
   }
 
   .developer__img {
-    width: 41px;
-    height: 41px;
+    width: 48px;
+    height: 37px;
+    margin-top: 1px;
   }
 }
 

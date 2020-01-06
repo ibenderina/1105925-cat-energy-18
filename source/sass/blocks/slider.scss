@@ -109,7 +109,7 @@
     display: flex;
     justify-content: center;
     width: 708px;
-    margin: 0 auto -14px auto;
+    margin: 0 auto -17px;
     padding-top: 0;
   }
 
@@ -174,8 +174,9 @@
     cursor: pointer;
 
     &::before {
-      top: 0;
-      bottom: 0;
+      position: absolute;
+
+      top: -2px;
       left: 11px;
       z-index: 2;
 

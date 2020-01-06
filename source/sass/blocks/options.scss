@@ -263,11 +263,22 @@
   .options--bordered {
     width: auto;
     margin: 73px 0 36px 0;
-    padding: 22px 31px 23px 25px;
+    padding: 22px 31px 12px 28px;
+  }
+
+  .options--bordered .options__name {
+    letter-spacing: 0;
+    margin-top: 1px;
+  }
+
+  .options--bordered .options__label {
+    margin-bottom: 10px;
   }
 
   .options__name {
     padding-right: 17px;
+
+    letter-spacing: 0.3px;
 
     @include Oswald-style(20px, 20px, #222222, left, uppercase);
   }
@@ -286,14 +297,17 @@
     margin-top: 1px;
   }
 
-  .options__input-email::after {
-    top: 22px;
-    right: 20px;
+  .options__input-email {
+    top: 6px;
   }
 
-  .options__input-phone::after {
+  .options__input-phone {
     top: 16px;
     right: 17px;
+  }
+
+  .options__name--mod {
+    padding-right: 13px;
   }
 
   .options__label {
@@ -307,9 +321,11 @@
 
     @include Oswald-style(36px, 36px, #111111, left, none);
 
-    &--br {
-      position: relative;
+    &-br {
       display: inline;
+      position: absolute;
+      width: 87%;
+      background-color: white;
     }
   }
 
@@ -321,19 +337,27 @@
 
     .options__label {
       width: 45%;
-      margin-bottom: 33px;
+      margin-bottom: 30px;
+    }
+
+    .options__name {
+      margin-top: 1px;
+      margin-left: 2px;
+      letter-spacing: 0;
     }
   }
 
   .options__radio + .options__name::before {
     width: 40px;
     height: 40px;
+
+    margin-right: 18px;
   }
 
   .options__radio:checked + .options__name::after {
     width: 18px;
     height: 18px;
-    top: 14px;
+    top: 13px;
     left: 8px;
   }
 
@@ -346,7 +370,7 @@
     width: 21px;
     height: 16px;
     top: 11px;
-    left: 9px;
+    left: 11px;
   }
 
   .options__header--border::before {
@@ -354,7 +378,7 @@
   }
 
   .options__header--border::after {
-    margin-left: 30px;
+    margin-left: 36px;
   }
 }
 

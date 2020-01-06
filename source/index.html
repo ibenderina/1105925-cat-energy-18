@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Кэт энерджи</title>
-  <link href="fonts/oswaldmedium.woff" rel="preload">
-  <link href="fonts/oswaldmedium.woff2" rel="preload">
-  <link href="fonts/oswaldregular.woff" rel="preload">
-  <link href="fonts/oswaldregular.woff2" rel="preload">
   <link href="css/style.min.css" rel="stylesheet">
+  <link href="fonts/oswaldmedium.woff" rel="preload" as="font">
+  <link href="fonts/oswaldmedium.woff2" rel="preload" as="font">
+  <link href="fonts/oswaldregular.woff" rel="preload" as="font">
+  <link href="fonts/oswaldregular.woff2" rel="preload" as="font">
 </head>
 <body>
 
@@ -23,9 +23,9 @@
   <div class="container container--header">
     <a class="header__logo-link">
       <picture>
-        <build media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-        <build media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img class="header__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
+        <source media="(min-width: 1300px)" srcset="img/logo/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+        <img class="header__logo" src="img/logo/logo-mobile.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
       </picture>
     </a>
     <button class="header__nav-toggle header__nav-toggle--close" type="button" aria-label="Развернуть меню" onclick="change(this)"></button>
@@ -137,21 +137,21 @@
           <div class="slider__photos">
             <div class="slider__photo slider__photo--before">
               <picture>
-                <build type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                <build type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                <build type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-                <build media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <build media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                 <img class="slider__photo-item slider__photo-item--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до">
               </picture>
             </div>
             <div class="slider__photo slider__photo--after slider__photo--closed">
               <picture>
-                <build type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-                <build type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-                <build type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-                <build media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                <build media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                 <img class="slider__photo-item slider__photo-item--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото кота после">
               </picture>
             </div>
@@ -185,27 +185,27 @@
 <footer class="footer">
   <div class="container container--footer">
     <a class="footer__logo-link" href="index.html">
-      <img class="footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип сайта 'Cat Energy'">
+      <img class="footer__logo" src="img/logo/logo-footer.svg" width="128" height="24" alt="Логотип сайта 'Cat Energy'">
     </a>
     <ul class="social-list">
       <li class="social-list__item">
         <a class="social-list__link" href="" aria-label="Перейти во вконтакте">
           <svg class="social-list__icon social-list__icon--vk" width="22" height="12">
-            <use xlink:href="img/sprite.svg#icon-vk"></use>
+            <use xlink:href="#icon-vk"></use>
           </svg>
         </a>
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="" aria-label="Перейти в инстаграм">
           <svg class="social-list__icon social-list__icon--insta" width="16" height="16" fill="red">
-            <use xlink:href="img/sprite.svg#icon-insta"></use>
+            <use xlink:href="#icon-insta"></use>
           </svg>
         </a>
       </li>
       <li class="social-list__item">
         <a class="social-list__link" href="" aria-label="Перейти в фейсбук">
           <svg class="social-list__icon social-list__icon--fb" width="10" height="19">
-            <use xlink:href="img/sprite.svg#icon-fb"></use>
+            <use xlink:href="#icon-fb"></use>
           </svg>
         </a>
       </li>
@@ -213,8 +213,8 @@
     <div class="developer">
       <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт разработчика">
         <span class="developer__name">HTML Academy</span>
-        <svg class="developer__img" width="37" height="44">
-          <use xlink:href="img/sprite.svg#htmacademy"></use>
+        <svg class="developer__img" width="37" height="37">
+          <use xlink:href="#icon-academy"></use>
         </svg>
       </a>
     </div>

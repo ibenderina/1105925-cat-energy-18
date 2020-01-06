@@ -124,6 +124,10 @@
       height: 3px;
       background-color: #68b738;
     }
+
+    &::after {
+      margin-left: 34px;
+    }
   }
 
   .add-products__header--border::before {

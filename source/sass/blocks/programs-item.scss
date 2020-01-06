@@ -1,6 +1,6 @@
 .programs-item {
   position: relative;
-  padding: 30px 32px 19px 19px;
+  padding: 30px 21px 19px 19px;
   margin: 0 0 20px 0;
 
   background-color: #f2f2f2;
@@ -8,12 +8,12 @@
 
 .programs-item__header {
   margin: 0;
-  padding-right: 47px;
+  padding-right: 60px;
 
   @include Oswald-style(24px, 37px, #111111, right, uppercase);
 
   &--pro {
-    padding-right: 19px;
+    padding-right: 32px;
   }
 
   &::before {
@@ -70,6 +70,7 @@
     width: 25px;
     height: 12px;
     margin-left: 11px;
+    margin-top: -5px;
 
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
@@ -90,13 +91,13 @@
 
 .programs-item__description {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 29px 0 24px 0;
-  margin: 0 0 18px 0;
+  padding: 29px 0 22px;
+  margin: 0 0 20px;
 }
 
 @media (min-width: $tablet-width) {
   .programs-item {
-    margin: 0 0 30px 0;
+    margin: 0 0 28px;
     padding: 76px 282px 56px 52px;
   }
 
@@ -161,14 +162,6 @@
     padding: 76px 30px 55px 53px;
   }
 
-  .programs-item:first-child .programs-item__header {
-    padding-left: 43px;
-  }
-
-  .programs-item:last-child .programs-item__header {
-    padding-left: 61px;
-  }
-
   .programs-item__header {
     @include Oswald-style(36px, 37px, #111111, center, uppercase);
 
@@ -192,6 +185,14 @@
       left: 36px;
       top: 68px;
     }
+
+    &--slim {
+      padding-left: 56px;
+    }
+
+    &--pro {
+      padding-left: 73px;
+    }
   }
 
   .programs-item__description {
@@ -200,5 +201,10 @@
 
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .programs-item__link::after {
+    margin-left: 23px;
+    margin-top: -1px;
   }
 }
