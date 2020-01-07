@@ -1,6 +1,4 @@
 .catalog-item {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 0;
   padding: 0 20px 25px 20px;
 
@@ -69,6 +67,7 @@
 
 .catalog-item__link {
   width: 100%;
+  height: max-content;
 
   @include green-button(10px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
@@ -102,6 +101,13 @@
     color: rgba(68, 68, 68, 0.3);
 
     background-color: #ebebeb;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .catalog-item {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -183,6 +189,11 @@
   .catalog-item__header {
     padding: 0 48px 27px 49px;
 
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .catalog-item__header-link {
     font-size: 20px;
     text-align: center;
   }

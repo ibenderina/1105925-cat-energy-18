@@ -6,8 +6,12 @@
   margin-top: -3px;
 }
 
+.menu-form__submit {
+  margin: 32px 0;
+}
+
 .menu-form__options-button {
-  margin: 35px 0 21px 0;
+  margin: 0;
   width: 100%;
 
   @include green-button(9px 0);
@@ -15,7 +19,7 @@
 }
 
 .menu-form__options-note {
-  margin: 0 0 31px 0;
+  margin: 21px 0 0 0;
 
   line-height: 16px;
   text-align: center;
