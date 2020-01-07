@@ -28,12 +28,12 @@
 
     &--about {
       position: static;
-      width: 523px;
-      padding: 72px 0 0 0;
+      width: 535px;
+      padding: 0;
     }
 
     &--form {
-      padding: 82px 0 0 0;
+      padding: 0 0 0 0;
     }
 
     &--footer {
@@ -48,7 +48,7 @@
 @media (min-width: $desktop-width) {
   .container {
     margin: 0 auto;
-    width: 1250px;
+    width: 1220px;
 
     &--header {
       display: flex;
@@ -56,12 +56,13 @@
       justify-content: space-between;
       width: 1220px;
       margin: 0 auto;
+      padding: 0;
     }
 
     &--about {
       width: 523px;
       position: relative;
-      padding: 180px 0 0 115px;
+      padding: 222px 0 0 106px;
     }
 
     &--results {
@@ -76,11 +77,11 @@
     }
 
     &--catalog {
-      padding: 7px 40px 0 40px;
+      padding: 189px 40px 0 40px;
     }
 
     &--form {
-      margin: 113px auto 0 auto;
+      margin: 188px auto 0 auto;
       padding: 0;
       box-sizing: border-box;
     }

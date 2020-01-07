@@ -1,6 +1,4 @@
 .catalog-item {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 0;
   padding: 0 20px 25px 20px;
 
@@ -9,7 +7,7 @@
   &:last-of-type {
     display: block;
     text-align: center;
-    padding-top: 23px;
+    padding: 22px 21px 22px 19px;
 
     .catalog-item__header {
       padding: 25px 0 3px 0;
@@ -51,7 +49,7 @@
 .catalog-item__info {
   display: flex;
   flex-direction: column;
-  width: 49%;
+  width: 50%;
 }
 
 .catalog-item__header {
@@ -60,11 +58,16 @@
   padding: 21px 50px 0 0;
 
   @include Oswald-style(16px, 20px, #111111, left, uppercase);
+}
+
+.catalog-item__header-link {
+  @include Oswald-style(16px, 20px, #111111, left, uppercase);
   text-decoration: none;
 }
 
 .catalog-item__link {
   width: 100%;
+  height: max-content;
 
   @include green-button(10px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
@@ -101,6 +104,13 @@
   }
 }
 
+@media (max-width: $tablet-width - 1) {
+  .catalog-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .catalog-item {
     position: relative;
@@ -112,14 +122,10 @@
     border-bottom: none;
 
     &:last-of-type {
-      padding-top: 115px;
+      padding: 115px 37px 32px 35px;
 
       background-color: inherit;
       border: 1px solid #cdcdcd;
-
-      .catalog-item__img {
-        height: 61px;
-      }
 
       .catalog-item__header {
         padding: 50px 45px 24px 46px;
@@ -160,11 +166,11 @@
   }
 
   .catalog-item:last-child {
-    .catalog-item__img {
-      width: 31px;
-      height: 31px;
-      top: -47px;
-      right: 0;
+    .catalog-item__img--last {
+      width: 61px;
+      height: 61px;
+      top: 55px;
+      right: 129px;
     }
   }
 
@@ -175,13 +181,19 @@
 
   .catalog-item__img {
     position: absolute;
-    display: inline-block;
     content: "";
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .catalog-item__header {
     padding: 0 48px 27px 49px;
 
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .catalog-item__header-link {
     font-size: 20px;
     text-align: center;
   }
@@ -200,9 +212,12 @@
   .catalog-item {
     width: 170px;
     margin-top: 0;
+    margin-bottom: 141px;
     left: 0;
 
     &:last-of-type {
+      padding-top: 112px;
+
       .catalog-item__header {
         padding: 49px 8px 5px 10px;
       }
@@ -245,6 +260,7 @@
   .catalog-item__img {
     position: absolute;
     display: inline-block;
+    vertical-align: middle;
     content: "";
   }
 

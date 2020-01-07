@@ -82,6 +82,24 @@
 
     background-image: url("../img/advantage-clock@1x.png");
   }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    &:nth-child(1)::after {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+
+    &:nth-child(2)::after {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+
+    &:nth-child(3)::after {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+
+    &:nth-child(4)::after {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -198,8 +216,9 @@
 
 @media (min-width: $desktop-width) {
   .benefits {
-    padding: 44px 0 0 40px;
+    padding: 47px 0 0 0;
     margin: 0;
+
     border-bottom: none;
   }
 
@@ -210,26 +229,26 @@
   .benefits__list-item {
     padding: 0;
     margin: 0;
-    max-width: 22%;
+    max-width: 20%;
 
     &:nth-child(1) .benefits__list-text::before {
-      right: 45px;
+      right: 14px;
     }
 
     &:nth-child(2) .benefits__list-text::before {
-      right: 27px;
+      right: -1px;
     }
 
     &:nth-child(3) .benefits__list-text::before {
-      right: 25px;
+      right: -3px;
     }
 
     &:nth-child(4) .benefits__list-text::before {
-      right: 21px;
+      right: -4px;
     }
   }
 
   .benefits__list-text {
-    width: 90%;
+    width: 108%;
   }
 }

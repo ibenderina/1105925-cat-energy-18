@@ -37,12 +37,17 @@
 @media (min-width: $desktop-width) {
   .contain {
     max-width: 34%;
-    margin: 0;
-    padding: 0;
+    margin: 7px 0 0 0;
   }
 
   .contain__text {
     padding-left: 18px;
+    width: auto;
+  }
+
+  .contain__description {
+    width: auto;
+    flex-basis: 44px;
     text-align: left;
   }
 }

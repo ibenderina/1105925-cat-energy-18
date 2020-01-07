@@ -6,15 +6,12 @@
   margin-top: -3px;
 }
 
-.menu-form__description {
-  margin: 0;
-  padding: 0 17px 40px 0;
-
-  @include Oswald-style(14px, 18px, #111111, left, uppercase);
+.menu-form__submit {
+  margin: 32px 0;
 }
 
 .menu-form__options-button {
-  margin: 19px 0 21px 0;
+  margin: 0;
   width: 100%;
 
   @include green-button(9px 0);
@@ -22,10 +19,14 @@
 }
 
 .menu-form__options-note {
-  margin: 0 0 31px 0;
+  margin: 21px 0 0 0;
 
   line-height: 16px;
   text-align: center;
+}
+
+.menu-form__row {
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
@@ -33,16 +34,9 @@
     padding: 3px 38px 49px 40px;
   }
 
-  .menu-form__description {
-    width: 52%;
-    padding: 54px 0px 11px 39px;
-    margin: 0;
-
-    @include Oswald-style(20px, 30px, #111111, left, uppercase);
-  }
-
   .menu-form__options-button {
     padding: 17px 26px;
+    margin: 0;
     width: 45%;
     display: inline-block;
     vertical-align: middle;
@@ -53,39 +47,49 @@
   .menu-form__options-note {
     display: inline-block;
     vertical-align: middle;
-    margin: -3px 0 0 57px;
+    margin: -4px 0 0 62px;
 
     text-align: center;
     font-size: 16px;
+  }
+
+  .menu-form__row {
+    flex-direction: column;
+  }
+
+  .menu-form__submit {
+    margin: -7px 0 2px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu-form {
-
-    //justify-content: space-between;
     margin: 0;
-    padding: 11px 7px 0 23px;
-  }
-
-  .menu-form__description {
-    display: block;
-    width: 100%;
-    padding: 54px 8px 0 23px;
-
-    @include Oswald-style(20px, 30px, #111111, left, uppercase);
+    padding: 67px 0 39px 0;
   }
 
   .menu-form__options-button {
-    padding: 17px 0;
-    margin: 28px 0 17px 0;
+    padding: 15px 0;
+    margin: 31px 0 17px;
     width: 47%;
+    max-width: 568px;
     flex-grow: 0;
   }
 
   .menu-form__options-note {
-    width: 47%;
-    margin: 45px 0 0 0;
+    margin: 12px 0 0 83px;
     text-align: left;
+  }
+
+  .menu-form__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 -15px 0 0;
+    width: 100%;
+  }
+
+  .menu-form__submit {
+    margin: 9px 0 0 0;
   }
 }

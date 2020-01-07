@@ -11,6 +11,7 @@
 .features__description {
   font-size: 12px;
   line-height: 16px;
+  letter-spacing: -1px;
 }
 
 .features__text {
@@ -23,7 +24,7 @@
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  width: 49%;
+  width: 52%;
 
   text-align: right;
 }
@@ -31,7 +32,6 @@
 @media (min-width: $tablet-width) {
   .features {
     padding: 0;
-    width: 103%;
   }
 
   .features__text,
@@ -50,7 +50,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .features {
-    width: 105%;
+  .features__text,
+  .features__description {
+    letter-spacing: 0;
   }
 }

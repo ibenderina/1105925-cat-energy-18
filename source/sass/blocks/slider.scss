@@ -18,8 +18,8 @@
   align-items: center;
   width: 84px;
   margin: 0 16px 0 10px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
@@ -34,8 +34,7 @@
 
   &::before {
     content: "";
-    position: absolute;
-    top: -51%;
+    bottom: -2px;
     left: 6px;
 
     display: block;
@@ -59,22 +58,12 @@
 
   @include Oswald-style(16px, 20px, #111111, right, uppercase);
 
-  border-bottom: 1px dotted rgba(190, 190, 190, 0.5);
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid rgba(190, 190, 190, 1);
+  &--before {
+    margin-right: 5px;
+    margin-left: 7px;
   }
-
-  &:active {
-    border-bottom: 1px solid transparent;
-  }
-}
-
-.slider__label--before {
-  margin-right: 5px;
-  margin-left: 7px;
 }
 
 .slider__photos {
@@ -87,36 +76,48 @@
   margin: 0 auto;
 }
 
-.slider__photo-item--closed {
-  display: none;
+@media (max-width: $tablet-width - 1) {
+  .slider__photo-item--after,
+  .slider__photo-item--closed {
+    display: none;
+    clip: rect(auto, auto, 0, 0);
+  }
+
+  .slider__photo-item--active {
+    display: block;
+    clip: rect(auto, auto, auto, auto);
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .slider {
+    margin: 0 -30px;
+  }
+
   .slider__container {
     padding-bottom: 70px;
-    margin: 32px -10px 0 0;
+    margin: 55px 0 0 0;
 
     background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
       linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
-  }
 
-  .slider__container--before {
-    background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
-      linear-gradient(to right, #f2f2f2 0%, #eaeaea 100%);
-  }
+    &--before {
+      background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
+        linear-gradient(to right, #f2f2f2 0%, #eaeaea 100%);
+    }
 
-  .slider__container--after {
-    background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
-      linear-gradient(to left, #f2f2f2 0%, #eaeaea 0%);
+    &--after {
+      background-image: linear-gradient(to bottom, #ffffff 168px, transparent 168px),
+        linear-gradient(to left, #f2f2f2 0%, #eaeaea 0%);
+    }
   }
 
   .slider__photos {
     position: relative;
-
     display: flex;
     justify-content: center;
     width: 708px;
-    margin: 0 auto -14px auto;
+    margin: 0 auto -17px;
     padding-top: 0;
   }
 
@@ -128,6 +129,7 @@
   }
 
   .slider__buttons-block {
+    width: 570px;
     justify-content: center;
   }
 
@@ -135,26 +137,29 @@
     position: absolute;
     top: -1px;
     left: 16px;
-
     width: 690px;
     height: 517px;
-  }
 
-  .slider__photo-item--before {
-    clip: rect(auto, 337px, auto, auto);
-  }
+    &--before {
+      clip: rect(auto, 337px, auto, auto);
+    }
 
-  .slider__photo-item--after {
-    clip: rect(auto, auto, auto, 337px);
-  }
+    &--after {
+      clip: rect(auto, auto, auto, 337px);
+    }
 
-  .slider__photo-item--active {
-    clip: rect(auto, auto, auto, auto);
+    &--active {
+      clip: rect(auto, auto, auto, auto);
+    }
+
+    &--closed {
+      clip: rect(auto, auto, 0, 0);
+      display: none;
+    }
   }
 
   .slider__control {
     position: relative;
-
     width: 428px;
     height: 6px;
     margin: 0 21px 0 22px;
@@ -167,8 +172,7 @@
 
   .slider__button {
     top: 0;
-    left: 197px;
-
+    left: 198px;
     display: block;
     width: 32px;
     height: 32px;
@@ -180,24 +184,23 @@
     cursor: pointer;
 
     &::before {
-      top: 0;
-      bottom: 0;
+      position: absolute;
+      top: -2px;
       left: 11px;
       z-index: 2;
-
       width: 8px;
       height: 8px;
       margin: auto;
 
       border-radius: 50%;
+    }
 
-      &--before {
-        left: -12px;
-      }
+    &--before {
+      left: -12px;
+    }
 
-      &--after {
-        left: 408px;
-      }
+    &--after {
+      left: 408px;
     }
 
     &:hover {
@@ -212,63 +215,68 @@
 
   .slider__label {
     width: 50px;
+    border-bottom: 1px dotted rgba(190, 190, 190, 0.5);
 
     @include Oswald-style(20px, 20px, #111111, right, uppercase);
-  }
 
-  .slider__label--before {
-    margin-right: 0;
-    margin-left: 0;
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba(190, 190, 190, 1);
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
+
+    &--before {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
+}
 
 @media (min-width: $desktop-width) {
-    .slider {
-      margin: 0;
-      padding: 0 72px 0 0;
-    }
+  .slider {
+    margin: 0;
+    padding: 0 47px 0 0;
+  }
 
-    .slider__container {
-      //margin-right: -65px;
-      margin: 54px -65px 0 0;
-      background-image: linear-gradient(to bottom, #ffffff 208px, transparent 208px),
-        linear-gradient(to right, #f2f2f2 405px, #eaeaea 1px);
-    }
+  .slider__container {
+    margin: 54px -65px 0 0;
 
-    //.slider__container--before {
-    //  background-image: linear-gradient(to bottom, #ffffff 208px, transparent 208px),
-    //    linear-gradient(to right, #f2f2f2 0%, #eaeaea 100%);
-    //}
-    //
-    //.slider__container--after {
-    //  background-image: linear-gradient(to bottom, #ffffff 208px, transparent 208px),
-    //    linear-gradient(to left, #f2f2f2 0%, #eaeaea 0%);
-    //}
+    background-image: linear-gradient(to bottom, #ffffff 208px, transparent 208px),
+      linear-gradient(to right, #f2f2f2 405px, #eaeaea 1px);
+  }
 
-    .slider__photos {
-      margin: -133px 0 25px 0;
-      overflow: hidden;
-    }
+  .slider__photos {
+    margin: -133px 0 25px 0;
+    overflow: hidden;
+  }
 
-    .slider__photo-item {
-      top: 17px;
-      left: 40px;
-    }
+  .slider__photo-item {
+    top: 17px;
+    left: 40px;
 
-    .slider__photo-item--before {
+    &--before {
       clip: rect(auto, 365px, auto, auto);
     }
 
-    .slider__photo-item--after {
+    &--after {
       clip: rect(auto, auto, auto, 365px);
     }
 
-    .slider__buttons-block {
-      margin: 20px 0 0 121px;
-      justify-content: end;
+    &--active {
+      clip: rect(auto, auto, auto, auto);
     }
 
-    .slider__button {
-      left: 198px;
+    &--closed {
+      clip: rect(auto, auto, 0, 0);
+      display: none;
     }
+  }
+
+  .slider__buttons-block {
+    margin: 20px 0 0 121px;
+    justify-content: space-between;
   }
 }

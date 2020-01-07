@@ -1,6 +1,7 @@
 .contacts {
   margin: 0 -20px -5px -20px;
-  background-color: #f2f2f2;
+
+  background-color: #ffffff;
 }
 
 .contacts__item {
@@ -22,6 +23,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 49%;
+  margin: 16px 3px 0 0;
 
   font-size: 14px;
   line-height: 20px;
@@ -31,20 +33,27 @@
   padding: 0;
   width: 100%;
   height: 372px;
-  border: none;
 
+  border: none;
   background-image: url("../img/bg-map-mobile@1x.png");
 
   @include back(#a0a0a0, contain);
 }
 
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .contacts__map {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: contain;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .contacts {
-    margin: 0 -30px -7px -30px;
+    margin: 0 -30px -7px;
   }
 
   .contacts__item {
-    padding: 66px 73px 33px 70px;
+    padding: 66px 73px 36px 70px;
   }
 
   .contacts__text {
@@ -55,7 +64,7 @@
   }
 
   .contacts__address {
-    margin: 0;
+    margin: -3px 0 0 0;
     width: 31%;
 
     text-align: right;
@@ -71,6 +80,15 @@
 
   .contacts__map {
     height: 396px;
+
+    background-image: url("../img/bg-map-tablet@1x.png");
+  }
+
+  @media (min-width: 768px) and (min-resolution: 144dpi),
+    (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .contacts__map {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 }
 
@@ -83,10 +101,10 @@
 
   .contacts__item {
     position: absolute;
-    margin-top: 97px;
+    margin-top: 95px;
     left: 0;
     max-width: 494px;
-    padding: 66px 0 34px 80px;
+    padding: 65px 0 37px 76px;
 
     background-color: #ffffff;
   }
@@ -98,7 +116,7 @@
 
   .contacts__address {
     width: 32%;
-    margin: -3px 90px 0 0;
+    margin: -3px 87px 0 0;
 
     text-align: left;
     font-size: 16px;
@@ -111,5 +129,13 @@
     height: 400px;
 
     background-color: #f2f2f2;
+    background-image: url("../img/bg-map-desktop@1x.png");
+  }
+
+  @media (min-width: 1300px) and (min-resolution: 144dpi),
+    (min-width: 1300px) and (min-resolution: 1.5dppx) {
+    .contacts__map {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }

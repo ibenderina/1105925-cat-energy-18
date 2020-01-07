@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+.developer__img {
+  margin: 5px 0 0 0;
+
+  fill: #666666;
+}
+
 .developer__link {
   display: flex;
   justify-content: space-between;
@@ -11,11 +17,9 @@
 
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    .developer__img {
-      filter: none;
-    }
+  &:hover .developer__img,
+  &:focus .developer__img {
+    fill: #68b738;
   }
 
   &:active {
@@ -32,10 +36,6 @@
   line-height: 16px;
 }
 
-.developer__img {
-  filter: grayscale(1) brightness(2) invert(1);
-}
-
 @media (min-width: $tablet-width) {
   .developer {
     display: inline-flex;
@@ -45,14 +45,20 @@
   }
 
   .developer__img {
-    width: 41px;
-    height: 41px;
+    width: 48px;
+    height: 37px;
+    margin-top: 1px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .developer {
     width: 14%;
+    max-width: 163px;
     padding: 0;
+  }
+
+  .developer__img {
+    margin-right: -6px;
   }
 }

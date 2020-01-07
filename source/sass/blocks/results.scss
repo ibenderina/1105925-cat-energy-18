@@ -25,17 +25,17 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0 0 61px 0;
+}
 
-  &--style {
-    width: 31%;
-    padding: 14px 17px 0;
-    margin-bottom: -28px;
+.results__list-block {
+  width: 31%;
+  padding: 14px 17px 0;
+  margin-bottom: -28px;
 
-    text-align: center;
+  text-align: center;
 
-    border: 1px solid #cdcdcd;
-    border-radius: 3px;
-  }
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 }
 
 .results__list-value {
@@ -50,6 +50,7 @@
   font-size: 12px;
   line-height: 12px;
   word-spacing: 30px;
+  letter-spacing: -1px;
 
   background-color: #f2f2f2;
 }
@@ -65,7 +66,8 @@
 
 @media (min-width: $tablet-width) {
   .results {
-    padding: 43px 20px 0 20px;
+    padding: 43px 0 0 0;
+    margin: 0;
 
     background-color: #ffffff;
     background-image: linear-gradient(to bottom, #ffffff 618px, transparent 618px),
@@ -97,10 +99,13 @@
   .results__list {
     display: inline-flex;
     width: 52%;
+  }
 
-    &--style {
-      width: 35%;
-    }
+  .results__list-block {
+    position: relative;
+
+    width: 35%;
+    padding: 15px 19px 20px 13px;
   }
 
   .results__list-value {
@@ -108,11 +113,20 @@
   }
 
   .results__list-info {
-    margin-bottom: -9px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
 
     font-size: 14px;
     line-height: 21px;
     word-spacing: normal;
+    letter-spacing: 0;
 
     background-color: #ffffff;
   }
@@ -131,7 +145,7 @@
 
 @media (min-width: $desktop-width) {
   .results {
-    padding: 0 0 0 40px;
+    padding: 0;
     margin: 0 auto;
 
     background-color: #ffffff;
@@ -168,15 +182,14 @@
     padding: 0 113px 0 0;
   }
 
-  .results__list--style {
+  .results__list-block {
     flex-grow: 1;
     max-width: 34%;
+    padding: 15px 17px 18px 18px;
   }
 
   .results__list-info {
-    margin-bottom: -4px;
-    padding-top: 13px;
-    width: 102%;
+    bottom: 10px;
 
     font-size: 14px;
     line-height: 10px;
