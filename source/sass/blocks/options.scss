@@ -11,7 +11,7 @@
 }
 
 .options__header--border {
-  margin: 0 0 54px 0;
+  margin: 0 0 55px;
   position: relative;
 
   font-size: 36px;
@@ -95,8 +95,12 @@
   @include Oswald-style(16px, 18px, #222222, left, uppercase);
   white-space: nowrap;
 
-  &--mod {
+  &--phone {
     padding-right: 9px;
+  }
+
+  &--email {
+    padding-right: 10px;
   }
 }
 
@@ -122,7 +126,7 @@
 }
 
 .options__input-email {
-  top: 4px;
+  top: 1px;
   right: 17px;
 }
 
@@ -284,6 +288,14 @@
     @include Oswald-style(20px, 20px, #222222, left, uppercase);
   }
 
+  .options__name--email {
+    padding-right: 19px;
+  }
+
+  .options__name--phone {
+    letter-spacing: 0;
+  }
+
   .options__input {
     padding: 10px 11px 10px 19px;
 
@@ -294,8 +306,8 @@
 
   .options__textarea {
     min-height: 139px;
-    padding: 16px 11px 18px 19px;
-    margin-top: 1px;
+    padding: 12px 11px 21px 19px;
+    margin-top: 4px;
   }
 
   .options__input-email {
@@ -305,10 +317,6 @@
   .options__input-phone {
     top: 16px;
     right: 17px;
-  }
-
-  .options__name--mod {
-    padding-right: 13px;
   }
 
   .options__label {
@@ -335,7 +343,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 8px 4px 0;
+    padding: 4px 8px 2px 0;
 
     .options__label {
       width: 45%;
