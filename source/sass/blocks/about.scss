@@ -17,6 +17,12 @@
   background-image: url("../img/index-can-mobile@1x.png");
 }
 
+@media (min-width: 480px) and (max-width: $tablet-width - 1) {
+  .about__img {
+    margin: -180px auto 40px;
+  }
+}
+
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .about__img {
     background-image: url("../img/index-can-mobile@2x.png");
@@ -108,6 +114,7 @@
     z-index: -1;
     width: 709px;
     height: 609px;
+    margin: -140px auto 0;
     top: 340px;
     left: -9px;
 

@@ -42,6 +42,12 @@
   }
 }
 
+@media (min-width: 450px) and (max-width: $tablet-width - 1) {
+  .options__header--border::before {
+    margin-left: -107vw;
+  }
+}
+
 .options__header-br {
   position: absolute;
   display: block;
@@ -104,7 +110,7 @@
   @include Oswald-style(20px, 20px, #444444, left, uppercase);
 
   &::placeholder {
-    @include Oswald-style(16px, 18px, #444444, left, uppercase);
+    @include Oswald-style(16px, 20px, #444444, left, uppercase);
   }
 }
 
@@ -140,6 +146,7 @@
 .options__input:hover,
 .options__textarea:hover {
   border: 1px solid rgba(205, 205, 205, 1);
+  outline: 2px solid transparent;
 }
 
 .options__input:focus,
@@ -155,8 +162,9 @@
 
 .options__input:invalid,
 .options__textarea:invalid {
-  border: 2px solid #ff8282;
-  outline: 1px solid transparent;
+  border: 1px solid #ff8282;
+  outline: 1px solid #ff8282;
+  outline-offset: 0;
 
   ~ .options__input-email,
   ~ .options__input-phone {
@@ -280,7 +288,7 @@
     padding: 10px 11px 10px 19px;
 
     &::placeholder {
-      @include Oswald-style(20px, 20px, #444444, left, uppercase);
+      @include Oswald-style(20px, 25px, #444444, left, uppercase);
     }
   }
 

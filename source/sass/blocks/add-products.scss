@@ -15,7 +15,7 @@
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .add-products__gifts {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
-    background-size: contain;
+    background-size: cover;
   }
 }
 
@@ -32,14 +32,27 @@
     display: inline-block;
     vertical-align: middle;
     position: absolute;
-    top: -206%;
-    left: 32%;
+    top: -123px;
+    left: 51px;
     width: 56px;
     height: 61px;
 
     background-image: url("../img/icon-gift.svg");
 
     @include back(transparent, cover);
+  }
+}
+
+@media (min-width: 450px) and (max-width: $tablet-width) {
+  .add-products__gifts {
+    padding: 113px 20px 84px 155px;
+  }
+
+  .add-products__gifts-text {
+    &::before {
+      top: -9%;
+      left: -67px;
+    }
   }
 }
 
@@ -145,7 +158,7 @@
     background-position: 100% 65%;
     background-repeat: no-repeat;
     background-color: #68b738;
-    background-size: contain;
+    background-size: cover;
   }
 
   @media (min-width: 768px) and (min-resolution: 144dpi),

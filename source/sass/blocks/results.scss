@@ -38,6 +38,17 @@
   border-radius: 3px;
 }
 
+@media (min-width: 400px) and (max-width: $tablet-width - 1) {
+  .results__list {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .results__list-block {
+    max-width: 100px;
+  }
+}
+
 .results__list-value {
   @include Oswald-style(24px, 24px, #111111, center, uppercase);
 }
