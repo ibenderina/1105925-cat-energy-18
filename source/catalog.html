@@ -3,6 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Security-Policy" content="
+    script-src 'self';
+    frame-src 'self';
+    style-src 'self' 'unsafe-inline';
+    object-src 'self';
+  ">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.min.css" rel="stylesheet">
   <link href="fonts/oswaldmedium.woff" rel="preload">
@@ -12,7 +19,7 @@
 </head>
 <body>
 <!--svg-sprite-->
-<div style="display:none">
+<div class="visually-hidden">
   <include src="build/img/sprite.svg"></include>
 </div>
 <!--svg-sprite-->
@@ -284,7 +291,7 @@
       </div>
     </section>
   </div>
-  <section class="contacts">
+  <section class="contacts contacts--grey">
     <h2 class="visually-hidden">Как нас найти</h2>
     <div class="container container--contacts">
       <div class="contacts__item">
