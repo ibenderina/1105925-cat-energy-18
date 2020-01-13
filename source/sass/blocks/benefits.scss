@@ -55,28 +55,28 @@
     background-size: cover;
   }
 
-  &:nth-child(1)::after {
+  &--leaf::after {
     width: 50px;
     height: 50px;
 
     background-image: url("../img/advantage-leaf@1x.png");
   }
 
-  &:nth-child(2)::after {
+  &--powder::after {
     width: 50px;
     height: 50px;
 
     background-image: url("../img/advantage-powder@1x.png");
   }
 
-  &:nth-child(3)::after {
+  &--dining::after {
     width: 40px;
     height: 50px;
 
     background-image: url("../img/advantage-dining@1x.png");
   }
 
-  &:nth-child(4)::after {
+  &--clock::after {
     width: 45px;
     height: 50px;
 
@@ -84,19 +84,19 @@
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    &:nth-child(1)::after {
+    &--leaf::after {
       background-image: url("../img/advantage-leaf@2x.png");
     }
 
-    &:nth-child(2)::after {
+    &--powder::after {
       background-image: url("../img/advantage-powder@2x.png");
     }
 
-    &:nth-child(3)::after {
+    &--dining::after {
       background-image: url("../img/advantage-dining@2x.png");
     }
 
-    &:nth-child(4)::after {
+    &--clock::after {
       background-image: url("../img/advantage-clock@2x.png");
     }
   }
@@ -105,7 +105,7 @@
 @media (min-width: $tablet-width) {
   .benefits {
     margin: 0 -30px;
-    padding: 16px 30px 0 29px;
+    padding: 16px 30px 111px 29px;
 
     border-bottom: solid 1px #ededed;
   }
@@ -119,6 +119,8 @@
   .benefits__list {
     flex-direction: row;
     flex-wrap: wrap;
+
+    counter-reset: itemNum;
   }
 
   .benefits__list-item {
@@ -167,28 +169,32 @@
 
     &:nth-child(1) {
       .benefits__list-text::before {
-        content: "1";
+        counter-increment: itemNum;
+        content: counter(itemNum);
         right: 97px;
       }
     }
 
     &:nth-child(2) {
       .benefits__list-text::before {
-        content: "2";
+        counter-increment: itemNum;
+        content: counter(itemNum);
         right: 79px;
       }
     }
 
     &:nth-child(3) {
       .benefits__list-text::before {
-        content: "3";
+        counter-increment: itemNum;
+        content: counter(itemNum);
         right: 79px;
       }
     }
 
     &:nth-child(4) {
       .benefits__list-text::before {
-        content: "4";
+        counter-increment: itemNum;
+        content: counter(itemNum);
         right: 76px;
       }
     }
@@ -203,7 +209,11 @@
       display: block;
       position: absolute;
       top: -39px;
+      right: 77px;
       z-index: -1;
+
+      counter-increment: itemNum;
+      content: counter(itemNum);
 
       @include Oswald-style(281px, 281px, #f2f2f2, right, none);
     }
@@ -229,7 +239,7 @@
   .benefits__list-item {
     padding: 0;
     margin: 0;
-    max-width: 20%;
+    max-width: 245px;
 
     &:nth-child(1) .benefits__list-text::before {
       right: 14px;
@@ -250,5 +260,9 @@
 
   .benefits__list-text {
     width: 108%;
+
+    &::before {
+      right: 0;
+    }
   }
 }

@@ -57,7 +57,14 @@
         <div class="about__cat"></div>
       </div>
     </div>
-    <div class="about__img"></div>
+    <picture>
+      <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+      <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+      <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+      <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+      <img class="about__img" src="img/index-can-mobile@1x.png" width="271" height="280" alt="Фото банки корма">
+    </picture>
   </section>
   <section class="programs">
     <div class="container">
@@ -68,14 +75,14 @@
           <p class="programs-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a class="programs-item__link" href="">Каталог Slim</a>
+          <a class="programs-item__link" href="catalog-slim.html">Каталог Slim</a>
         </li>
         <li class="programs__items programs-item">
           <h3 class="programs-item__header programs-item__header--pro">Набор массы</h3>
           <p class="programs-item__description">Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a class="programs-item__link" href="">Каталог pro</a>
+          <a class="programs-item__link" href="catalog-pro.html">Каталог pro</a>
         </li>
       </ul>
     </div>
@@ -84,21 +91,29 @@
     <div class="container">
       <h2 class="benefits__header">Как это работает</h2>
       <ul class="benefits__list">
-        <li class="benefits__list-item">
+        <li class="benefits__list-item benefits__list-item--leaf">
           <p class="benefits__list-text">Функциональное питание содержит только полезные питательные вещества.
           </p>
         </li>
-        <li class="benefits__list-item">
+        <li class="benefits__list-item benefits__list-item--powder">
           <p class="benefits__list-text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
           </p>
         </li>
-        <li class="benefits__list-item">
+        <li class="benefits__list-item benefits__list-item--dining">
           <p class="benefits__list-text">Замените один-два приема обычной еды на наше функциональное питание.
           </p>
         </li>
-        <li class="benefits__list-item">
+        <li class="benefits__list-item benefits__list-item--clock">
           <p class="benefits__list-text">Уже через месяц наслаждайтесь изменениями к лучшему
             <span class="benefits__br-tablet">вашего питомца!</span>
+          </p>
+        </li>
+        <li class="benefits__list-item benefits__list-item--powder">
+          <p class="benefits__list-text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+          </p>
+        </li>
+        <li class="benefits__list-item benefits__list-item--dining">
+          <p class="benefits__list-text">Замените один-два приема обычной еды на наше функциональное питание.
           </p>
         </li>
       </ul>

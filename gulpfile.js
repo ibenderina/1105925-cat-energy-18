@@ -28,6 +28,8 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csso())
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -105,7 +107,10 @@ gulp.task("minify-html", function () {
 gulp.task("minify-js", function () {
   return pipeline(
     gulp.src("source/js/*.js"),
+    rename("script.js"),
+    gulp.dest("build/js"),
     uglify(),
+    rename("script.min.js"),
     gulp.dest("build/js")
   );
 });

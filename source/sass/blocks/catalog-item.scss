@@ -126,6 +126,7 @@
     position: relative;
     padding: 162px 37px 41px 38px;
     margin-bottom: 140px;
+    margin-right: 62px;
     width: 249px;
 
     background-color: #f2f2f2;
@@ -159,25 +160,31 @@
 
   .catalog-item:nth-child(odd) {
     .catalog-item__img {
-      width: 326px;
+      width: auto;
       height: 172px;
       top: -47px;
       right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
   .catalog-item:nth-child(even) {
     .catalog-item__img {
-      width: 327px;
+      width: auto;
       height: 208px;
       top: -83px;
       right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
   .catalog-item:last-child {
     .catalog-item__img--last {
-      width: 61px;
+      width: 100%;
       height: 61px;
       top: 55px;
       right: 129px;
@@ -222,7 +229,8 @@
   .catalog-item {
     width: 170px;
     margin-top: 0;
-    margin-bottom: 141px;
+    margin-bottom: 144px;
+    margin-right: 80px;
     left: 0;
 
     &:last-of-type {
@@ -244,7 +252,7 @@
   .catalog-item:nth-child(even) {
     .catalog-item__img {
       height: 210px;
-      width: 245px;
+      width: auto;
       right: 0;
     }
   }
@@ -252,7 +260,7 @@
   .catalog-item:nth-child(odd) {
     .catalog-item__img {
       height: 172px;
-      width: 245px;
+      width: auto;
       right: 0;
       top: -45px;
     }
@@ -260,7 +268,7 @@
 
   .catalog-item:last-child {
     .catalog-item__img {
-      width: 61px;
+      width: 100%;
       height: 61px;
       top: 56px;
       right: 90px;

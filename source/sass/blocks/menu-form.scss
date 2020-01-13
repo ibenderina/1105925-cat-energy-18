@@ -13,6 +13,7 @@
 .menu-form__options-button {
   margin: 0;
   width: 100%;
+  border: none;
 
   @include green-button(9px 0);
   @include Oswald-style(16px, 20px, #ffffff, center, uppercase);
