@@ -1,13 +1,18 @@
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 10px 82px 16px 73px;
+  padding: 10px 20px 16px 20px;
   margin-bottom: 20px;
 
   list-style-type: none;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-list__item {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 15px;
 }
 
 .social-list__icon {
@@ -29,11 +34,8 @@
   .social-list {
     display: inline-flex;
     flex-wrap: wrap;
-    width: 18%;
-    max-width: 140px;
     padding: 0 0 4px 0;
     margin: 0;
-    justify-content: space-between;
     align-items: center;
 
     border-bottom: none;
@@ -58,8 +60,4 @@
 }
 
 @media (min-width: $desktop-width) {
-  .social-list {
-    width: 10%;
-    padding-left: 5px;
-  }
 }
