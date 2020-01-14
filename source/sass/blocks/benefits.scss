@@ -1,6 +1,6 @@
 .benefits {
   position: relative;
-  padding: 20px 0 39px 0;
+  padding: 20px 0 22px;
 }
 
 .benefits__header {
@@ -27,7 +27,6 @@
 .benefits__list-item {
   position: relative;
   display: flex;
-  justify-content: space-between;
   padding-bottom: 20px;
 
   &::before {
@@ -101,7 +100,7 @@
 @media (min-width: $tablet-width) {
   .benefits {
     margin: 0 -30px;
-    padding: 16px 30px 111px 29px;
+    padding: 16px 30px 46px 29px;
 
     border-bottom: solid 1px #ededed;
   }
@@ -115,15 +114,16 @@
   .benefits__list {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 0 -80px 0;
+    margin: 0 -80px -78px 0;
 
     counter-reset: itemNum;
   }
 
   .benefits__list-item {
-    width: 46%;
+    width: 45%;
+    max-width: 306px;
     flex-direction: column;
-    padding-bottom: 130px;
+    padding-bottom: 134px;
     margin: 0 80px 0 0;
 
     &::before {
@@ -160,7 +160,7 @@
       .benefits__list-text::before {
         counter-increment: itemNum;
         content: counter(itemNum);
-        right: 97px;
+        right: 75px;
       }
     }
 
@@ -168,7 +168,7 @@
       .benefits__list-text::before {
         counter-increment: itemNum;
         content: counter(itemNum);
-        right: 79px;
+        right: 60px;
       }
     }
 
@@ -176,7 +176,7 @@
       .benefits__list-text::before {
         counter-increment: itemNum;
         content: counter(itemNum);
-        right: 79px;
+        right: 60px;
       }
     }
 
@@ -184,7 +184,7 @@
       .benefits__list-text::before {
         counter-increment: itemNum;
         content: counter(itemNum);
-        right: 76px;
+        right: 60px;
       }
     }
   }
@@ -210,6 +210,12 @@
 
   .benefits__br-tablet {
     display: block;
+  }
+}
+
+@media (min-width: 900px) and (max-width: $desktop-width - 1) {
+  .benefits__list-item {
+    margin-right: 30px;
   }
 }
 

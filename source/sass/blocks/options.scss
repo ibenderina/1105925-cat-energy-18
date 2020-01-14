@@ -106,7 +106,7 @@
 
 .options__input {
   width: 100%;
-  padding: 4px 11px 9px 13px;
+  padding: 7px 11px 11px 13px;
 
   border: 1px solid rgba(205, 205, 205, 0.5);
   outline: 1px solid transparent;
@@ -114,7 +114,8 @@
   @include Oswald-style(20px, 25px, #444444, left, uppercase);
 
   &::placeholder {
-    color: red;
+    opacity: 1;
+
     @include Oswald-style(16px, 25px, #444444, left, uppercase);
   }
 }
@@ -298,10 +299,11 @@
   }
 
   .options__input {
-    padding: 10px 11px 10px 19px;
+    padding: 13px 11px 12px 19px;
 
     &::placeholder {
       @include Oswald-style(20px, 25px, #444444, left, uppercase);
+      opacity: 1;
     }
   }
 
@@ -343,12 +345,14 @@
   .options__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 4px 8px 2px 0;
+    margin-right: -100px;
 
     .options__label {
-      width: 45%;
+      width: 35%;
       margin-bottom: 30px;
+      margin-right: 90px;
     }
 
     .options__name {
@@ -392,6 +396,18 @@
   }
 }
 
+@media (min-width: 900px) and (max-width: $desktop-width - 1) {
+  .options__list {
+    margin-right: -20px;
+    max-width: none;
+
+    .options__label {
+      margin-right: 20px;
+      max-width: 30%;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .options {
     margin: 29px 0 -11px 0;
@@ -425,11 +441,13 @@
   }
 
   .options__list {
-    width: 102%;
-    padding: 13px 0 0 0;
+    width: auto;
+    margin: 0 -80px 0 0;
+    padding: 0;
 
     .options__label {
-      width: 22%;
+      width: 325px;
+      margin-right: 0;
     }
   }
 
@@ -440,6 +458,7 @@
 
   .options__header--style {
     padding: 49px 0 0 0;
+    margin-bottom: 57px;
 
     &::before {
       top: 71px;

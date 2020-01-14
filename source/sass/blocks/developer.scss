@@ -1,6 +1,8 @@
 .developer {
-  margin: -4px 0 0 0;
-  padding: 0;
+  margin: 0;
+  padding: 16px 0 0 0;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .developer__img {
@@ -42,6 +44,9 @@
     width: 24%;
     max-width: 170px;
     padding: 0 0 6px 0;
+    margin-top: -6px;
+
+    border-top: none;
   }
 
   .developer__img {
@@ -56,6 +61,7 @@
     width: 14%;
     max-width: 163px;
     padding: 0;
+    margin-top: -7px;
   }
 
   .developer__img {
