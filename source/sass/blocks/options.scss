@@ -48,7 +48,7 @@
   }
 }
 
-.options__header--br {
+.options__header-br {
   position: absolute;
   display: block;
   width: 100%;
@@ -299,7 +299,7 @@
   }
 
   .options__input {
-    padding: 13px 11px 12px 19px;
+    padding: 11px 11px 14px 19px;
 
     &::placeholder {
       @include Oswald-style(20px, 25px, #444444, left, uppercase);
@@ -332,14 +332,14 @@
     padding: 10px 0;
 
     @include Oswald-style(36px, 36px, #111111, left, none);
+  }
 
-    &--br {
-      display: inline;
-      position: absolute;
-      width: 87%;
+  .options__header-br {
+    display: inline;
+    position: absolute;
+    width: 87%;
 
-      background-color: white;
-    }
+    background-color: white;
   }
 
   .options__list {

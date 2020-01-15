@@ -170,7 +170,7 @@
   }
 
   @media (min-width: 1300px) and (min-resolution: 144dpi),
-  (min-width: 1300px) and (min-resolution: 1.5dppx) {
+    (min-width: 1300px) and (min-resolution: 1.5dppx) {
     .about__cat-wrapper::before {
       background-image: url("../img/index-background-desktop@2x.jpg");
     }

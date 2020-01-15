@@ -23,7 +23,8 @@
       <picture>
         <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img class="header__logo" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
+        <source srcset="img/logo-mobile.svg">
+        <img class="header__logo" src="img/logo-desktop.svg" width="191" height="39" alt="Логотип сайта 'Cat Energy'">
       </picture>
     </a>
     <button class="header__nav-toggle header__nav-toggle--close" type="button" aria-label="Развернуть меню"></button>
@@ -87,7 +88,7 @@
       </div>
       <fieldset class="menu-form__options options">
         <legend class="options__header options__header--border">Контактные данные
-          <span class="options__header--br">(владельца кота)</span>
+          <span class="options__header-br">(владельца кота)</span>
         </legend>
         <div class="menu-form__row">
           <label class="options__label options__col-half" for="email">
